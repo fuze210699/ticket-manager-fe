@@ -4,7 +4,17 @@
     "target": "ES6",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@core/*": ["src/core/*"],
+      "@features/*": ["src/features/*"],
+      "@shared/*": ["src/shared/*"],
+      "@infrastructure/*": ["src/infrastructure/*"],
+      "@assets/*": ["src/shared/assets/*"],
+      "@components/*": ["src/shared/components/*"],
+      "@utils/*": ["src/shared/utils/*"],
+      "@hooks/*": ["src/shared/hooks/*"],
+      "@composables/*": ["src/shared/composables/*"]
     }
   },
   "include": ["src/**/*"]

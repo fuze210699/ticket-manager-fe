@@ -1,0 +1,246 @@
+{
+  "notFound": {
+    "title": "Không tìm thấy trang",
+    "description": "Trang bạn đang tìm kiếm không tồn tại.",
+    "goHome": "Quay về trang chủ"
+  },
+  "common": {
+    "language": "Ngôn ngữ",
+    "vietnamese": "Tiếng Việt",
+    "english": "Tiếng Anh",
+    "japanese": "Tiếng Nhật",
+    "add": "Thêm",
+    "edit": "Sửa",
+    "delete": "Xóa",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "close": "Đóng",
+    "back": "Quay lại",
+    "next": "Tiếp theo",
+    "previous": "Trước đó",
+    "search": "Tìm kiếm",
+    "settings": "Cài đặt",
+    "profile": "Hồ sơ",
+    "logout": "Đăng xuất",
+    "reset": "Đặt lại",
+    "dueDate": "Ngày hết hạn",
+    "priority": "Ưu tiên",
+    "filter": "Lọc",
+    "advancedFilter": "Lọc nâng cao",
+    "priorities": {
+      "1": "Thấp",
+      "2": "Trung bình",
+      "3": "Cao"
+    },
+    "category": "Danh mục",
+    "tags": "Thẻ",
+    "selectCategory": "Chọn danh mục",
+    "allCategories": "Tất cả danh mục",
+    "allPriorities": "Tất cả mức ưu tiên",
+    "theme": "Giao diện",
+    "view": "Chế độ xem",
+    "timezone": "Múi giờ",
+    "month": "Tháng",
+    "week": "Tuần",
+    "day": "Ngày",
+    "today": "Hôm nay",
+    "event": "Sự kiện",
+    "startDate": "Ngày bắt đầu",
+    "endDate": "Ngày kết thúc",
+    "allDay": "Cả ngày",
+    "location": "Địa điểm",
+    "color": "Màu sắc",
+    "light": "Sáng",
+    "dark": "Tối",
+    "showWeekends": "Hiện cuối tuần",
+    "showHolidays": "Hiện ngày lễ",
+    "meeting": "Cuộc họp",
+    "task": "Công việc",
+    "reminder": "Nhắc nhở",
+    "personal": "Cá nhân",
+    "title": "Tiêu đề",
+    "description": "Mô tả"
+  },
+  "nav": {
+    "dashboard": "Bảng điều khiển",
+    "widgets": "Tiện ích",
+    "marketplace": "Cửa hàng",
+    "templates": "Mẫu",
+    "guide": "Hướng dẫn"
+  },
+  "footer": {
+    "appName": "MySpace - Không gian làm việc tùy chỉnh của bạn",
+    "allRightsReserved": "Đã đăng ký bản quyền",
+    "privacyPolicy": "Chính sách bảo mật",
+    "termsOfService": "Điều khoản dịch vụ"
+  },
+  "auth": {
+    "createAccount": "Tạo tài khoản",
+    "alreadyHaveAccount": "Đã có tài khoản?",
+    "signIn": "Đăng nhập",
+    "fullName": "Họ và tên",
+    "fullNamePlaceholder": "Nhập họ và tên",
+    "email": "Địa chỉ email",
+    "emailPlaceholder": "Nhập email",
+    "password": "Mật khẩu",
+    "passwordPlaceholder": "Tạo mật khẩu",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "confirmPasswordPlaceholder": "Xác nhận mật khẩu của bạn",
+    "acceptTerms": "Tôi đồng ý với",
+    "termsOfService": "Điều khoản dịch vụ",
+    "and": "và",
+    "privacyPolicy": "Chính sách bảo mật",
+    "creatingAccount": "Đang tạo tài khoản...",
+    "createAccount": "Tạo tài khoản",
+    "error": {
+      "title": "Lỗi",
+      "passwordMismatch": "Mật khẩu không khớp",
+      "signupFailed": "Đăng ký thất bại",
+      "enterCredentials": "Vui lòng nhập cả email và mật khẩu"
+    },
+    "success": {
+      "title": "Thành công",
+      "accountCreated": "Tài khoản đã được tạo thành công"
+    },
+    "title": "Đăng nhập",
+    "noAccount": "Chưa có tài khoản?",
+    "register": "Đăng ký",
+    "rememberMe": "Ghi nhớ đăng nhập",
+    "forgotPassword": "Quên mật khẩu?"
+  },
+  "dashboard": {
+    "title": "Bảng điều khiển",
+    "subtitle": "Tùy chỉnh không gian làm việc",
+    "createSpace": "Tạo không gian mới",
+    "members": "thành viên",
+    "openSpace": "Mở không gian",
+    "noSpacesTitle": "Chưa có không gian",
+    "noSpaces": "Bạn chưa có không gian nào. Tạo không gian mới để bắt đầu.",
+    "widgets": {
+      "addWidget": "Thêm tiện ích",
+      "customize": "Tùy chỉnh",
+      "resize": "Thay đổi kích thước",
+      "move": "Di chuyển",
+      "remove": "Xóa",
+      "settings": "Cài đặt tiện ích"
+    },
+    "dropZone": "Thả widget vào đây",
+    "availableWidgets": "Widget có sẵn",
+    "sizes": {
+      "col-12": "Toàn màn hình",
+      "col-6": "Nửa màn hình",
+      "col-4": "Một phần ba",
+      "col-3": "Một phần tư"
+    },
+    "editLayout": "Chỉnh sửa bố cục",
+    "presetLayouts": {
+      "title": "Bố cục mẫu",
+      "default": "Bố cục mặc định",
+      "dashboard": "Bảng điều khiển",
+      "grid": "Lưới đều",
+      "contentFocus": "Tập trung nội dung",
+      "social": "Mạng xã hội",
+      "productivity": "Năng suất",
+      "descriptions": {
+        "default": "Bố cục cơ bản với một khu vực nội dung chính và hai bảng điều khiển bên",
+        "dashboard": "Hoàn hảo cho việc theo dõi với một widget lớn và nhiều widget nhỏ hơn",
+        "grid": "Các widget có kích thước bằng nhau trong mẫu lưới",
+        "contentFocus": "Khu vực nội dung chính lớn với các widget thanh bên",
+        "social": "Tối ưu hóa cho nguồn cấp dữ liệu và cập nhật mạng xã hội",
+        "productivity": "Bố cục cân bằng cho quản lý công việc và công cụ năng suất"
+      }
+    },
+    "availableWidgets": "Tiện ích có sẵn",
+    "dropZone": "Khu vực thả",
+    "addZone": "Thêm khu vực",
+    "saveLayout": "Lưu bố cục",
+    "resetLayout": "Đặt lại bố cục",
+    "exportLayout": "Xuất bố cục",
+    "importLayout": "Nhập bố cục",
+    "changeTheme": "Đổi giao diện"
+  },
+  "widgets": {
+    "categories": {
+      "entertainment": "Giải trí",
+      "productivity": "Năng suất",
+      "social": "Mạng xã hội",
+      "utilities": "Tiện ích",
+      "custom": "Tùy chỉnh"
+    },
+    "types": {
+      "music": {
+        "title": "Trình phát nhạc",
+        "description": "Nghe nhạc yêu thích"
+      },
+      "video": {
+        "title": "Trình phát video",
+        "description": "Xem video từ YouTube, TikTok, v.v."
+      },
+      "calendar": {
+        "title": "Lịch",
+        "description": "Quản lý lịch trình và sự kiện",
+        "createEvent": "Tạo sự kiện",
+        "editEvent": "Sửa sự kiện",
+        "deleteEvent": "Xóa sự kiện",
+        "eventDetails": "Chi tiết sự kiện",
+        "noEvents": "Không có sự kiện nào",
+        "settings": {
+          "title": "Cài đặt lịch",
+          "viewMode": "Chế độ xem",
+          "timezone": "Múi giờ",
+          "theme": "Giao diện",
+          "showWeekends": "Hiện cuối tuần",
+          "showHolidays": "Hiện ngày lễ"
+        }
+      },
+      "notes": {
+        "title": "Ghi chú",
+        "description": "Tạo và tổ chức ghi chú",
+        "contentPlaceholder": "Nhập ghi chú của bạn..."
+      },
+      "todo": {
+        "title": "Công việc",
+        "task": "công việc",
+        "empty": "Chưa có công việc nào",
+        "addTask": "Thêm công việc",
+        "titlePlaceholder": "Tiêu đề công việc",
+        "description": "Mô tả",
+        "descriptionPlaceholder": "Mô tả công việc",
+        "subtasks": "Công việc phụ",
+        "addSubtask": "Thêm công việc phụ",
+        "subtaskPlaceholder": "Tiêu đề công việc phụ"
+      },
+      "weather": {
+        "title": "Thời tiết",
+        "description": "Xem thời tiết hiện tại và dự báo"
+      },
+      "workspace": {
+        "title": "Không gian làm việc",
+        "description": "Quản lý dự án và công việc"
+      }
+    }
+  },
+  "workspace": {
+    "namePlaceholder": "Nhập tên không gian làm việc",
+    "back": "Quay lại",
+    "addMilestone": "Thêm cột mốc",
+    "ticketDetails": "Chi tiết ticket"
+  },
+  "ticket": {
+    "add": "Thêm Ticket",
+    "code": "Mã",
+    "title": "Tiêu đề",
+    "link": "Liên kết",
+    "milestone": "Cột mốc",
+    "status": "Trạng thái",
+    "statuses": {
+      "todo": "Cần làm",
+      "inProgress": "Đang thực hiện",
+      "done": "Hoàn thành"
+    },
+    "estimateTime": "Thời gian dự kiến",
+    "actualTime": "Thời gian thực tế",
+    "close": "Đóng",
+    "save": "Lưu"
+  }
+}

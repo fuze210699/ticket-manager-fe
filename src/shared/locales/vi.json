@@ -1,0 +1,39 @@
+{
+  "common": {
+    "filter": "Lọc",
+    "advancedFilter": "Lọc nâng cao",
+    "priorities": {
+      "1": "Thấp",
+      "2": "Trung bình",
+      "3": "Cao"
+    },
+    "category": "Danh mục",
+    "tags": "Thẻ",
+    "selectCategory": "Chọn danh mục",
+    "search": "Tìm kiếm",
+    "edit": "Sửa",
+    "delete": "Xóa",
+    "add": "Thêm",
+    "cancel": "Hủy",
+    "save": "Lưu",
+    "dueDate": "Ngày hết hạn",
+    "priority": "Ưu tiên",
+    "allCategories": "Tất cả danh mục",
+    "allPriorities": "Tất cả mức ưu tiên"
+  },
+  "widgets": {
+    "types": {
+      "todo": {
+        "title": "Công việc",
+        "task": "công việc",
+        "empty": "Chưa có công việc nào",
+        "addTask": "Thêm công việc",
+        "titlePlaceholder": "Nhập tiêu đề công việc...",
+        "descriptionPlaceholder": "Nhập mô tả công việc...",
+        "subtasks": "Công việc con",
+        "addSubtask": "Thêm công việc con",
+        "subtaskPlaceholder": "Nhập công việc con..."
+      }
+    }
+  }
+} 

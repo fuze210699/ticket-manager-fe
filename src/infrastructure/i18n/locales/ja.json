@@ -1,0 +1,341 @@
+{
+  "notFound": {
+    "title": "ページが見つかりません",
+    "description": "お探しのページは存在しません。",
+    "goHome": "ホームに戻る"
+  },
+  "auth": {
+    "createAccount": "アカウントを作成",
+    "alreadyHaveAccount": "すでにアカウントをお持ちですか？",
+    "signIn": "ログイン",
+    "fullName": "氏名",
+    "fullNamePlaceholder": "氏名を入力してください",
+    "email": "メールアドレス",
+    "emailPlaceholder": "メールアドレスを入力してください",
+    "password": "パスワード",
+    "passwordPlaceholder": "パスワードを作成",
+    "confirmPassword": "パスワードの確認",
+    "confirmPasswordPlaceholder": "パスワードを確認してください",
+    "acceptTerms": "私は",
+    "termsOfService": "利用規約",
+    "and": "と",
+    "privacyPolicy": "プライバシーポリシー",
+    "creatingAccount": "アカウント作成中...",
+    "createAccount": "アカウントを作成",
+    "error": {
+      "title": "エラー",
+      "passwordMismatch": "パスワードが一致しません",
+      "signupFailed": "アカウント作成に失敗しました",
+      "enterCredentials": "メールアドレスとパスワードを両方入力してください"
+    },
+    "success": {
+      "title": "成功",
+      "accountCreated": "アカウントが正常に作成されました"
+    },
+    "title": "ログイン",
+    "noAccount": "アカウントをお持ちでない方",
+    "register": "新規登録",
+    "rememberMe": "ログイン情報を保存",
+    "forgotPassword": "パスワードをお忘れですか？"
+  },
+  "common": {
+    "close": "閉じる",
+    "save": "保存",
+    "addNew": "新規追加...",
+    "expand": "展開",
+    "collapse": "折りたたみ",
+    "language": "言語",
+    "vietnamese": "ベトナム語",
+    "english": "英語",
+    "japanese": "日本語",
+    "back": "戻る",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "success": "成功",
+    "confirm": "確認",
+    "allRightsReserved": "全著作権所有",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約",
+    "learnMore": "もっと詳しく",
+    "getStarted": "始める",
+    "add": "追加",
+    "next": "次へ",
+    "previous": "前へ",
+    "search": "検索",
+    "settings": "設定",
+    "profile": "プロフィール",
+    "logout": "ログアウト",
+    "reset": "リセット",
+    "dueDate": "期限",
+    "priority": "優先度"
+  },
+  "workspace": {
+    "namePlaceholder": "ワークスペース名を入力...",
+    "descriptionPlaceholder": "ワークスペースの説明を入力...",
+    "tickets": "チケット一覧",
+    "noTickets": "チケットがありません。「チケット追加」をクリックして作成してください。"
+  },
+  "ticket": {
+    "add": "チケット追加",
+    "code": "チケットコード",
+    "title": "タイトル",
+    "link": "リンク",
+    "milestone": "マイルストーン",
+    "status": "ステータス",
+    "estimateTime": "見積時間（時間）",
+    "actualTime": "実際時間（時間）",
+    "startTime": "開始時間",
+    "endTime": "終了時間",
+    "statuses": {
+      "todo": "未着手",
+      "inProgress": "進行中",
+      "done": "完了"
+    },
+    "name": "チケット名",
+    "description": "説明",
+    "assignee": "担当者",
+    "priority": "優先度",
+    "dueDate": "期限",
+    "save": "保存",
+    "details": "チケット詳細"
+  },
+  "milestone": {
+    "add": "マイルストーン追加",
+    "title": "タイトル",
+    "startTime": "開始時間",
+    "endTime": "終了時間",
+    "description": "説明",
+    "placeholder": {
+      "title": "マイルストーンのタイトルを入力...",
+      "description": "マイルストーンの説明を入力..."
+    },
+    "name": "マイルストーン名",
+    "dueDate": "期限",
+    "save": "保存",
+    "cancel": "キャンセル"
+  },
+  "dependency": {
+    "add": "依存関係を追加",
+    "type": "依存関係の種類",
+    "description": "説明",
+    "confirm": "依存関係を確認",
+    "types": {
+      "hard": "Hard",
+      "soft": "Soft"
+    },
+    "note": "メモ (オプション)",
+    "save": "保存",
+    "cancel": "キャンセル"
+  },
+  "footer": {
+    "appName": "チケットマネージャー",
+    "allRightsReserved": "全著作権所有",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約"
+  },
+  "landing": {
+    "title": "スマートチケット管理",
+    "description": "直感的で使いやすいインターフェースを備えた効率的なチケット管理ソリューション。強力な機能でワークフローを最適化。",
+    "getStarted": "始める",
+    "benefits": {
+      "time": {
+        "title": "時間の節約",
+        "description": "繰り返しタスクの自動化とチケットの効率的な管理"
+      },
+      "accuracy": {
+        "title": "高精度",
+        "description": "チケットの進捗とステータスを正確に追跡"
+      },
+      "collaboration": {
+        "title": "簡単なコラボレーション",
+        "description": "共有と通知機能でチームとして効果的に作業"
+      }
+    }
+  },
+  "login": {
+    "title": "ログイン",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "rememberMe": "ログイン情報を保存",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "signIn": "ログイン",
+    "noAccount": "アカウントをお持ちでない方",
+    "register": "新規登録"
+  },
+  "home": {
+    "title": "ワークスペース",
+    "subtitle": "作業の管理と整理",
+    "createWorkspace": "新規ワークスペース作成",
+    "members": "メンバー",
+    "openWorkspace": "ワークスペースを開く",
+    "createWorkspaceTitle": "新規ワークスペース作成",
+    "workspaceName": "ワークスペース名",
+    "workspaceDescription": "説明",
+    "create": "作成",
+    "noWorkspaces": "ワークスペースがありません。新規ワークスペースを作成して開始してください。",
+    "noWorkspacesTitle": "ワークスペースがありません"
+  },
+  "nav": {
+    "dashboard": "ダッシュボード",
+    "projects": "プロジェクト",
+    "tasks": "タスク",
+    "reports": "レポート",
+    "guide": "ガイド",
+    "profile": "プロフィール",
+    "settings": "設定",
+    "logout": "ログアウト"
+  },
+  "guide": {
+    "title": "ユーザーガイド",
+    "subtitle": "Ticket Managerの効果的な使用方法を学ぶ",
+    "gettingStarted": "はじめに",
+    "features": "機能",
+    "tutorials": "チュートリアル",
+    "faq": "よくある質問",
+    "contact": "サポートに連絡"
+  },
+  "profile": {
+    "title": "個人プロフィール",
+    "changeAvatar": "アバターを変更",
+    "avatarDescription": "新しいプロフィール画像をアップロード",
+    "personalInfo": "個人情報",
+    "fullName": "氏名",
+    "email": "メールアドレス",
+    "phone": "電話番号",
+    "location": "所在地",
+    "bio": "自己紹介",
+    "saveChanges": "変更を保存",
+    "uploadButton": "写真をアップロード",
+    "bioPlaceholder": "自己紹介を入力してください...",
+    "bioDescription": "プロフィールの簡単な説明",
+    "saving": "保存中...",
+    "saved": "プロフィールを保存しました",
+    "saveSuccess": "プロフィールが正常に更新されました",
+    "saveError": "保存に失敗しました",
+    "saveErrorDescription": "プロフィールの保存中にエラーが発生しました。もう一度お試しください。",
+    "invalidFileType": "無効なファイル形式です",
+    "pleaseSelectImage": "画像ファイルを選択してください",
+    "fileTooLarge": "ファイルが大きすぎます",
+    "maxFileSize": "最大ファイルサイズは5MBです",
+    "avatarUploaded": "アバターをアップロードしました",
+    "avatarUploadSuccess": "プロフィール画像が更新されました",
+    "uploadError": "アップロードに失敗しました",
+    "uploadErrorDescription": "アバターのアップロード中にエラーが発生しました。もう一度お試しください。"
+  },
+  "settings": {
+    "title": "設定",
+    "accountSettings": "アカウント設定",
+    "currentPassword": "現在のパスワード",
+    "newPassword": "新しいパスワード",
+    "confirmPassword": "新しいパスワードの確認",
+    "notificationSettings": "通知設定",
+    "emailNotifications": "メール通知",
+    "emailNotificationsDescription": "更新や変更に関する通知をメールで受け取る",
+    "pushNotifications": "プッシュ通知",
+    "pushNotificationsDescription": "ブラウザで直接通知を受け取る",
+    "saveChanges": "変更を保存",
+    "saveSuccess": "設定を保存しました",
+    "saveError": "設定の保存に失敗しました",
+    "saveErrorDescription": "設定の保存中にエラーが発生しました。もう一度お試しください。",
+    "passwordMismatch": "新しいパスワードが一致しません",
+    "invalidCurrentPassword": "現在のパスワードが正しくありません",
+    "passwordTooShort": "パスワードは8文字以上である必要があります",
+    "passwordRequirements": "パスワードには大文字、小文字、数字を少なくとも1文字ずつ含める必要があります"
+  },
+  "dashboard": {
+    "title": "ダッシュボード",
+    "subtitle": "ワークスペースのカスタマイズ",
+    "createSpace": "新規スペース作成",
+    "members": "メンバー",
+    "openSpace": "スペースを開く",
+    "noSpacesTitle": "スペースがありません",
+    "noSpaces": "スペースがありません。新規スペースを作成して開始してください。",
+    "widgets": {
+      "addWidget": "ウィジェットを追加",
+      "customize": "カスタマイズ",
+      "resize": "サイズ変更",
+      "move": "移動",
+      "remove": "削除",
+      "settings": "ウィジェット設定"
+    },
+    "dropZone": "ウィジェットをドロップ",
+    "availableWidgets": "利用可能なウィジェット",
+    "sizes": {
+      "col-12": "全幅",
+      "col-6": "半幅",
+      "col-4": "3分の1",
+      "col-3": "4分の1"
+    },
+    "editLayout": "レイアウトを編集",
+    "presetLayouts": {
+      "title": "プリセットレイアウト",
+      "default": "デフォルトレイアウト",
+      "dashboard": "ダッシュボード",
+      "grid": "グリッド",
+      "contentFocus": "コンテンツフォーカス",
+      "social": "ソーシャル",
+      "productivity": "生産性",
+      "descriptions": {
+        "default": "メインコンテンツエリアと2つのサイドパネルを持つ基本的なレイアウト",
+        "dashboard": "大きなウィジェットと複数の小さなウィジェットでモニタリングに最適",
+        "grid": "グリッドパターンで均等サイズのウィジェット",
+        "contentFocus": "大きなメインコンテンツエリアとサイドバーウィジェット",
+        "social": "ソーシャルフィードと更新に最適化",
+        "productivity": "タスク管理と生産性ツールのバランスの取れたレイアウト"
+      }
+    },
+    "availableWidgets": "利用可能なウィジェット",
+    "dropZone": "ドロップゾーン",
+    "addZone": "ゾーンを追加",
+    "saveLayout": "レイアウトを保存",
+    "resetLayout": "レイアウトをリセット",
+    "exportLayout": "レイアウトをエクスポート",
+    "importLayout": "レイアウトをインポート",
+    "changeTheme": "テーマを変更"
+  },
+  "widgets": {
+    "categories": {
+      "entertainment": "エンターテインメント",
+      "productivity": "生産性",
+      "social": "ソーシャル",
+      "utilities": "ユーティリティ",
+      "custom": "カスタム"
+    },
+    "types": {
+      "music": {
+        "title": "ミュージックプレーヤー",
+        "description": "お気に入りの音楽を聴く"
+      },
+      "video": {
+        "title": "ビデオプレーヤー",
+        "description": "YouTube、TikTokなどの動画を視聴"
+      },
+      "calendar": {
+        "title": "カレンダー",
+        "description": "スケジュールとイベントを管理"
+      },
+      "notes": {
+        "title": "メモ",
+        "description": "メモを作成して整理"
+      },
+      "todo": {
+        "title": "ToDoリスト",
+        "description": "タスクを管理",
+        "empty": "タスクがありません",
+        "task": "タスク",
+        "titlePlaceholder": "何をする必要がありますか？"
+      },
+      "weather": {
+        "title": "天気",
+        "description": "現在の天気と予報を確認"
+      },
+      "workspace": {
+        "title": "ワークスペース",
+        "description": "プロジェクトとタスクを管理"
+      }
+    }
+  }
+} 

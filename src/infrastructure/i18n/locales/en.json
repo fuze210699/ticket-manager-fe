@@ -1,0 +1,190 @@
+{
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist.",
+    "goHome": "Go back home"
+  },
+  "common": {
+    "language": "Language",
+    "vietnamese": "Vietnamese",
+    "english": "English",
+    "japanese": "Japanese",
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "settings": "Settings",
+    "profile": "Profile",
+    "logout": "Logout",
+    "reset": "Reset",
+    "dueDate": "Due Date",
+    "priority": "Priority",
+    "filter": "Filter",
+    "advancedFilter": "Advanced Filter",
+    "priorities": {
+      "1": "Low",
+      "2": "Medium",
+      "3": "High"
+    },
+    "category": "Category",
+    "tags": "Tags",
+    "selectCategory": "Select Category",
+    "allCategories": "All Categories",
+    "allPriorities": "All Priorities",
+    "meeting": "Meeting",
+    "task": "Task",
+    "reminder": "Reminder",
+    "personal": "Personal",
+    "title": "Title",
+    "description": "Description",
+    "event": "Event"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "widgets": "Widgets",
+    "marketplace": "Marketplace",
+    "templates": "Templates",
+    "guide": "Guide"
+  },
+  "footer": {
+    "appName": "MySpace - Your Customizable Workspace",
+    "allRightsReserved": "All rights reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "auth": {
+    "createAccount": "Create your account",
+    "alreadyHaveAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter your full name",
+    "email": "Email address",
+    "emailPlaceholder": "Enter your email",
+    "password": "Password",
+    "passwordPlaceholder": "Create a password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "acceptTerms": "I accept the",
+    "termsOfService": "Terms of Service",
+    "and": "and",
+    "privacyPolicy": "Privacy Policy",
+    "creatingAccount": "Creating account...",
+    "createAccount": "Create account",
+    "error": {
+      "title": "Error",
+      "passwordMismatch": "Passwords do not match",
+      "signupFailed": "Sign up failed",
+      "enterCredentials": "Please enter both email and password"
+    },
+    "success": {
+      "title": "Success",
+      "accountCreated": "Account created successfully"
+    },
+    "title": "Sign in",
+    "noAccount": "Don't have an account?",
+    "register": "Register",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot your password?"
+  },
+  "dashboard": {
+    "title": "My Dashboard",
+    "subtitle": "Customize your workspace",
+    "createSpace": "Create New Space",
+    "members": "members",
+    "openSpace": "Open Space",
+    "noSpacesTitle": "No Spaces",
+    "noSpaces": "You don't have any spaces yet. Create a new space to get started.",
+    "editLayout": "Edit Layout",
+    "presetLayouts": "Preset Layouts",
+    "availableWidgets": "Available Widgets",
+    "dropZone": "Drop widget here",
+    "addZone": "Add New Zone",
+    "changeTheme": "Change Theme",
+    "exportLayout": "Export Layout",
+    "importLayout": "Import Layout",
+    "sizes": {
+      "col-12": "Full Width",
+      "col-8": "Two Thirds",
+      "col-6": "Half Width",
+      "col-4": "One Third",
+      "col-3": "Quarter Width"
+    }
+  },
+  "widgets": {
+    "categories": {
+      "entertainment": "Entertainment",
+      "productivity": "Productivity",
+      "social": "Social",
+      "utilities": "Utilities",
+      "custom": "Custom"
+    },
+    "types": {
+      "music": {
+        "title": "Music Player",
+        "description": "Listen to your favorite music"
+      },
+      "video": {
+        "title": "Video Player",
+        "description": "Watch videos from YouTube, TikTok, etc."
+      },
+      "calendar": {
+        "title": "Calendar",
+        "description": "Manage your schedule and events"
+      },
+      "notes": {
+        "title": "Notes",
+        "description": "Take quick notes and reminders",
+        "contentPlaceholder": "Enter your notes..."
+      },
+      "todo": {
+        "title": "Todo",
+        "task": "tasks",
+        "empty": "No tasks yet",
+        "addTask": "Add Task",
+        "titlePlaceholder": "Task title",
+        "description": "Description",
+        "descriptionPlaceholder": "Task description",
+        "subtasks": "Subtasks",
+        "addSubtask": "Add Subtask",
+        "subtaskPlaceholder": "Subtask title"
+      },
+      "weather": {
+        "title": "Weather",
+        "description": "Check current weather and forecast"
+      },
+      "workspace": {
+        "title": "Workspace",
+        "description": "Manage your projects and tasks"
+      }
+    }
+  },
+  "workspace": {
+    "namePlaceholder": "Enter workspace name",
+    "back": "Back",
+    "addMilestone": "Add Milestone",
+    "ticketDetails": "Ticket Details"
+  },
+  "ticket": {
+    "add": "Add Ticket",
+    "code": "Code",
+    "title": "Title",
+    "link": "Link",
+    "milestone": "Milestone",
+    "status": "Status",
+    "statuses": {
+      "todo": "To Do",
+      "inProgress": "In Progress",
+      "done": "Done"
+    },
+    "estimateTime": "Estimate Time",
+    "actualTime": "Actual Time",
+    "close": "Close",
+    "save": "Save"
+  }
+}

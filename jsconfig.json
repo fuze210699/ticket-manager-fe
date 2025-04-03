@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@app/*": ["./src/app/*"],
+      "@core/*": ["./src/core/*"],
+      "@features/*": ["./src/features/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@infrastructure/*": ["./src/infrastructure/*"],
+      "@assets/*": ["./src/shared/assets/*"],
+      "@components/*": ["./src/shared/components/*"],
+      "@utils/*": ["./src/shared/utils/*"],
+      "@hooks/*": ["./src/shared/hooks/*"],
+      "@composables/*": ["./src/shared/composables/*"],
+      "@layouts/*": ["./src/layouts/*"]
+    },
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.js", "src/**/*.vue", "src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
