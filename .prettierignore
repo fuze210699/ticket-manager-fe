@@ -1,0 +1,23 @@
+# Build files
+dist
+node_modules
+
+# Log files
+*.log
+
+# Cache files
+.cache
+.temp
+
+# Editor directories
+.vscode
+.idea
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml 

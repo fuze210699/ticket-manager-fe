@@ -19,4 +19,3 @@ import AppFooter from '@shared/components/layout/AppFooter.vue';
   min-height: 100dvh;
 }
 </style>
-

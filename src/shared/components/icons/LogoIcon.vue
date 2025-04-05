@@ -1,0 +1,34 @@
+<template>
+  <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.57898 1V24.9311" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    <path d="M17.421 1V24.9311" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    <path d="M1 1L8.6688 12.8879" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    <path
+      d="M25 12.9656L17.4211 25"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+    />
+    <path
+      d="M17.421 1L8.57891 24.9311"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+    />
+    <path
+      d="M25 12.9656L8.57893 12.9656"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+    />
+  </svg>
+</template>
+
+<script setup>
+defineProps({
+  class: {
+    type: String,
+    default: '',
+  },
+});
+</script>

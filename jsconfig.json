@@ -26,6 +26,6 @@
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true
   },
-  "include": ["src/**/*.js", "src/**/*.vue", "src/**/*.ts"],
+  "include": ["src/**/*.js", "src/**/*.vue"],
   "exclude": ["node_modules"]
 }

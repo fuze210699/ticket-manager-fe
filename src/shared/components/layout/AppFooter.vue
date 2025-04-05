@@ -1,20 +1,50 @@
 <template>
-  <footer class="bg-white border-t border-gray-200">
-    <div class="px-4 py-3 flex items-center justify-between">
-      <div class="text-sm text-gray-600">
-        © {{ new Date().getFullYear() }} {{ $t('footer.appName') }}. {{ $t('footer.allRightsReserved') }}
-      </div>
-      <div class="flex items-center gap-4">
-        <a href="#" class="text-sm text-gray-600 hover:text-gray-800">{{ $t('footer.privacyPolicy') }}</a>
-        <a href="#" class="text-sm text-gray-600 hover:text-gray-800">{{ $t('footer.termsOfService') }}</a>
-      </div>
+  <footer class="py-3 lg:py-0 border-t bg-background">
+    <div
+      class="container flex flex-col items-center justify-between gap-4 lg:h-16 lg:flex-row mx-auto px-4"
+    >
+      <p class="text-balance text-center text-sm leading-loose text-muted-foreground lg:text-left">
+        Built by
+        <a
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          class="font-medium underline underline-offset-4"
+          @click="handleCompanyClick"
+          >Your Company</a
+        >. All rights reserved. &copy; {{ new Date().getFullYear() }}
+      </p>
+      <nav class="flex gap-4 lg:gap-6">
+        <a
+          class="text-sm text-muted-foreground hover:text-foreground"
+          href="#"
+          @click.prevent="handleTermsClick"
+          >Terms</a
+        >
+        <a
+          class="text-sm text-muted-foreground hover:text-foreground"
+          href="#"
+          @click.prevent="handlePrivacyClick"
+          >Privacy</a
+        >
+      </nav>
     </div>
   </footer>
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n';
+const handleCompanyClick = event => {
+  event.preventDefault();
+  window.open('https://yourcompany.com', '_blank');
+};
 
-const { t } = useI18n();
+const handleTermsClick = event => {
+  event.preventDefault();
+  window.location.href = '/terms';
+};
+
+const handlePrivacyClick = event => {
+  event.preventDefault();
+  window.location.href = '/privacy';
+};
 </script>
-

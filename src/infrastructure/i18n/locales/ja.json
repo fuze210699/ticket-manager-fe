@@ -70,30 +70,68 @@
     "logout": "ログアウト",
     "reset": "リセット",
     "dueDate": "期限",
-    "priority": "優先度"
+    "priority": "優先度",
+    "filter": "フィルター",
+    "advancedFilter": "詳細フィルター",
+    "priorities": {
+      "1": "低",
+      "2": "中",
+      "3": "高"
+    },
+    "category": "カテゴリー",
+    "tags": "タグ",
+    "selectCategory": "カテゴリーを選択",
+    "allCategories": "すべてのカテゴリー",
+    "allPriorities": "すべての優先度",
+    "meeting": "会議",
+    "task": "タスク",
+    "reminder": "リマインダー",
+    "personal": "個人",
+    "title": "タイトル",
+    "description": "説明",
+    "event": "イベント",
+    "theme": "テーマ",
+    "view": "表示",
+    "timezone": "タイムゾーン",
+    "month": "月",
+    "week": "週",
+    "day": "日",
+    "today": "今日",
+    "startDate": "開始日",
+    "endDate": "終了日",
+    "allDay": "終日",
+    "location": "場所",
+    "color": "色",
+    "light": "ライト",
+    "dark": "ダーク",
+    "showWeekends": "週末を表示",
+    "showHolidays": "祝日を表示"
   },
   "workspace": {
     "namePlaceholder": "ワークスペース名を入力...",
     "descriptionPlaceholder": "ワークスペースの説明を入力...",
     "tickets": "チケット一覧",
-    "noTickets": "チケットがありません。「チケット追加」をクリックして作成してください。"
+    "noTickets": "チケットがありません。「チケット追加」をクリックして作成してください。",
+    "back": "戻る",
+    "addMilestone": "マイルストーンを追加",
+    "ticketDetails": "チケット詳細"
   },
   "ticket": {
     "add": "チケット追加",
-    "code": "チケットコード",
+    "code": "コード",
     "title": "タイトル",
     "link": "リンク",
     "milestone": "マイルストーン",
     "status": "ステータス",
-    "estimateTime": "見積時間（時間）",
-    "actualTime": "実際時間（時間）",
-    "startTime": "開始時間",
-    "endTime": "終了時間",
     "statuses": {
       "todo": "未着手",
       "inProgress": "進行中",
       "done": "完了"
     },
+    "estimateTime": "見積時間",
+    "actualTime": "実際時間",
+    "startTime": "開始時間",
+    "endTime": "終了時間",
     "name": "チケット名",
     "description": "説明",
     "assignee": "担当者",
@@ -123,15 +161,15 @@
     "description": "説明",
     "confirm": "依存関係を確認",
     "types": {
-      "hard": "Hard",
-      "soft": "Soft"
+      "hard": "ハード",
+      "soft": "ソフト"
     },
     "note": "メモ (オプション)",
     "save": "保存",
     "cancel": "キャンセル"
   },
   "footer": {
-    "appName": "チケットマネージャー",
+    "appName": "MySpace - カスタマイズ可能なワークスペース",
     "allRightsReserved": "全著作権所有",
     "privacyPolicy": "プライバシーポリシー",
     "termsOfService": "利用規約"
@@ -180,10 +218,13 @@
   },
   "nav": {
     "dashboard": "ダッシュボード",
+    "widgets": "ウィジェット",
+    "marketplace": "マーケットプレイス",
+    "templates": "テンプレート",
+    "guide": "ガイド",
     "projects": "プロジェクト",
     "tasks": "タスク",
     "reports": "レポート",
-    "guide": "ガイド",
     "profile": "プロフィール",
     "settings": "設定",
     "logout": "ログアウト"
@@ -246,13 +287,38 @@
     "passwordRequirements": "パスワードには大文字、小文字、数字を少なくとも1文字ずつ含める必要があります"
   },
   "dashboard": {
-    "title": "ダッシュボード",
-    "subtitle": "ワークスペースのカスタマイズ",
+    "title": "マイダッシュボード",
+    "subtitle": "ワークスペースをカスタマイズ",
     "createSpace": "新規スペース作成",
     "members": "メンバー",
     "openSpace": "スペースを開く",
-    "noSpacesTitle": "スペースがありません",
+    "noSpacesTitle": "スペースなし",
     "noSpaces": "スペースがありません。新規スペースを作成して開始してください。",
+    "editLayout": "レイアウトを編集",
+    "presetLayouts": {
+      "title": "プリセットレイアウト",
+      "default": "デフォルトレイアウト",
+      "dashboard": "ダッシュボードレイアウト",
+      "grid": "グリッドレイアウト",
+      "contentFocus": "コンテンツフォーカスレイアウト",
+      "social": "ソーシャルレイアウト",
+      "productivity": "生産性レイアウト"
+    },
+    "availableWidgets": "利用可能なウィジェット",
+    "dropZone": "ウィジェットをここにドロップ",
+    "addZone": "新しいゾーンを追加",
+    "changeTheme": "テーマを変更",
+    "exportLayout": "レイアウトをエクスポート",
+    "importLayout": "レイアウトをインポート",
+    "noWidgets": "ウィジェットがありません",
+    "addWidgetsDesc": "ダッシュボードが空です。下のボタンをクリックして編集モードに入り、ダッシュボードにウィジェットを追加してください。",
+    "sizes": {
+      "col-12": "全幅",
+      "col-8": "3分の2",
+      "col-6": "半分",
+      "col-4": "3分の1",
+      "col-3": "4分の1"
+    },
     "widgets": {
       "addWidget": "ウィジェットを追加",
       "customize": "カスタマイズ",
@@ -260,45 +326,11 @@
       "move": "移動",
       "remove": "削除",
       "settings": "ウィジェット設定"
-    },
-    "dropZone": "ウィジェットをドロップ",
-    "availableWidgets": "利用可能なウィジェット",
-    "sizes": {
-      "col-12": "全幅",
-      "col-6": "半幅",
-      "col-4": "3分の1",
-      "col-3": "4分の1"
-    },
-    "editLayout": "レイアウトを編集",
-    "presetLayouts": {
-      "title": "プリセットレイアウト",
-      "default": "デフォルトレイアウト",
-      "dashboard": "ダッシュボード",
-      "grid": "グリッド",
-      "contentFocus": "コンテンツフォーカス",
-      "social": "ソーシャル",
-      "productivity": "生産性",
-      "descriptions": {
-        "default": "メインコンテンツエリアと2つのサイドパネルを持つ基本的なレイアウト",
-        "dashboard": "大きなウィジェットと複数の小さなウィジェットでモニタリングに最適",
-        "grid": "グリッドパターンで均等サイズのウィジェット",
-        "contentFocus": "大きなメインコンテンツエリアとサイドバーウィジェット",
-        "social": "ソーシャルフィードと更新に最適化",
-        "productivity": "タスク管理と生産性ツールのバランスの取れたレイアウト"
-      }
-    },
-    "availableWidgets": "利用可能なウィジェット",
-    "dropZone": "ドロップゾーン",
-    "addZone": "ゾーンを追加",
-    "saveLayout": "レイアウトを保存",
-    "resetLayout": "レイアウトをリセット",
-    "exportLayout": "レイアウトをエクスポート",
-    "importLayout": "レイアウトをインポート",
-    "changeTheme": "テーマを変更"
+    }
   },
   "widgets": {
     "categories": {
-      "entertainment": "エンターテインメント",
+      "entertainment": "エンターテイメント",
       "productivity": "生産性",
       "social": "ソーシャル",
       "utilities": "ユーティリティ",
@@ -315,18 +347,53 @@
       },
       "calendar": {
         "title": "カレンダー",
-        "description": "スケジュールとイベントを管理"
+        "description": "スケジュールとイベントを管理",
+        "createEvent": "イベントを作成",
+        "editEvent": "イベントを編集",
+        "deleteEvent": "イベントを削除",
+        "eventDetails": "イベント詳細",
+        "noEvents": "イベントなし",
+        "settings": {
+          "title": "カレンダー設定",
+          "viewMode": "表示モード",
+          "timezone": "タイムゾーン",
+          "theme": "テーマ",
+          "showWeekends": "週末を表示",
+          "showHolidays": "祝日を表示"
+        }
       },
       "notes": {
         "title": "メモ",
-        "description": "メモを作成して整理"
+        "addNote": "メモを追加",
+        "history": "履歴",
+        "empty": "メモがありません。クリックして最初のメモを追加してください！",
+        "note": "メモ",
+        "titlePlaceholder": "メモのタイトルを入力",
+        "content": "内容",
+        "contentPlaceholder": "メモの内容をここに入力してください...",
+        "preview": "プレビュー",
+        "attachments": "添付ファイル",
+        "autoSave": "自動保存",
+        "syntaxHighlighting": "構文強調表示",
+        "versionHistory": "バージョン履歴",
+        "noSelection": "メモが選択されていません",
+        "selectOrCreate": "リストからメモを選択するか、新しいメモを作成してください",
+        "untitled": "無題のメモ",
+        "noContent": "内容なし",
+        "lastSaved": "最終保存",
+        "editing": "編集中..."
       },
       "todo": {
-        "title": "ToDoリスト",
-        "description": "タスクを管理",
-        "empty": "タスクがありません",
+        "title": "ToDo",
         "task": "タスク",
-        "titlePlaceholder": "何をする必要がありますか？"
+        "empty": "タスクなし",
+        "addTask": "タスクを追加",
+        "titlePlaceholder": "タスクタイトル",
+        "description": "説明",
+        "descriptionPlaceholder": "タスクの説明",
+        "subtasks": "サブタスク",
+        "addSubtask": "サブタスクを追加",
+        "subtaskPlaceholder": "サブタスクタイトル"
       },
       "weather": {
         "title": "天気",
@@ -338,4 +405,4 @@
       }
     }
   }
-} 
+}

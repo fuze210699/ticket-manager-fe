@@ -43,14 +43,51 @@
     "personal": "Personal",
     "title": "Title",
     "description": "Description",
-    "event": "Event"
+    "event": "Event",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "confirm": "Confirm",
+    "allRightsReserved": "All rights reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "theme": "Theme",
+    "view": "View",
+    "timezone": "Timezone",
+    "month": "Month",
+    "week": "Week",
+    "day": "Day",
+    "today": "Today",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "allDay": "All Day",
+    "location": "Location",
+    "color": "Color",
+    "light": "Light",
+    "dark": "Dark",
+    "showWeekends": "Show Weekends",
+    "showHolidays": "Show Holidays",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "precipitation": "Precipitation",
+    "dailyForecast": "Daily Forecast",
+    "unit": "Unit",
+    "updateInterval": "Update Interval"
   },
   "nav": {
     "dashboard": "Dashboard",
     "widgets": "Widgets",
     "marketplace": "Marketplace",
     "templates": "Templates",
-    "guide": "Guide"
+    "guide": "Guide",
+    "projects": "Projects",
+    "tasks": "Tasks",
+    "reports": "Reports",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout"
   },
   "footer": {
     "appName": "MySpace - Your Customizable Workspace",
@@ -101,19 +138,45 @@
     "noSpacesTitle": "No Spaces",
     "noSpaces": "You don't have any spaces yet. Create a new space to get started.",
     "editLayout": "Edit Layout",
-    "presetLayouts": "Preset Layouts",
+    "presetLayouts": {
+      "title": "Preset Layouts",
+      "default": "Default Layout",
+      "dashboard": "Dashboard Layout",
+      "grid": "Grid Layout",
+      "contentFocus": "Content Focus Layout",
+      "social": "Social Layout",
+      "productivity": "Productivity Layout",
+      "descriptions": {
+        "default": "Basic layout with a main content area and two side panels",
+        "dashboard": "Perfect for monitoring with one large widget and several smaller ones",
+        "grid": "Equal-sized widgets in a grid pattern",
+        "contentFocus": "Large main content area with side widgets",
+        "social": "Optimized for social feeds and updates",
+        "productivity": "Balanced layout for task management and productivity tools"
+      }
+    },
     "availableWidgets": "Available Widgets",
     "dropZone": "Drop widget here",
     "addZone": "Add New Zone",
     "changeTheme": "Change Theme",
     "exportLayout": "Export Layout",
     "importLayout": "Import Layout",
+    "noWidgets": "No Widgets Added",
+    "addWidgetsDesc": "Your dashboard is empty. Click the button below to enter edit mode and add widgets to your dashboard.",
     "sizes": {
       "col-12": "Full Width",
       "col-8": "Two Thirds",
       "col-6": "Half Width",
       "col-4": "One Third",
       "col-3": "Quarter Width"
+    },
+    "widgets": {
+      "addWidget": "Add Widget",
+      "customize": "Customize",
+      "resize": "Resize",
+      "move": "Move",
+      "remove": "Remove",
+      "settings": "Widget Settings"
     }
   },
   "widgets": {
@@ -135,12 +198,41 @@
       },
       "calendar": {
         "title": "Calendar",
-        "description": "Manage your schedule and events"
+        "description": "Manage your schedule and events",
+        "createEvent": "Create Event",
+        "editEvent": "Edit Event",
+        "deleteEvent": "Delete Event",
+        "eventDetails": "Event Details",
+        "noEvents": "No events",
+        "settings": {
+          "title": "Calendar Settings",
+          "viewMode": "View Mode",
+          "timezone": "Timezone",
+          "theme": "Theme",
+          "showWeekends": "Show Weekends",
+          "showHolidays": "Show Holidays"
+        }
       },
       "notes": {
         "title": "Notes",
-        "description": "Take quick notes and reminders",
-        "contentPlaceholder": "Enter your notes..."
+        "addNote": "Add Note",
+        "history": "History",
+        "empty": "No notes yet. Click to add your first note!",
+        "note": "Note",
+        "titlePlaceholder": "Enter note title",
+        "content": "Content",
+        "contentPlaceholder": "Enter your note content here...",
+        "preview": "Preview",
+        "attachments": "Attachments",
+        "autoSave": "Auto Save",
+        "syntaxHighlighting": "Syntax Highlighting",
+        "versionHistory": "Version History",
+        "noSelection": "No Note Selected",
+        "selectOrCreate": "Select a note from the list or create a new one",
+        "untitled": "Untitled Note",
+        "noContent": "No content",
+        "lastSaved": "Last saved",
+        "editing": "Editing..."
       },
       "todo": {
         "title": "Todo",
@@ -166,9 +258,12 @@
   },
   "workspace": {
     "namePlaceholder": "Enter workspace name",
+    "descriptionPlaceholder": "Enter workspace description",
     "back": "Back",
     "addMilestone": "Add Milestone",
-    "ticketDetails": "Ticket Details"
+    "ticketDetails": "Ticket Details",
+    "tickets": "Tickets",
+    "noTickets": "No tickets yet. Click 'Add Ticket' to create one."
   },
   "ticket": {
     "add": "Add Ticket",
@@ -184,7 +279,141 @@
     },
     "estimateTime": "Estimate Time",
     "actualTime": "Actual Time",
-    "close": "Close",
-    "save": "Save"
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "name": "Ticket Name",
+    "description": "Description",
+    "assignee": "Assignee",
+    "priority": "Priority",
+    "dueDate": "Due Date",
+    "save": "Save",
+    "details": "Ticket Details"
+  },
+  "milestone": {
+    "add": "Add Milestone",
+    "title": "Title",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "description": "Description",
+    "placeholder": {
+      "title": "Enter milestone title...",
+      "description": "Enter milestone description..."
+    },
+    "name": "Milestone Name",
+    "dueDate": "Due Date",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "dependency": {
+    "add": "Add Dependency",
+    "type": "Dependency Type",
+    "description": "Description",
+    "confirm": "Confirm Dependency",
+    "types": {
+      "hard": "Hard",
+      "soft": "Soft"
+    },
+    "note": "Note (Optional)",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "landing": {
+    "title": "Smart Ticket Management",
+    "description": "Efficient ticket management solution with an intuitive and user-friendly interface. Optimize your workflow with powerful features.",
+    "getStarted": "Get Started",
+    "benefits": {
+      "time": {
+        "title": "Save Time",
+        "description": "Automate repetitive tasks and manage tickets efficiently"
+      },
+      "accuracy": {
+        "title": "High Accuracy",
+        "description": "Track ticket progress and status accurately"
+      },
+      "collaboration": {
+        "title": "Easy Collaboration",
+        "description": "Work effectively as a team with sharing and notification features"
+      }
+    }
+  },
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot your password?",
+    "signIn": "Sign In",
+    "noAccount": "Don't have an account?",
+    "register": "Register"
+  },
+  "home": {
+    "title": "Workspace",
+    "subtitle": "Manage and organize your work",
+    "createWorkspace": "Create New Workspace",
+    "members": "members",
+    "openWorkspace": "Open Workspace",
+    "createWorkspaceTitle": "Create New Workspace",
+    "workspaceName": "Workspace Name",
+    "workspaceDescription": "Description",
+    "create": "Create",
+    "noWorkspaces": "You don't have any workspaces yet. Create a new workspace to get started.",
+    "noWorkspacesTitle": "No Workspaces"
+  },
+  "guide": {
+    "title": "User Guide",
+    "subtitle": "Learn how to use Ticket Manager effectively",
+    "gettingStarted": "Getting Started",
+    "features": "Features",
+    "tutorials": "Tutorials",
+    "faq": "FAQ",
+    "contact": "Contact Support"
+  },
+  "profile": {
+    "title": "Personal Profile",
+    "changeAvatar": "Change Avatar",
+    "avatarDescription": "Upload a new profile picture",
+    "personalInfo": "Personal Information",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "bio": "Bio",
+    "saveChanges": "Save Changes",
+    "uploadButton": "Upload Photo",
+    "bioPlaceholder": "Enter your bio...",
+    "bioDescription": "A brief description of your profile",
+    "saving": "Saving...",
+    "saved": "Profile saved",
+    "saveSuccess": "Profile updated successfully",
+    "saveError": "Failed to save",
+    "saveErrorDescription": "An error occurred while saving your profile. Please try again.",
+    "invalidFileType": "Invalid file type",
+    "pleaseSelectImage": "Please select an image file",
+    "fileTooLarge": "File is too large",
+    "maxFileSize": "Maximum file size is 5MB",
+    "avatarUploaded": "Avatar uploaded",
+    "avatarUploadSuccess": "Profile picture updated",
+    "uploadError": "Upload failed",
+    "uploadErrorDescription": "An error occurred while uploading your avatar. Please try again."
+  },
+  "settings": {
+    "title": "Settings",
+    "accountSettings": "Account Settings",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm New Password",
+    "notificationSettings": "Notification Settings",
+    "emailNotifications": "Email Notifications",
+    "emailNotificationsDescription": "Receive notifications about updates and changes via email",
+    "pushNotifications": "Push Notifications",
+    "pushNotificationsDescription": "Receive notifications directly in your browser",
+    "saveChanges": "Save Changes",
+    "saveSuccess": "Settings saved",
+    "saveError": "Failed to save settings",
+    "saveErrorDescription": "An error occurred while saving your settings. Please try again.",
+    "passwordMismatch": "New passwords do not match",
+    "invalidCurrentPassword": "Current password is incorrect",
+    "passwordTooShort": "Password must be at least 8 characters long",
+    "passwordRequirements": "Password must contain at least one uppercase letter, one lowercase letter, and one number"
   }
 }

@@ -37,6 +37,22 @@
     "selectCategory": "Chọn danh mục",
     "allCategories": "Tất cả danh mục",
     "allPriorities": "Tất cả mức ưu tiên",
+    "meeting": "Cuộc họp",
+    "task": "Công việc",
+    "reminder": "Nhắc nhở",
+    "personal": "Cá nhân",
+    "title": "Tiêu đề",
+    "description": "Mô tả",
+    "event": "Sự kiện",
+    "loading": "Đang tải...",
+    "error": "Đã xảy ra lỗi",
+    "success": "Thành công",
+    "confirm": "Xác nhận",
+    "allRightsReserved": "Đã đăng ký bản quyền",
+    "privacyPolicy": "Chính sách bảo mật",
+    "termsOfService": "Điều khoản dịch vụ",
+    "learnMore": "Tìm hiểu thêm",
+    "getStarted": "Bắt đầu",
     "theme": "Giao diện",
     "view": "Chế độ xem",
     "timezone": "Múi giờ",
@@ -44,7 +60,6 @@
     "week": "Tuần",
     "day": "Ngày",
     "today": "Hôm nay",
-    "event": "Sự kiện",
     "startDate": "Ngày bắt đầu",
     "endDate": "Ngày kết thúc",
     "allDay": "Cả ngày",
@@ -54,19 +69,17 @@
     "dark": "Tối",
     "showWeekends": "Hiện cuối tuần",
     "showHolidays": "Hiện ngày lễ",
-    "meeting": "Cuộc họp",
-    "task": "Công việc",
-    "reminder": "Nhắc nhở",
-    "personal": "Cá nhân",
-    "title": "Tiêu đề",
-    "description": "Mô tả"
+    "humidity": "Độ ẩm",
+    "wind": "Gió",
+    "precipitation": "Lượng mưa",
+    "dailyForecast": "Dự báo hàng ngày",
+    "unit": "Đơn vị",
+    "updateInterval": "Chu kỳ cập nhật"
   },
   "nav": {
-    "dashboard": "Bảng điều khiển",
-    "widgets": "Tiện ích",
-    "marketplace": "Cửa hàng",
-    "templates": "Mẫu",
-    "guide": "Hướng dẫn"
+    "profile": "Hồ sơ",
+    "settings": "Cài đặt",
+    "logout": "Đăng xuất"
   },
   "footer": {
     "appName": "MySpace - Không gian làm việc tùy chỉnh của bạn",
@@ -91,7 +104,6 @@
     "and": "và",
     "privacyPolicy": "Chính sách bảo mật",
     "creatingAccount": "Đang tạo tài khoản...",
-    "createAccount": "Tạo tài khoản",
     "error": {
       "title": "Lỗi",
       "passwordMismatch": "Mật khẩu không khớp",
@@ -109,13 +121,38 @@
     "forgotPassword": "Quên mật khẩu?"
   },
   "dashboard": {
-    "title": "Bảng điều khiển",
-    "subtitle": "Tùy chỉnh không gian làm việc",
+    "title": "Bảng Điều Khiển",
+    "subtitle": "Tùy chỉnh không gian làm việc của bạn",
     "createSpace": "Tạo không gian mới",
     "members": "thành viên",
     "openSpace": "Mở không gian",
     "noSpacesTitle": "Chưa có không gian",
     "noSpaces": "Bạn chưa có không gian nào. Tạo không gian mới để bắt đầu.",
+    "editLayout": "Chỉnh Sửa Bố Cục",
+    "presetLayouts": {
+      "title": "Bố Cục Mẫu",
+      "default": "Bố Cục Mặc Định",
+      "dashboard": "Bố Cục Bảng Điều Khiển",
+      "grid": "Bố Cục Lưới",
+      "contentFocus": "Bố Cục Tập Trung Nội Dung",
+      "social": "Bố Cục Mạng Xã Hội",
+      "productivity": "Bố Cục Năng Suất"
+    },
+    "availableWidgets": "Tiện Ích Khả Dụng",
+    "dropZone": "Thả tiện ích vào đây",
+    "addZone": "Thêm Vùng Mới",
+    "changeTheme": "Đổi Giao Diện",
+    "exportLayout": "Xuất Bố Cục",
+    "importLayout": "Nhập Bố Cục",
+    "noWidgets": "Chưa Có Tiện Ích Nào",
+    "addWidgetsDesc": "Bảng điều khiển của bạn đang trống. Nhấn nút bên dưới để vào chế độ chỉnh sửa và thêm tiện ích vào bảng điều khiển.",
+    "sizes": {
+      "col-12": "Toàn Màn Hình",
+      "col-8": "Hai Phần Ba",
+      "col-6": "Một Nửa",
+      "col-4": "Một Phần Ba",
+      "col-3": "Một Phần Tư"
+    },
     "widgets": {
       "addWidget": "Thêm tiện ích",
       "customize": "Tùy chỉnh",
@@ -123,41 +160,7 @@
       "move": "Di chuyển",
       "remove": "Xóa",
       "settings": "Cài đặt tiện ích"
-    },
-    "dropZone": "Thả widget vào đây",
-    "availableWidgets": "Widget có sẵn",
-    "sizes": {
-      "col-12": "Toàn màn hình",
-      "col-6": "Nửa màn hình",
-      "col-4": "Một phần ba",
-      "col-3": "Một phần tư"
-    },
-    "editLayout": "Chỉnh sửa bố cục",
-    "presetLayouts": {
-      "title": "Bố cục mẫu",
-      "default": "Bố cục mặc định",
-      "dashboard": "Bảng điều khiển",
-      "grid": "Lưới đều",
-      "contentFocus": "Tập trung nội dung",
-      "social": "Mạng xã hội",
-      "productivity": "Năng suất",
-      "descriptions": {
-        "default": "Bố cục cơ bản với một khu vực nội dung chính và hai bảng điều khiển bên",
-        "dashboard": "Hoàn hảo cho việc theo dõi với một widget lớn và nhiều widget nhỏ hơn",
-        "grid": "Các widget có kích thước bằng nhau trong mẫu lưới",
-        "contentFocus": "Khu vực nội dung chính lớn với các widget thanh bên",
-        "social": "Tối ưu hóa cho nguồn cấp dữ liệu và cập nhật mạng xã hội",
-        "productivity": "Bố cục cân bằng cho quản lý công việc và công cụ năng suất"
-      }
-    },
-    "availableWidgets": "Tiện ích có sẵn",
-    "dropZone": "Khu vực thả",
-    "addZone": "Thêm khu vực",
-    "saveLayout": "Lưu bố cục",
-    "resetLayout": "Đặt lại bố cục",
-    "exportLayout": "Xuất bố cục",
-    "importLayout": "Nhập bố cục",
-    "changeTheme": "Đổi giao diện"
+    }
   },
   "widgets": {
     "categories": {
@@ -195,8 +198,24 @@
       },
       "notes": {
         "title": "Ghi chú",
-        "description": "Tạo và tổ chức ghi chú",
-        "contentPlaceholder": "Nhập ghi chú của bạn..."
+        "addNote": "Thêm ghi chú",
+        "history": "Lịch sử",
+        "empty": "Chưa có ghi chú nào. Nhấp để thêm ghi chú đầu tiên!",
+        "note": "Ghi chú",
+        "titlePlaceholder": "Nhập tiêu đề ghi chú",
+        "content": "Nội dung",
+        "contentPlaceholder": "Nhập nội dung ghi chú của bạn ở đây...",
+        "preview": "Xem trước",
+        "attachments": "Tệp đính kèm",
+        "autoSave": "Tự động lưu",
+        "syntaxHighlighting": "Tô sáng cú pháp",
+        "versionHistory": "Lịch sử phiên bản",
+        "noSelection": "Chưa chọn ghi chú nào",
+        "selectOrCreate": "Chọn ghi chú từ danh sách hoặc tạo mới",
+        "untitled": "Ghi chú không tiêu đề",
+        "noContent": "Chưa có nội dung",
+        "lastSaved": "Lưu lần cuối",
+        "editing": "Đang chỉnh sửa..."
       },
       "todo": {
         "title": "Công việc",
@@ -222,9 +241,12 @@
   },
   "workspace": {
     "namePlaceholder": "Nhập tên không gian làm việc",
+    "descriptionPlaceholder": "Nhập mô tả không gian làm việc",
     "back": "Quay lại",
     "addMilestone": "Thêm cột mốc",
-    "ticketDetails": "Chi tiết ticket"
+    "ticketDetails": "Chi tiết ticket",
+    "tickets": "Tickets",
+    "noTickets": "Chưa có ticket nào. Nhấp vào 'Thêm Ticket' để tạo."
   },
   "ticket": {
     "add": "Thêm Ticket",
@@ -240,7 +262,141 @@
     },
     "estimateTime": "Thời gian dự kiến",
     "actualTime": "Thời gian thực tế",
-    "close": "Đóng",
-    "save": "Lưu"
+    "startTime": "Thời gian bắt đầu",
+    "endTime": "Thời gian kết thúc",
+    "name": "Tên Ticket",
+    "description": "Mô tả",
+    "assignee": "Người thực hiện",
+    "priority": "Ưu tiên",
+    "dueDate": "Ngày hết hạn",
+    "save": "Lưu",
+    "details": "Chi tiết Ticket"
+  },
+  "milestone": {
+    "add": "Thêm Cột mốc",
+    "title": "Tiêu đề",
+    "startTime": "Thời gian bắt đầu",
+    "endTime": "Thời gian kết thúc",
+    "description": "Mô tả",
+    "placeholder": {
+      "title": "Nhập tiêu đề cột mốc...",
+      "description": "Nhập mô tả cột mốc..."
+    },
+    "name": "Tên Cột mốc",
+    "dueDate": "Ngày hết hạn",
+    "save": "Lưu",
+    "cancel": "Hủy"
+  },
+  "dependency": {
+    "add": "Thêm Phụ thuộc",
+    "type": "Loại phụ thuộc",
+    "description": "Mô tả",
+    "confirm": "Xác nhận phụ thuộc",
+    "types": {
+      "hard": "Cứng",
+      "soft": "Mềm"
+    },
+    "note": "Ghi chú (Tùy chọn)",
+    "save": "Lưu",
+    "cancel": "Hủy"
+  },
+  "landing": {
+    "title": "Quản lý Ticket Thông minh",
+    "description": "Giải pháp quản lý ticket hiệu quả với giao diện trực quan và thân thiện với người dùng. Tối ưu hóa quy trình làm việc với các tính năng mạnh mẽ.",
+    "getStarted": "Bắt đầu",
+    "benefits": {
+      "time": {
+        "title": "Tiết kiệm thời gian",
+        "description": "Tự động hóa các tác vụ lặp lại và quản lý ticket hiệu quả"
+      },
+      "accuracy": {
+        "title": "Độ chính xác cao",
+        "description": "Theo dõi tiến độ và trạng thái ticket chính xác"
+      },
+      "collaboration": {
+        "title": "Cộng tác dễ dàng",
+        "description": "Làm việc hiệu quả như một đội với các tính năng chia sẻ và thông báo"
+      }
+    }
+  },
+  "login": {
+    "title": "Đăng nhập",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "rememberMe": "Ghi nhớ đăng nhập",
+    "forgotPassword": "Quên mật khẩu?",
+    "signIn": "Đăng nhập",
+    "noAccount": "Chưa có tài khoản?",
+    "register": "Đăng ký"
+  },
+  "home": {
+    "title": "Không gian làm việc",
+    "subtitle": "Quản lý và tổ chức công việc",
+    "createWorkspace": "Tạo không gian làm việc mới",
+    "members": "thành viên",
+    "openWorkspace": "Mở không gian làm việc",
+    "createWorkspaceTitle": "Tạo không gian làm việc mới",
+    "workspaceName": "Tên không gian làm việc",
+    "workspaceDescription": "Mô tả",
+    "create": "Tạo",
+    "noWorkspaces": "Bạn chưa có không gian làm việc nào. Tạo không gian làm việc mới để bắt đầu.",
+    "noWorkspacesTitle": "Chưa có không gian làm việc"
+  },
+  "guide": {
+    "title": "Hướng dẫn người dùng",
+    "subtitle": "Học cách sử dụng Ticket Manager hiệu quả",
+    "gettingStarted": "Bắt đầu",
+    "features": "Tính năng",
+    "tutorials": "Hướng dẫn",
+    "faq": "Câu hỏi thường gặp",
+    "contact": "Liên hệ hỗ trợ"
+  },
+  "profile": {
+    "title": "Hồ sơ cá nhân",
+    "changeAvatar": "Thay đổi ảnh đại diện",
+    "avatarDescription": "Tải lên ảnh đại diện mới",
+    "personalInfo": "Thông tin cá nhân",
+    "fullName": "Họ và tên",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "location": "Địa chỉ",
+    "bio": "Giới thiệu",
+    "saveChanges": "Lưu thay đổi",
+    "uploadButton": "Tải lên ảnh",
+    "bioPlaceholder": "Nhập giới thiệu của bạn...",
+    "bioDescription": "Mô tả ngắn về hồ sơ của bạn",
+    "saving": "Đang lưu...",
+    "saved": "Đã lưu hồ sơ",
+    "saveSuccess": "Cập nhật hồ sơ thành công",
+    "saveError": "Lưu thất bại",
+    "saveErrorDescription": "Đã xảy ra lỗi khi lưu hồ sơ của bạn. Vui lòng thử lại.",
+    "invalidFileType": "Loại tệp không hợp lệ",
+    "pleaseSelectImage": "Vui lòng chọn tệp ảnh",
+    "fileTooLarge": "Tệp quá lớn",
+    "maxFileSize": "Kích thước tệp tối đa là 5MB",
+    "avatarUploaded": "Đã tải lên ảnh đại diện",
+    "avatarUploadSuccess": "Đã cập nhật ảnh đại diện",
+    "uploadError": "Tải lên thất bại",
+    "uploadErrorDescription": "Đã xảy ra lỗi khi tải lên ảnh đại diện của bạn. Vui lòng thử lại."
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "accountSettings": "Cài đặt tài khoản",
+    "currentPassword": "Mật khẩu hiện tại",
+    "newPassword": "Mật khẩu mới",
+    "confirmPassword": "Xác nhận mật khẩu mới",
+    "notificationSettings": "Cài đặt thông báo",
+    "emailNotifications": "Thông báo qua email",
+    "emailNotificationsDescription": "Nhận thông báo về cập nhật và thay đổi qua email",
+    "pushNotifications": "Thông báo đẩy",
+    "pushNotificationsDescription": "Nhận thông báo trực tiếp trong trình duyệt",
+    "saveChanges": "Lưu thay đổi",
+    "saveSuccess": "Đã lưu cài đặt",
+    "saveError": "Lưu cài đặt thất bại",
+    "saveErrorDescription": "Đã xảy ra lỗi khi lưu cài đặt của bạn. Vui lòng thử lại.",
+    "passwordMismatch": "Mật khẩu mới không khớp",
+    "invalidCurrentPassword": "Mật khẩu hiện tại không đúng",
+    "passwordTooShort": "Mật khẩu phải có ít nhất 8 ký tự",
+    "passwordRequirements": "Mật khẩu phải chứa ít nhất một chữ hoa, một chữ thường và một số"
   }
 }

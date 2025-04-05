@@ -1,15 +1,13 @@
 <template>
-  <EditModeWidget
-    v-if="isEditMode"
-    :icon="ListTodo"
-    @remove="$emit('remove')"
-  />
+  <EditModeWidget v-if="isEditMode" :icon="ListTodo" @remove="$emit('remove')" />
   <div v-else class="h-full flex flex-col overflow-hidden bg-white dark:bg-gray-800">
     <!-- Header -->
     <div class="flex items-center justify-between p-4 border-b dark:border-gray-700">
       <div class="flex items-center gap-2">
         <ListTodo class="w-5 h-5 text-blue-500 dark:text-blue-400" />
-        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">{{ $t('widgets.types.todo.title') }}</h2>
+        <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
+          {{ $t('widgets.types.todo.title') }}
+        </h2>
       </div>
       <div class="flex items-center gap-2">
         <div class="relative">
@@ -18,29 +16,34 @@
             type="text"
             class="pl-8 pr-4 py-2 border dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
             :placeholder="$t('common.search')"
-          >
-          <Search class="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+          />
+          <Search
+            class="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
+          />
         </div>
         <button
           class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-200"
-          @click="showAddTask = true"
           :title="$t('widgets.types.todo.addTask')"
+          @click="showAddTask = true"
         >
           <Plus class="w-5 h-5 text-gray-600 dark:text-gray-300" />
         </button>
         <button
           class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-200"
-          @click="toggleFilter"
           :title="$t('common.filter')"
+          @click="toggleFilter"
         >
           <Filter class="w-5 h-5 text-gray-600 dark:text-gray-300" />
         </button>
         <button
           class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-200"
-          @click="showAdvancedFilter = !showAdvancedFilter"
           :title="$t('common.advancedFilter')"
+          @click="showAdvancedFilter = !showAdvancedFilter"
         >
-          <ChevronDown class="w-5 h-5 text-gray-600 dark:text-gray-300" :class="{ 'transform rotate-180': showAdvancedFilter }" />
+          <ChevronDown
+            class="w-5 h-5 text-gray-600 dark:text-gray-300"
+            :class="{ 'transform rotate-180': showAdvancedFilter }"
+          />
         </button>
       </div>
     </div>
@@ -60,11 +63,7 @@
             class="w-full px-3 py-2 border dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
           >
             <option :value="null">{{ $t('common.allCategories') }}</option>
-            <option
-              v-for="category in categories"
-              :key="category.id"
-              :value="category.id"
-            >
+            <option v-for="category in categories" :key="category.id" :value="category.id">
               {{ category.name }}
             </option>
           </select>
@@ -78,11 +77,7 @@
             class="w-full px-3 py-2 border dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
           >
             <option :value="null">{{ $t('common.allPriorities') }}</option>
-            <option
-              v-for="priority in priorities"
-              :key="priority.value"
-              :value="priority.value"
-            >
+            <option v-for="priority in priorities" :key="priority.value" :value="priority.value">
               {{ priority.label }}
             </option>
           </select>
@@ -101,7 +96,7 @@
         </span>
       </div>
       <div class="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-        <div 
+        <div
           class="h-full bg-blue-500 transition-all duration-500 ease-out"
           :style="{ width: `${progressPercentage}%` }"
         ></div>
@@ -120,12 +115,8 @@
           {{ $t('widgets.types.todo.addTask') }}
         </button>
       </div>
-      
-      <TransitionGroup
-        name="task-list"
-        tag="div"
-        class="space-y-2"
-      >
+
+      <TransitionGroup name="task-list" tag="div" class="space-y-2">
         <div
           v-for="task in filteredTasks"
           :key="task.id"
@@ -138,18 +129,20 @@
           @drop="onDrop($event, task)"
         >
           <GripVertical class="w-5 h-5 text-gray-400 self-center cursor-move" />
-          
+
           <button
             class="mt-1 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all duration-200"
             :class="[
-              task.completed ? 'bg-green-500 border-green-500' : 'border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500',
-              priorityColors[task.priority]
+              task.completed
+                ? 'bg-green-500 border-green-500'
+                : 'border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500',
+              priorityColors[task.priority],
             ]"
             @click="toggleTask(task)"
           >
             <Check v-if="task.completed" class="w-3 h-3 text-white" />
           </button>
-          
+
           <div class="flex-1 min-w-0">
             <div class="flex items-start justify-between gap-2">
               <div
@@ -158,24 +151,26 @@
               >
                 {{ task.title }}
               </div>
-              <div class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <div
+                class="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+              >
                 <button
                   class="p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
-                  @click="editTask(task)"
                   :title="$t('common.edit')"
+                  @click="editTask(task)"
                 >
                   <Pencil class="w-4 h-4" />
                 </button>
                 <button
                   class="p-1 text-gray-400 hover:text-red-500 transition-colors duration-200"
-                  @click="deleteTask(task.id)"
                   :title="$t('common.delete')"
+                  @click="deleteTask(task.id)"
                 >
                   <Trash2 class="w-4 h-4" />
                 </button>
               </div>
             </div>
-            
+
             <div class="mt-1 flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
               <span v-if="task.dueDate" class="flex items-center gap-1">
                 <Calendar class="w-4 h-4" />
@@ -197,7 +192,7 @@
                 {{ task.tags.map(t => t.name).join(', ') }}
               </span>
             </div>
-            
+
             <div v-if="task.subtasks?.length" class="mt-2 space-y-1">
               <div
                 v-for="subtask in task.subtasks"
@@ -239,9 +234,10 @@
           <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-lg mx-4">
             <div class="p-6">
               <h3 class="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-                {{ editingTask ? $t('common.edit') : $t('common.add') }} {{ $t('widgets.types.todo.task') }}
+                {{ editingTask ? $t('common.edit') : $t('common.add') }}
+                {{ $t('widgets.types.todo.task') }}
               </h3>
-              
+
               <div class="space-y-4">
                 <div>
                   <input
@@ -250,9 +246,9 @@
                     class="w-full px-3 py-2 border dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
                     :placeholder="$t('widgets.types.todo.titlePlaceholder')"
                     @keyup.enter="saveTask"
-                  >
+                  />
                 </div>
-                
+
                 <div>
                   <textarea
                     v-model="taskForm.description"
@@ -261,7 +257,7 @@
                     rows="3"
                   ></textarea>
                 </div>
-                
+
                 <div class="grid grid-cols-2 gap-4">
                   <div>
                     <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -271,9 +267,9 @@
                       v-model="taskForm.dueDate"
                       type="date"
                       class="w-full px-3 py-2 border dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
-                    >
+                    />
                   </div>
-                  
+
                   <div>
                     <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       {{ $t('common.priority') }}
@@ -292,7 +288,7 @@
                     </select>
                   </div>
                 </div>
-                
+
                 <div class="grid grid-cols-2 gap-4">
                   <div>
                     <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -312,7 +308,7 @@
                       </option>
                     </select>
                   </div>
-                  
+
                   <div>
                     <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       {{ $t('common.tags') }}
@@ -325,7 +321,7 @@
                         :class="[
                           taskForm.tags.some(t => t.id === tag.id)
                             ? 'bg-blue-500 text-white'
-                            : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
+                            : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600',
                         ]"
                         @click="toggleTag(tag)"
                       >
@@ -335,7 +331,7 @@
                     </div>
                   </div>
                 </div>
-                
+
                 <div>
                   <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     {{ $t('widgets.types.todo.subtasks') }}
@@ -351,7 +347,7 @@
                         type="text"
                         class="flex-1 px-3 py-2 border dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
                         :placeholder="$t('widgets.types.todo.subtaskPlaceholder')"
-                      >
+                      />
                       <button
                         class="p-2 text-gray-400 hover:text-red-500 transition-colors duration-200"
                         @click="removeSubtask(index)"
@@ -369,7 +365,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="bg-gray-50 dark:bg-gray-700 px-6 py-4 flex justify-end gap-4 rounded-b-lg">
               <button
                 class="px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors duration-200"
@@ -393,15 +389,33 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue';
-import { useToast } from '@/shared/components/ui/use-toast';
-import { Plus, Filter, CheckCircle2, Check, Pencil, Trash2, Flag, ListTodo, Search, Tag, Folder, Clock, Calendar, ChevronDown, ChevronUp, GripVertical, X } from 'lucide-vue-next';
+import { useToast } from '@core/ui/use-toast';
+import {
+  Plus,
+  Filter,
+  CheckCircle2,
+  Check,
+  Pencil,
+  Trash2,
+  Flag,
+  ListTodo,
+  Search,
+  Tag,
+  Folder,
+  Clock,
+  Calendar,
+  ChevronDown,
+  ChevronUp,
+  GripVertical,
+  X,
+} from 'lucide-vue-next';
 import EditModeWidget from './EditModeWidget.vue';
 
 const props = defineProps({
   isEditMode: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 });
 
 defineEmits(['move-up', 'move-down', 'remove']);
@@ -411,14 +425,14 @@ const { success } = useToast();
 const priorityColors = {
   low: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100',
   medium: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-100',
-  high: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-100'
+  high: 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-100',
 };
 
 // Define priorities array
 const priorities = [
   { value: 1, label: 'Low' },
   { value: 2, label: 'Medium' },
-  { value: 3, label: 'High' }
+  { value: 3, label: 'High' },
 ];
 
 // State
@@ -444,7 +458,7 @@ const taskForm = ref({
   tags: [],
   category: null,
   description: '',
-  attachments: []
+  attachments: [],
 });
 
 // Categories
@@ -452,7 +466,7 @@ const categories = [
   { id: 1, name: 'Work', color: 'blue' },
   { id: 2, name: 'Personal', color: 'green' },
   { id: 3, name: 'Shopping', color: 'purple' },
-  { id: 4, name: 'Health', color: 'red' }
+  { id: 4, name: 'Health', color: 'red' },
 ];
 
 // Tags
@@ -460,11 +474,11 @@ const availableTags = [
   { id: 1, name: 'Urgent', color: 'red' },
   { id: 2, name: 'Important', color: 'orange' },
   { id: 3, name: 'Later', color: 'blue' },
-  { id: 4, name: 'Routine', color: 'green' }
+  { id: 4, name: 'Routine', color: 'green' },
 ];
 
 // Keyboard shortcuts
-const handleKeydown = (e) => {
+const handleKeydown = e => {
   if (e.ctrlKey || e.metaKey) {
     switch (e.key) {
       case 'z':
@@ -519,13 +533,13 @@ const redo = () => {
 const isDragging = ref(false);
 const draggedTask = ref(null);
 
-const onDragStart = (task) => {
+const onDragStart = task => {
   isDragging.value = true;
   draggedTask.value = task;
   task.dragging = true;
 };
 
-const onDragEnd = (task) => {
+const onDragEnd = task => {
   isDragging.value = false;
   draggedTask.value = null;
   task.dragging = false;
@@ -533,10 +547,10 @@ const onDragEnd = (task) => {
 
 const onDrop = (event, targetTask) => {
   if (!draggedTask.value) return;
-  
+
   const targetIndex = tasks.value.findIndex(t => t.id === targetTask.id);
   const draggedIndex = tasks.value.findIndex(t => t.id === draggedTask.value.id);
-  
+
   if (draggedIndex !== -1 && targetIndex !== -1) {
     tasks.value.splice(draggedIndex, 1);
     tasks.value.splice(targetIndex, 0, draggedTask.value);
@@ -548,32 +562,33 @@ const onDrop = (event, targetTask) => {
 // Filter and search
 const filteredTasks = computed(() => {
   let result = [...tasks.value];
-  
+
   // Apply filters
   if (currentFilter.value === 'active') {
     result = result.filter(task => !task.completed);
   } else if (currentFilter.value === 'completed') {
     result = result.filter(task => task.completed);
   }
-  
+
   if (selectedPriority.value) {
     result = result.filter(task => task.priority === selectedPriority.value);
   }
-  
+
   if (selectedCategory.value) {
     result = result.filter(task => task.category === selectedCategory.value);
   }
-  
+
   // Apply search
   if (searchQuery.value) {
     const query = searchQuery.value.toLowerCase();
-    result = result.filter(task => 
-      task.title.toLowerCase().includes(query) ||
-      task.description?.toLowerCase().includes(query) ||
-      task.tags?.some(tag => tag.name.toLowerCase().includes(query))
+    result = result.filter(
+      task =>
+        task.title.toLowerCase().includes(query) ||
+        task.description?.toLowerCase().includes(query) ||
+        task.tags?.some(tag => tag.name.toLowerCase().includes(query))
     );
   }
-  
+
   return result.sort((a, b) => {
     if (a.priority !== b.priority) {
       return a.priority - b.priority;
@@ -597,11 +612,11 @@ const exportTasks = () => {
   URL.revokeObjectURL(url);
 };
 
-const importTasks = (event) => {
+const importTasks = event => {
   const file = event.target.files[0];
   if (file) {
     const reader = new FileReader();
-    reader.onload = (e) => {
+    reader.onload = e => {
       try {
         const importedTasks = JSON.parse(e.target.result);
         tasks.value = importedTasks;
@@ -626,7 +641,7 @@ const resetForm = () => {
     tags: [],
     category: null,
     description: '',
-    attachments: []
+    attachments: [],
   };
   editingTask.value = null;
 };
@@ -640,20 +655,20 @@ const toggleFilter = () => {
   showFilter.value = !showFilter.value;
 };
 
-const formatDate = (date) => {
+const formatDate = date => {
   return new Date(date).toLocaleDateString('en-US', {
     month: 'short',
-    day: 'numeric'
+    day: 'numeric',
   });
 };
 
-const toggleTask = (task) => {
+const toggleTask = task => {
   task.completed = !task.completed;
   localStorage.setItem('tasks', JSON.stringify(tasks.value));
   success(task.completed ? 'Task completed!' : 'Task uncompleted');
 };
 
-const editTask = (task) => {
+const editTask = task => {
   editingTask.value = task;
   taskForm.value = {
     title: task.title,
@@ -664,7 +679,7 @@ const editTask = (task) => {
     tags: task.tags,
     category: task.category,
     description: task.description,
-    attachments: task.attachments
+    attachments: task.attachments,
   };
   showAddTask.value = true;
 };
@@ -680,7 +695,7 @@ const saveTask = () => {
       tasks.value[index] = {
         ...editingTask.value,
         ...taskForm.value,
-        updatedAt: new Date()
+        updatedAt: new Date(),
       };
     }
     success('Task updated successfully');
@@ -689,7 +704,7 @@ const saveTask = () => {
       id: Date.now(),
       ...taskForm.value,
       createdAt: new Date(),
-      updatedAt: new Date()
+      updatedAt: new Date(),
     });
     success('Task added successfully');
   }
@@ -698,14 +713,14 @@ const saveTask = () => {
   closeAddTask();
 };
 
-const deleteTask = (id) => {
+const deleteTask = id => {
   tasks.value = tasks.value.filter(task => task.id !== id);
   localStorage.setItem('tasks', JSON.stringify(tasks.value));
   success('Task deleted successfully');
 };
 
 // Add tag toggling function
-const toggleTag = (tag) => {
+const toggleTag = tag => {
   const index = taskForm.value.tags.findIndex(t => t.id === tag.id);
   if (index === -1) {
     taskForm.value.tags.push(tag);
@@ -759,4 +774,4 @@ onUnmounted(() => {
   opacity: 0.5;
   background-color: rgba(0, 0, 0, 0.1);
 }
-</style> 
+</style>

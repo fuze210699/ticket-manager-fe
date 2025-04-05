@@ -1,13 +1,10 @@
-import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import tailwindcss from '@tailwindcss/vite'
+import { fileURLToPath, URL } from 'node:url';
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    tailwindcss(),
-  ],
+  plugins: [vue(), tailwindcss()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
@@ -21,7 +18,7 @@ export default defineConfig({
       '@utils': fileURLToPath(new URL('./src/shared/utils', import.meta.url)),
       '@hooks': fileURLToPath(new URL('./src/shared/hooks', import.meta.url)),
       '@composables': fileURLToPath(new URL('./src/shared/composables', import.meta.url)),
-      '@layouts': fileURLToPath(new URL('./src/layouts', import.meta.url))
-    }
+      '@layouts': fileURLToPath(new URL('./src/layouts', import.meta.url)),
+    },
   },
-})
+});

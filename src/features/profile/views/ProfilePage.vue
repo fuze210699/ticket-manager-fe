@@ -1,11 +1,9 @@
 <template>
   <div class="max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
-    <div
-      class="bg-card text-card-foreground shadow-sm rounded-lg border border-border"
-    >
+    <div class="bg-card text-card-foreground shadow-sm rounded-lg border border-border">
       <div class="px-4 py-5 sm:p-6">
         <h3 class="text-lg font-semibold leading-6 text-foreground mb-6">
-          {{ $t("profile.title", "Profile Settings") }}
+          {{ $t('profile.title', 'Profile Settings') }}
         </h3>
 
         <div class="space-y-8">
@@ -46,8 +44,8 @@
                 </svg>
               </button>
               <input
-                type="file"
                 ref="fileInput"
+                type="file"
                 class="hidden"
                 accept="image/*"
                 @change="handleFileChange"
@@ -55,13 +53,13 @@
             </div>
             <div class="flex-grow">
               <h4 class="text-base font-semibold text-foreground">
-                {{ $t("profile.changeAvatar", "Update your photo") }}
+                {{ $t('profile.changeAvatar', 'Update your photo') }}
               </h4>
               <p class="text-sm text-muted-foreground mt-1">
                 {{
                   $t(
-                    "profile.avatarDescription",
-                    "Upload a new avatar. We recommend a 1:1 aspect ratio."
+                    'profile.avatarDescription',
+                    'Upload a new avatar. We recommend a 1:1 aspect ratio.'
                   )
                 }}
               </p>
@@ -70,7 +68,7 @@
                 class="mt-2 inline-flex h-9 items-center justify-center rounded-md border border-input bg-background px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
                 @click="triggerFileInput"
               >
-                {{ $t("profile.uploadButton", "Upload Photo") }}
+                {{ $t('profile.uploadButton', 'Upload Photo') }}
               </button>
             </div>
           </div>
@@ -79,66 +77,54 @@
 
           <div class="space-y-4">
             <h4 class="text-base font-semibold text-foreground">
-              {{ $t("profile.personalInfo", "Personal Information") }}
+              {{ $t('profile.personalInfo', 'Personal Information') }}
             </h4>
 
             <div class="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
               <div>
-                <label
-                  for="fullName"
-                  class="block text-sm font-medium text-muted-foreground mb-1"
-                >
-                  {{ $t("profile.fullName", "Full Name") }}
+                <label for="fullName" class="block text-sm font-medium text-muted-foreground mb-1">
+                  {{ $t('profile.fullName', 'Full Name') }}
                 </label>
                 <input
-                  type="text"
                   id="fullName"
                   v-model="profile.fullName"
+                  type="text"
                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 />
               </div>
 
               <div>
-                <label
-                  for="email"
-                  class="block text-sm font-medium text-muted-foreground mb-1"
-                >
-                  {{ $t("profile.email", "Email Address") }}
+                <label for="email" class="block text-sm font-medium text-muted-foreground mb-1">
+                  {{ $t('profile.email', 'Email Address') }}
                 </label>
                 <input
-                  type="email"
                   id="email"
                   v-model="profile.email"
+                  type="email"
                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 />
               </div>
 
               <div>
-                <label
-                  for="phone"
-                  class="block text-sm font-medium text-muted-foreground mb-1"
-                >
-                  {{ $t("profile.phone", "Phone Number") }}
+                <label for="phone" class="block text-sm font-medium text-muted-foreground mb-1">
+                  {{ $t('profile.phone', 'Phone Number') }}
                 </label>
                 <input
-                  type="tel"
                   id="phone"
                   v-model="profile.phone"
+                  type="tel"
                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 />
               </div>
 
               <div>
-                <label
-                  for="location"
-                  class="block text-sm font-medium text-muted-foreground mb-1"
-                >
-                  {{ $t("profile.location", "Location") }}
+                <label for="location" class="block text-sm font-medium text-muted-foreground mb-1">
+                  {{ $t('profile.location', 'Location') }}
                 </label>
                 <input
-                  type="text"
                   id="location"
                   v-model="profile.location"
+                  type="text"
                   class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 />
               </div>
@@ -148,48 +134,55 @@
           <div class="border-t border-border"></div>
 
           <div>
-            <label
-              for="bio"
-              class="block text-sm font-medium text-muted-foreground mb-1"
-            >
-              {{ $t("profile.bio", "Bio") }}
+            <label for="bio" class="block text-sm font-medium text-muted-foreground mb-1">
+              {{ $t('profile.bio', 'Bio') }}
             </label>
             <textarea
               id="bio"
               v-model="profile.bio"
               rows="4"
               class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-              :placeholder="
-                $t(
-                  'profile.bioPlaceholder',
-                  'Tell us a little about yourself...'
-                )
-              "
+              :placeholder="$t('profile.bioPlaceholder', 'Tell us a little about yourself...')"
             ></textarea>
             <p class="mt-2 text-sm text-muted-foreground">
-              {{
-                $t(
-                  "profile.bioDescription",
-                  "Brief description for your profile."
-                )
-              }}
+              {{ $t('profile.bioDescription', 'Brief description for your profile.') }}
             </p>
           </div>
 
           <div class="flex justify-end pt-4">
             <button
-              @click="saveProfile"
               type="button"
               class="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
               :disabled="isSaving"
+              @click="saveProfile"
             >
               <span v-if="isSaving" class="mr-2">
-                <svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                <svg
+                  class="animate-spin h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    class="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4"
+                  ></circle>
+                  <path
+                    class="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
                 </svg>
               </span>
-              {{ isSaving ? $t("profile.saving", "Saving...") : $t("profile.saveChanges", "Save Changes") }}
+              {{
+                isSaving
+                  ? $t('profile.saving', 'Saving...')
+                  : $t('profile.saveChanges', 'Save Changes')
+              }}
             </button>
           </div>
         </div>
@@ -202,24 +195,24 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
-import { useToast } from "@shared/components/ui/use-toast";
-import { useI18n } from 'vue-i18n'
-import ApiSettings from "@/features/profile/components/ApiSettings.vue";
+import { ref } from 'vue';
+import { useToast } from '@core/ui/use-toast';
+import { useI18n } from 'vue-i18n';
+import ApiSettings from '@/features/profile/components/ApiSettings.vue';
 
-const { t } = useI18n()
+const { t } = useI18n();
 const { toast } = useToast();
 const fileInput = ref(null);
 const isSaving = ref(false);
 
 // Reactive state for profile data
 const profile = ref({
-  fullName: "John Doe",
-  email: "john@example.com",
-  phone: "+84 123 456 789",
-  location: "Ho Chi Minh City",
-  bio: "Software developer with 5 years of experience in web development.",
-  avatarUrl: null
+  fullName: 'John Doe',
+  email: 'john@example.com',
+  phone: '+84 123 456 789',
+  location: 'Ho Chi Minh City',
+  bio: 'Software developer with 5 years of experience in web development.',
+  avatarUrl: null,
 });
 
 // Trigger file input click
@@ -228,7 +221,7 @@ const triggerFileInput = () => {
 };
 
 // Handle file selection
-const handleFileChange = (event) => {
+const handleFileChange = event => {
   const file = event.target.files[0];
   if (!file) return;
 
@@ -237,7 +230,7 @@ const handleFileChange = (event) => {
     toast({
       title: t('profile.avatarError.title'),
       description: t('profile.avatarError.invalidType'),
-      type: 'error'
+      type: 'error',
     });
     return;
   }
@@ -247,19 +240,19 @@ const handleFileChange = (event) => {
     toast({
       title: t('profile.avatarError.title'),
       description: t('profile.avatarError.tooLarge'),
-      type: 'error'
+      type: 'error',
     });
     return;
   }
 
   // Create preview URL
   const reader = new FileReader();
-  reader.onload = (e) => {
+  reader.onload = e => {
     profile.value.avatarUrl = e.target.result;
     toast({
       title: t('profile.avatarSuccess.title'),
       description: t('profile.avatarSuccess.message'),
-      type: 'success'
+      type: 'success',
     });
   };
   reader.readAsDataURL(file);
@@ -290,18 +283,17 @@ const saveProfile = async () => {
     toast({
       title: t('profile.saveSuccess.title'),
       description: t('profile.saveSuccess.message'),
-      type: 'success'
+      type: 'success',
     });
   } catch (error) {
     console.error('Error saving profile:', error);
     toast({
       title: t('profile.saveError.title'),
       description: t('profile.saveError.message'),
-      type: 'error'
+      type: 'error',
     });
   } finally {
     isSaving.value = false;
   }
 };
 </script>
-

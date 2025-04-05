@@ -8,16 +8,18 @@
       <p class="text-muted-foreground mb-8">
         {{ $t('notFound.description') }}
       </p>
-      <router-link
-        to="/"
-        class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-      >
-        {{ $t('notFound.goHome') }}
-      </router-link>
+      <Button variant="primary">
+        <router-link
+          to="/"
+          class="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+        >
+          {{ $t('notFound.goHome') }}
+        </router-link>
+      </Button>
     </div>
   </div>
 </template>
 
 <script setup>
-// Không cần import useI18n vì $t đã được inject tự động
+import Button from '@core/ui/Button.vue';
 </script>

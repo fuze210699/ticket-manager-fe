@@ -20,8 +20,15 @@
               {{ $t('auth.email') }}
             </label>
             <div class="mt-1">
-              <input id="email" name="email" type="email" autocomplete="email" required v-model="email"
-                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" />
+              <input
+                id="email"
+                v-model="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              />
             </div>
           </div>
 
@@ -30,16 +37,27 @@
               {{ $t('auth.password') }}
             </label>
             <div class="mt-1">
-              <input id="password" name="password" type="password" autocomplete="current-password" required
+              <input
+                id="password"
                 v-model="password"
-                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" />
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required
+                class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              />
             </div>
           </div>
 
           <div class="flex items-center justify-between">
             <div class="flex items-center">
-              <input id="remember-me" name="remember-me" type="checkbox" v-model="rememberMe"
-                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" />
+              <input
+                id="remember-me"
+                v-model="rememberMe"
+                name="remember-me"
+                type="checkbox"
+                class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+              />
               <label for="remember-me" class="ml-2 block text-sm text-gray-900">
                 {{ $t('auth.rememberMe') }}
               </label>
@@ -56,11 +74,13 @@
             {{ $t('auth.error.enterCredentials') }}
           </div>
 
-          <div>
-            <button type="submit"
-              class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+          <div class="flex justify-center">
+            <Button
+              type="submit"
+              variant="primary"
+            >
               {{ $t('auth.signIn') }}
-            </button>
+            </Button>
           </div>
         </form>
       </div>
@@ -69,27 +89,27 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import Button from '@/core/ui/Button.vue';
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
-const router = useRouter()
-const email = ref('')
-const password = ref('')
-const rememberMe = ref(false)
-const error = ref('')
+const router = useRouter();
+const email = ref('');
+const password = ref('');
+const rememberMe = ref(false);
+const error = ref('');
 
 const handleLogin = () => {
   // TODO: Implement actual authentication logic
   // For now, we'll just simulate a successful login
   if (email.value && password.value) {
-    localStorage.setItem('isAuthenticated', 'true')
+    localStorage.setItem('isAuthenticated', 'true');
     if (rememberMe.value) {
-      localStorage.setItem('rememberedEmail', email.value)
+      localStorage.setItem('rememberedEmail', email.value);
     }
-    router.push('/home')
+    router.push('/home');
   } else {
-    error.value = 'Please enter both email and password'
+    error.value = 'Please enter both email and password';
   }
-}
+};
 </script>
-

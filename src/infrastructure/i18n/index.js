@@ -14,9 +14,8 @@ export const i18n = createI18n({
   messages: {
     en,
     vi,
-    ja
-  }
+    ja,
+  },
 });
 
 export default i18n;
-

@@ -1,72 +1,87 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import { i18n } from '@infrastructure/i18n'
+import { createRouter, createWebHistory } from 'vue-router';
+import { i18n } from '@infrastructure/i18n';
+
+// Define lazy-loaded components
+const RootLayout = () => import('@app/RootLayout.vue');
+const LandingPage = () => import('@features/landing/views/LandingPage.vue');
+const LoginPage = () => import('@features/auth/views/LoginPage.vue');
+const SignUpPage = () => import('@features/auth/views/SignUpPage.vue');
+const HomePage = () => import('@features/home/views/HomePage.vue');
+const WorkspaceDetail = () => import('@features/workspace/views/WorkspaceDetail.vue');
+const NotFound = () => import('@shared/components/NotFound.vue');
 
 const routes = [
   {
     path: '/:locale?',
-    component: () => import('@app/RootLayout.vue'),
+    component: RootLayout,
     beforeEnter: (to, from, next) => {
-      const locale = to.params.locale || navigator.language.split('-')[0]
+      const locale = to.params.locale || navigator.language.split('-')[0];
       if (['vi', 'en', 'ja'].includes(locale)) {
-        i18n.global.locale.value = locale
-        next()
+        i18n.global.locale.value = locale;
+        next();
       } else {
         // Redirect to default language if locale is not supported
-        next(`/${i18n.global.fallbackLocale.value}${to.path}`)
+        next(`/${i18n.global.fallbackLocale.value}${to.path}`);
       }
     },
     children: [
       {
         path: '',
         name: 'landing',
-        component: () => import('@features/landing/views/LandingPage.vue')
+        component: LandingPage,
       },
       {
         path: 'login',
         name: 'login',
-        component: () => import('@features/auth/views/LoginPage.vue')
+        component: LoginPage,
       },
       {
         path: 'signup',
         name: 'signup',
-        component: () => import('@features/auth/views/SignUpPage.vue')
+        component: SignUpPage,
       },
       {
         path: 'home',
         name: 'home',
-        component: () => import('@features/home/pages/HomePage.vue'),
-        meta: { requiresAuth: true }
+        component: HomePage,
+        meta: { requiresAuth: true },
       },
       {
         path: 'workspace/:id',
-        name: 'workspace',
-        component: () => import('@features/workspace/views/WorkspacePage.vue'),
-        meta: { requiresAuth: true }
+        name: 'workspace-detail',
+        component: WorkspaceDetail,
+        meta: { requiresAuth: true },
       },
       {
         path: ':pathMatch(.*)*',
         name: 'not-found',
-        component: () => import('@shared/components/NotFound.vue')
-      }
-    ]
-  }
-]
+        component: NotFound,
+      },
+    ],
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
-})
+  routes,
+});
 
 // Navigation guard to check authentication
 router.beforeEach((to, from, next) => {
-  if (to.name !== 'landing' && to.name !== 'login' && to.name !== 'signup' && to.name !== 'not-found' && !to.meta.requiresAuth) {
-    to.meta.requiresAuth = true
+  if (
+    to.name !== 'landing' &&
+    to.name !== 'login' &&
+    to.name !== 'signup' &&
+    to.name !== 'not-found' &&
+    !to.meta.requiresAuth
+  ) {
+    to.meta.requiresAuth = true;
   }
   if (to.meta.requiresAuth && !localStorage.getItem('isAuthenticated')) {
-    next({ name: 'login' })
+    next({ name: 'login' });
   } else {
-    next()
+    next();
   }
-})
+});
 
 export default router;

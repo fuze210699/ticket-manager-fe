@@ -1,56 +1,110 @@
 <template>
   <div class="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-    <div class="bg-white rounded-lg p-6 w-full max-w-md">
-      <div class="flex justify-between items-center mb-4">
-        <h2 class="text-lg font-semibold">{{ $t('milestone.add') }}</h2>
-        <button @click="emit('close')" class="text-gray-500 hover:text-gray-700 cursor-pointer">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <div class="bg-white rounded-lg p-6 w-[500px] space-y-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-semibold tracking-tight">{{ t('milestone.add') }}</h2>
+        <button
+          class="text-gray-500 hover:text-gray-900 cursor-pointer"
+          :aria-label="t('common.close')"
+          @click="emit('close')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-4 w-4"
+            aria-hidden="true"
+          >
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
       </div>
-      <div class="space-y-4">
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">{{ $t('milestone.title') }}</label>
-          <input v-model="milestone.name" type="text" :placeholder="$t('milestone.placeholder.title')"
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <form class="space-y-4" @submit.prevent="handleSave">
+        <div class="space-y-2">
+          <label for="milestone-name" class="text-sm font-medium">
+            {{ t('milestone.title') }}
+            <span class="text-red-500">*</span>
+          </label>
+          <input
+            id="milestone-name"
+            v-model="milestone.name"
+            type="text"
+            required
+            :placeholder="t('milestone.placeholder.title')"
+            :aria-label="t('milestone.title')"
+            class="flex h-10 w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          />
         </div>
-        <div>
-          <label class="block text-sm font-medium text-gray-700 mb-1">{{ $t('milestone.description') }}</label>
-          <textarea v-model="milestone.description" :placeholder="$t('milestone.placeholder.description')"
-            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 h-24 resize-none"></textarea>
+        <div class="space-y-2">
+          <label for="milestone-description" class="text-sm font-medium">
+            {{ t('milestone.description') }}
+          </label>
+          <textarea
+            id="milestone-description"
+            v-model="milestone.description"
+            :placeholder="t('milestone.placeholder.description')"
+            :aria-label="t('milestone.description')"
+            rows="3"
+            class="flex w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none"
+          ></textarea>
         </div>
         <div class="grid grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">{{ $t('milestone.startTime') }}</label>
-            <input v-model="milestone.startTime" type="datetime-local"
-              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <div class="space-y-2">
+            <label for="milestone-start" class="text-sm font-medium">
+              {{ t('milestone.startTime') }}
+              <span class="text-red-500">*</span>
+            </label>
+            <input
+              id="milestone-start"
+              v-model="milestone.startTime"
+              type="datetime-local"
+              required
+              :aria-label="t('milestone.startTime')"
+              class="flex h-10 w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            />
           </div>
-          <div>
-            <label class="block text-sm font-medium text-gray-700 mb-1">{{ $t('milestone.endTime') }}</label>
-            <input v-model="milestone.endTime" type="datetime-local"
-              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          <div class="space-y-2">
+            <label for="milestone-end" class="text-sm font-medium">
+              {{ t('milestone.endTime') }}
+              <span class="text-red-500">*</span>
+            </label>
+            <input
+              id="milestone-end"
+              v-model="milestone.endTime"
+              type="datetime-local"
+              required
+              :aria-label="t('milestone.endTime')"
+              class="flex h-10 w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            />
           </div>
         </div>
-      </div>
-      <div class="mt-6 flex justify-end gap-2">
-        <button @click="emit('close')" class="px-4 py-2 text-gray-700 hover:text-gray-900 cursor-pointer bg-gray-200 rounded-md">
-          {{ $t('common.close') }}
-        </button>
-        <button @click="handleSave" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 cursor-pointer">
-          {{ $t('common.save') }}
-        </button>
-      </div>
+        <div class="flex justify-end gap-3 pt-4">
+          <Button variant="secondary" :aria-label="t('common.cancel')" @click="emit('close')">
+            {{ t('common.cancel') }}
+          </Button>
+          <Button type="submit" :disabled="!isFormValid" :aria-label="t('common.save')">
+            {{ t('common.save') }}
+          </Button>
+        </div>
+      </form>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import { useMilestoneStore } from '@infrastructure/stores/milestone';
+import { ref, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+import Button from '@core/ui/Button.vue';
+import { useMilestoneStore } from '@core/stores/milestone';
 
+const { t } = useI18n();
 const emit = defineEmits(['close', 'save']);
 const milestoneStore = useMilestoneStore();
 
@@ -58,17 +112,32 @@ const milestone = ref({
   name: '',
   description: '',
   startTime: '',
-  endTime: ''
+  endTime: '',
+});
+
+const isFormValid = computed(() => {
+  return (
+    milestone.value.name.trim() &&
+    milestone.value.startTime &&
+    milestone.value.endTime &&
+    new Date(milestone.value.startTime) <= new Date(milestone.value.endTime)
+  );
 });
 
 const handleSave = () => {
-  const newMilestone = milestoneStore.addMilestone(milestone.value);
-  emit('save', newMilestone);
-  milestone.value = {
-    name: '',
-    description: '',
-    startTime: '',
-    endTime: ''
-  };
+  if (isFormValid.value) {
+    const newMilestone = milestoneStore.addMilestone({
+      ...milestone.value,
+      name: milestone.value.name.trim(),
+      description: milestone.value.description.trim(),
+    });
+    emit('save', newMilestone);
+    milestone.value = {
+      name: '',
+      description: '',
+      startTime: '',
+      endTime: '',
+    };
+  }
 };
-</script> 
+</script>
