@@ -4,9 +4,7 @@
       <!-- Header -->
       <div class="flex items-center justify-between mb-8">
         <div class="space-y-1">
-          <h1
-            class="text-3xl font-bold bg-clip-text text-primary"
-          >
+          <h1 class="text-3xl font-bold bg-clip-text text-primary">
             {{ $t('dashboard.title') }}
           </h1>
           <p class="text-gray-500 text-lg">{{ $t('dashboard.subtitle') }}</p>
@@ -318,15 +316,15 @@ onMounted(() => {
 
 /* Precise calculations for width with gap-4 (1rem) */
 .w-1\/2 {
-  width: calc(50% - 0.5rem);  /* Half the gap (1rem / 2) */
+  width: calc(50% - 0.5rem); /* Half the gap (1rem / 2) */
 }
 
 .w-1\/3 {
-  width: calc(33.333333% - 0.6667rem);  /* Adjusted for 3-column layout */
+  width: calc(33.333333% - 0.6667rem); /* Adjusted for 3-column layout */
 }
 
 .w-1\/4 {
-  width: calc(25% - 0.75rem);  /* Adjusted for 4-column layout */
+  width: calc(25% - 0.75rem); /* Adjusted for 4-column layout */
 }
 
 .widget-container {

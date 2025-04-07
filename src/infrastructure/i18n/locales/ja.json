@@ -74,9 +74,13 @@
     "filter": "フィルター",
     "advancedFilter": "詳細フィルター",
     "priorities": {
+      "low": "低",
+      "medium": "中",
+      "high": "高",
       "1": "低",
       "2": "中",
-      "3": "高"
+      "3": "高",
+      "4": "なし"
     },
     "category": "カテゴリー",
     "tags": "タグ",
@@ -105,7 +109,13 @@
     "light": "ライト",
     "dark": "ダーク",
     "showWeekends": "週末を表示",
-    "showHolidays": "祝日を表示"
+    "showHolidays": "祝日を表示",
+    "humidity": "湿度",
+    "wind": "風",
+    "precipitation": "降水量",
+    "dailyForecast": "天気予報",
+    "unit": "単位",
+    "updateInterval": "更新間隔"
   },
   "workspace": {
     "namePlaceholder": "ワークスペース名を入力...",
@@ -249,21 +259,21 @@
     "location": "所在地",
     "bio": "自己紹介",
     "saveChanges": "変更を保存",
-    "uploadButton": "写真をアップロード",
-    "bioPlaceholder": "自己紹介を入力してください...",
+    "uploadButton": "画像をアップロード",
+    "bioPlaceholder": "自己紹介を入力...",
     "bioDescription": "プロフィールの簡単な説明",
     "saving": "保存中...",
-    "saved": "プロフィールを保存しました",
-    "saveSuccess": "プロフィールが正常に更新されました",
-    "saveError": "保存に失敗しました",
+    "saved": "プロフィールを保存",
+    "saveSuccess": "プロフィールを更新しました",
+    "saveError": "保存に失敗",
     "saveErrorDescription": "プロフィールの保存中にエラーが発生しました。もう一度お試しください。",
-    "invalidFileType": "無効なファイル形式です",
+    "invalidFileType": "無効なファイル形式",
     "pleaseSelectImage": "画像ファイルを選択してください",
     "fileTooLarge": "ファイルが大きすぎます",
     "maxFileSize": "最大ファイルサイズは5MBです",
-    "avatarUploaded": "アバターをアップロードしました",
-    "avatarUploadSuccess": "プロフィール画像が更新されました",
-    "uploadError": "アップロードに失敗しました",
+    "avatarUploaded": "アバターをアップロード",
+    "avatarUploadSuccess": "アバターを更新しました",
+    "uploadError": "アップロードに失敗",
     "uploadErrorDescription": "アバターのアップロード中にエラーが発生しました。もう一度お試しください。"
   },
   "settings": {
@@ -271,20 +281,20 @@
     "accountSettings": "アカウント設定",
     "currentPassword": "現在のパスワード",
     "newPassword": "新しいパスワード",
-    "confirmPassword": "新しいパスワードの確認",
+    "confirmPassword": "新しいパスワードを確認",
     "notificationSettings": "通知設定",
     "emailNotifications": "メール通知",
-    "emailNotificationsDescription": "更新や変更に関する通知をメールで受け取る",
+    "emailNotificationsDescription": "更新と変更に関する通知をメールで受け取る",
     "pushNotifications": "プッシュ通知",
     "pushNotificationsDescription": "ブラウザで直接通知を受け取る",
     "saveChanges": "変更を保存",
-    "saveSuccess": "設定を保存しました",
-    "saveError": "設定の保存に失敗しました",
+    "saveSuccess": "設定を保存",
+    "saveError": "設定の保存に失敗",
     "saveErrorDescription": "設定の保存中にエラーが発生しました。もう一度お試しください。",
     "passwordMismatch": "新しいパスワードが一致しません",
     "invalidCurrentPassword": "現在のパスワードが正しくありません",
     "passwordTooShort": "パスワードは8文字以上である必要があります",
-    "passwordRequirements": "パスワードには大文字、小文字、数字を少なくとも1文字ずつ含める必要があります"
+    "passwordRequirements": "パスワードは大文字、小文字、数字を少なくとも1文字ずつ含める必要があります"
   },
   "dashboard": {
     "title": "マイダッシュボード",
@@ -297,27 +307,42 @@
     "editLayout": "レイアウトを編集",
     "presetLayouts": {
       "title": "プリセットレイアウト",
+      "search": "レイアウトを検索...",
       "default": "デフォルトレイアウト",
-      "dashboard": "ダッシュボードレイアウト",
-      "grid": "グリッドレイアウト",
-      "contentFocus": "コンテンツフォーカスレイアウト",
-      "social": "ソーシャルレイアウト",
-      "productivity": "生産性レイアウト"
+      "codeReview": "コードレビュー",
+      "debugging": "デバッグ",
+      "database": "データベース",
+      "monitoring": "モニタリング",
+      "testing": "テスト",
+      "deployment": "デプロイメント",
+      "documentation": "ドキュメント",
+      "analytics": "分析",
+      "security": "セキュリティ",
+      "default_description": "メインコンテンツエリアと2つのサイドパネルを持つ基本的なレイアウト",
+      "codeReview_description": "差分表示とコメント機能を備えたコードレビューワークフローに最適",
+      "debugging_description": "コンソール、ネットワーク、状態検査を備えたデバッグレイアウト",
+      "database_description": "データベース管理とクエリインターフェース",
+      "monitoring_description": "システムモニタリングとパフォーマンスメトリクス",
+      "testing_description": "テスト実行とカバレッジ分析",
+      "deployment_description": "デプロイメントパイプラインとリリース管理",
+      "documentation_description": "APIドキュメントとコードリファレンス",
+      "analytics_description": "ユーザー行動とアプリケーション分析",
+      "security_description": "セキュリティモニタリングと監査ログ"
     },
     "availableWidgets": "利用可能なウィジェット",
     "dropZone": "ウィジェットをここにドロップ",
-    "addZone": "新しいゾーンを追加",
+    "addZone": "新規ゾーン追加",
     "changeTheme": "テーマを変更",
     "exportLayout": "レイアウトをエクスポート",
     "importLayout": "レイアウトをインポート",
-    "noWidgets": "ウィジェットがありません",
-    "addWidgetsDesc": "ダッシュボードが空です。下のボタンをクリックして編集モードに入り、ダッシュボードにウィジェットを追加してください。",
+    "noWidgets": "ウィジェットなし",
+    "addWidgetsDesc": "ダッシュボードが空です。下のボタンをクリックして編集モードに入り、ウィジェットを追加してください。",
     "sizes": {
       "col-12": "全幅",
-      "col-8": "3分の2",
-      "col-6": "半分",
-      "col-4": "3分の1",
-      "col-3": "4分の1"
+      "col-8": "2/3幅",
+      "col-6": "半幅",
+      "col-4": "1/3幅",
+      "col-3": "1/4幅"
     },
     "widgets": {
       "addWidget": "ウィジェットを追加",
@@ -338,11 +363,11 @@
     },
     "types": {
       "music": {
-        "title": "ミュージックプレーヤー",
+        "title": "音楽プレーヤー",
         "description": "お気に入りの音楽を聴く"
       },
       "video": {
-        "title": "ビデオプレーヤー",
+        "title": "動画プレーヤー",
         "description": "YouTube、TikTokなどの動画を視聴"
       },
       "calendar": {
@@ -363,41 +388,82 @@
         }
       },
       "notes": {
-        "title": "メモ",
-        "addNote": "メモを追加",
+        "title": "ノート",
+        "description": "メモやアイデアを整理して保存",
+        "addNote": "ノートを追加",
         "history": "履歴",
-        "empty": "メモがありません。クリックして最初のメモを追加してください！",
-        "note": "メモ",
-        "titlePlaceholder": "メモのタイトルを入力",
+        "empty": "ノートがありません。クリックして最初のノートを追加！",
+        "note": "ノート",
+        "titlePlaceholder": "ノートのタイトルを入力",
         "content": "内容",
-        "contentPlaceholder": "メモの内容をここに入力してください...",
+        "contentPlaceholder": "ノートの内容をここに入力...",
         "preview": "プレビュー",
         "attachments": "添付ファイル",
         "autoSave": "自動保存",
-        "syntaxHighlighting": "構文強調表示",
+        "syntaxHighlighting": "シンタックスハイライト",
         "versionHistory": "バージョン履歴",
-        "noSelection": "メモが選択されていません",
-        "selectOrCreate": "リストからメモを選択するか、新しいメモを作成してください",
-        "untitled": "無題のメモ",
+        "noSelection": "ノートが選択されていません",
+        "selectOrCreate": "リストからノートを選択するか、新規作成",
+        "untitled": "無題のノート",
         "noContent": "内容なし",
         "lastSaved": "最終保存",
         "editing": "編集中..."
       },
       "todo": {
-        "title": "ToDo",
+        "title": "タスクリスト",
+        "description": "タスクを管理し、進捗を追跡",
         "task": "タスク",
-        "empty": "タスクなし",
+        "tasks": "タスク",
+        "empty": "タスクがありません",
         "addTask": "タスクを追加",
-        "titlePlaceholder": "タスクタイトル",
-        "description": "説明",
-        "descriptionPlaceholder": "タスクの説明",
-        "subtasks": "サブタスク",
+        "titlePlaceholder": "タスクのタイトルを入力",
+        "descriptionPlaceholder": "タスクの説明を入力",
+        "subtaskPlaceholder": "サブタスクのタイトルを入力",
         "addSubtask": "サブタスクを追加",
-        "subtaskPlaceholder": "サブタスクタイトル"
+        "subtaskProgress": "{completed}/{total} サブタスク完了",
+        "subtasks": "サブタスク",
+        "overdue": "期限超過",
+        "highPriority": "高優先度",
+        "filters": {
+          "all": "すべて",
+          "active": "進行中",
+          "completed": "完了",
+          "overdue": "期限超過",
+          "highPriority": "高優先度"
+        },
+        "sortBy": "並び替え",
+        "sortOptions": {
+          "dueDate": "期限",
+          "priority": "優先度",
+          "category": "カテゴリー"
+        },
+        "filterBy": "フィルター",
+        "filterOptions": {
+          "allPriorities": "すべての優先度",
+          "allCategories": "すべてのカテゴリー"
+        },
+        "categories": {
+          "work": "仕事",
+          "personal": "個人",
+          "shopping": "買い物",
+          "health": "健康"
+        },
+        "tags": {
+          "urgent": "緊急",
+          "important": "重要",
+          "later": "後で",
+          "routine": "ルーティン"
+        },
+        "stats": {
+          "completed": "完了",
+          "remaining": "残り",
+          "highPriority": "高優先度",
+          "overdue": "期限超過"
+        }
       },
       "weather": {
         "title": "天気",
-        "description": "現在の天気と予報を確認"
+        "description": "現在の天気と予報を表示"
       },
       "workspace": {
         "title": "ワークスペース",

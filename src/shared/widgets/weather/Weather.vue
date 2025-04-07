@@ -182,7 +182,7 @@ import {
   X,
   RotateCcw,
 } from 'lucide-vue-next';
-import EditModeWidget from './EditModeWidget.vue';
+import EditModeWidget from '@/shared/components/widgets/EditModeWidget.vue';
 
 defineProps({
   isEditMode: {

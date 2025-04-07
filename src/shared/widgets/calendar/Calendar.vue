@@ -355,7 +355,7 @@ import {
   User,
   CheckCircle2,
 } from 'lucide-vue-next';
-import EditModeWidget from './EditModeWidget.vue';
+import EditModeWidget from '@/shared/components/widgets/EditModeWidget.vue';
 
 const props = defineProps({
   isEditMode: {

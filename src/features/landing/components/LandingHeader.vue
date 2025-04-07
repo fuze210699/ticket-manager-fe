@@ -46,7 +46,9 @@
               />
             </svg>
           </button>
-          <Button variant="outline" size="sm" @click="$emit('navigate', '/login')"> Sign In </Button>
+          <Button variant="outline" size="sm" @click="$emit('navigate', '/login')">
+            Sign In
+          </Button>
         </div>
       </div>
 

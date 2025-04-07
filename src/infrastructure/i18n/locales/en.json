@@ -18,7 +18,7 @@
     "back": "Back",
     "next": "Next",
     "previous": "Previous",
-    "search": "Search",
+    "search": "Search...",
     "settings": "Settings",
     "profile": "Profile",
     "logout": "Logout",
@@ -28,9 +28,13 @@
     "filter": "Filter",
     "advancedFilter": "Advanced Filter",
     "priorities": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
       "1": "Low",
       "2": "Medium",
-      "3": "High"
+      "3": "High",
+      "4": "None"
     },
     "category": "Category",
     "tags": "Tags",
@@ -140,20 +144,27 @@
     "editLayout": "Edit Layout",
     "presetLayouts": {
       "title": "Preset Layouts",
+      "search": "Search layouts...",
       "default": "Default Layout",
-      "dashboard": "Dashboard Layout",
-      "grid": "Grid Layout",
-      "contentFocus": "Content Focus Layout",
-      "social": "Social Layout",
-      "productivity": "Productivity Layout",
-      "descriptions": {
-        "default": "Basic layout with a main content area and two side panels",
-        "dashboard": "Perfect for monitoring with one large widget and several smaller ones",
-        "grid": "Equal-sized widgets in a grid pattern",
-        "contentFocus": "Large main content area with side widgets",
-        "social": "Optimized for social feeds and updates",
-        "productivity": "Balanced layout for task management and productivity tools"
-      }
+      "codeReview": "Code Review",
+      "debugging": "Debugging",
+      "database": "Database",
+      "monitoring": "Monitoring",
+      "testing": "Testing",
+      "deployment": "Deployment",
+      "documentation": "Documentation",
+      "analytics": "Analytics",
+      "security": "Security",
+      "default_description": "Basic layout with one main content area and two side panels",
+      "codeReview_description": "Perfect for code review workflow with diff view and comments",
+      "debugging_description": "Debugging layout with console, network, and state inspection",
+      "database_description": "Database management and query interface",
+      "monitoring_description": "System monitoring and performance metrics",
+      "testing_description": "Test execution and coverage analysis",
+      "deployment_description": "Deployment pipeline and release management",
+      "documentation_description": "API documentation and code reference",
+      "analytics_description": "User behavior and application analytics",
+      "security_description": "Security monitoring and audit logs"
     },
     "availableWidgets": "Available Widgets",
     "dropZone": "Drop widget here",
@@ -198,12 +209,12 @@
       },
       "calendar": {
         "title": "Calendar",
-        "description": "Manage your schedule and events",
+        "description": "Manage schedules and events",
         "createEvent": "Create Event",
         "editEvent": "Edit Event",
         "deleteEvent": "Delete Event",
         "eventDetails": "Event Details",
-        "noEvents": "No events",
+        "noEvents": "No Events",
         "settings": {
           "title": "Calendar Settings",
           "viewMode": "View Mode",
@@ -215,6 +226,7 @@
       },
       "notes": {
         "title": "Notes",
+        "description": "Organize and save your thoughts and ideas",
         "addNote": "Add Note",
         "history": "History",
         "empty": "No notes yet. Click to add your first note!",
@@ -227,43 +239,108 @@
         "autoSave": "Auto Save",
         "syntaxHighlighting": "Syntax Highlighting",
         "versionHistory": "Version History",
-        "noSelection": "No Note Selected",
+        "noSelection": "No note selected",
         "selectOrCreate": "Select a note from the list or create a new one",
         "untitled": "Untitled Note",
         "noContent": "No content",
         "lastSaved": "Last saved",
-        "editing": "Editing..."
+        "editing": "Editing...",
+        "searchPlaceholder": "Search notes...",
+        "showFilters": "Show filters",
+        "hideFilters": "Hide filters",
+        "filterByTags": "Filter by tags",
+        "filterByDate": "Filter by date",
+        "hasAttachments": "Has attachments",
+        "pin": "Pin note",
+        "unpin": "Unpin note",
+        "share": "Share",
+        "shareNote": "Share note",
+        "import": "Import",
+        "export": "Export",
+        "importJson": "Import from JSON",
+        "sync": "Sync",
+        "addItem": "Add item",
+        "addDiagram": "Add diagram",
+        "addAttachment": "Add attachment",
+        "restore": "Restore",
+        "keyboardShortcuts": "Keyboard shortcuts",
+        "newNote": "New note",
+        "saveNote": "Save note",
+        "focusSearch": "Focus search",
+        "toggleEditorMode": "Toggle editor mode",
+        "togglePin": "Toggle pin",
+        "addCodeBlock": "Add code block"
       },
       "todo": {
-        "title": "Todo",
-        "task": "tasks",
+        "title": "Todo List",
+        "description": "Manage tasks and track progress",
+        "task": "Task",
+        "tasks": "Tasks",
         "empty": "No tasks yet",
         "addTask": "Add Task",
-        "titlePlaceholder": "Task title",
-        "description": "Description",
-        "descriptionPlaceholder": "Task description",
-        "subtasks": "Subtasks",
+        "titlePlaceholder": "Enter task title",
+        "descriptionPlaceholder": "Enter task description",
+        "subtaskPlaceholder": "Enter subtask title",
         "addSubtask": "Add Subtask",
-        "subtaskPlaceholder": "Subtask title"
+        "subtaskProgress": "{completed}/{total} subtasks completed",
+        "subtasks": "Subtasks",
+        "overdue": "Overdue",
+        "highPriority": "High Priority",
+        "filters": {
+          "all": "All",
+          "active": "Active",
+          "completed": "Completed",
+          "overdue": "Overdue",
+          "highPriority": "High Priority"
+        },
+        "sortBy": "Sort By",
+        "sortOptions": {
+          "dueDate": "Due Date",
+          "priority": "Priority",
+          "category": "Category"
+        },
+        "filterBy": "Filter By",
+        "filterOptions": {
+          "allPriorities": "All Priorities",
+          "allCategories": "All Categories"
+        },
+        "categories": {
+          "work": "Work",
+          "personal": "Personal",
+          "shopping": "Shopping",
+          "health": "Health"
+        },
+        "tags": {
+          "urgent": "Urgent",
+          "important": "Important",
+          "later": "Later",
+          "routine": "Routine"
+        },
+        "stats": {
+          "completed": "Completed",
+          "remaining": "Remaining",
+          "highPriority": "High Priority",
+          "overdue": "Overdue"
+        }
       },
       "weather": {
         "title": "Weather",
-        "description": "Check current weather and forecast"
+        "description": "View current weather and forecast"
       },
       "workspace": {
         "title": "Workspace",
-        "description": "Manage your projects and tasks"
+        "description": "Manage projects and tasks"
       }
     }
   },
   "workspace": {
-    "namePlaceholder": "Enter workspace name",
-    "descriptionPlaceholder": "Enter workspace description",
+    "namePlaceholder": "Enter workspace name...",
+    "descriptionPlaceholder": "Enter workspace description...",
     "back": "Back",
     "addMilestone": "Add Milestone",
     "ticketDetails": "Ticket Details",
     "tickets": "Tickets",
-    "noTickets": "No tickets yet. Click 'Add Ticket' to create one."
+    "noTickets": "No tickets yet. Click 'Add Ticket' to create."
   },
   "ticket": {
     "add": "Add Ticket",
@@ -319,7 +396,7 @@
   },
   "landing": {
     "title": "Smart Ticket Management",
-    "description": "Efficient ticket management solution with an intuitive and user-friendly interface. Optimize your workflow with powerful features.",
+    "description": "Efficient ticket management solution with intuitive and user-friendly interface. Optimize your workflow with powerful features.",
     "getStarted": "Get Started",
     "benefits": {
       "time": {
@@ -337,7 +414,7 @@
     }
   },
   "login": {
-    "title": "Login",
+    "title": "Sign In",
     "email": "Email",
     "password": "Password",
     "rememberMe": "Remember me",
@@ -371,7 +448,7 @@
   "profile": {
     "title": "Personal Profile",
     "changeAvatar": "Change Avatar",
-    "avatarDescription": "Upload a new profile picture",
+    "avatarDescription": "Upload new profile picture",
     "personalInfo": "Personal Information",
     "fullName": "Full Name",
     "email": "Email",
@@ -379,20 +456,20 @@
     "location": "Location",
     "bio": "Bio",
     "saveChanges": "Save Changes",
-    "uploadButton": "Upload Photo",
+    "uploadButton": "Upload Image",
     "bioPlaceholder": "Enter your bio...",
     "bioDescription": "A brief description of your profile",
     "saving": "Saving...",
     "saved": "Profile saved",
     "saveSuccess": "Profile updated successfully",
-    "saveError": "Failed to save",
+    "saveError": "Save failed",
     "saveErrorDescription": "An error occurred while saving your profile. Please try again.",
     "invalidFileType": "Invalid file type",
     "pleaseSelectImage": "Please select an image file",
-    "fileTooLarge": "File is too large",
+    "fileTooLarge": "File too large",
     "maxFileSize": "Maximum file size is 5MB",
     "avatarUploaded": "Avatar uploaded",
-    "avatarUploadSuccess": "Profile picture updated",
+    "avatarUploadSuccess": "Avatar updated successfully",
     "uploadError": "Upload failed",
     "uploadErrorDescription": "An error occurred while uploading your avatar. Please try again."
   },
@@ -409,11 +486,11 @@
     "pushNotificationsDescription": "Receive notifications directly in your browser",
     "saveChanges": "Save Changes",
     "saveSuccess": "Settings saved",
-    "saveError": "Failed to save settings",
+    "saveError": "Save settings failed",
     "saveErrorDescription": "An error occurred while saving your settings. Please try again.",
     "passwordMismatch": "New passwords do not match",
     "invalidCurrentPassword": "Current password is incorrect",
-    "passwordTooShort": "Password must be at least 8 characters long",
+    "passwordTooShort": "Password must be at least 8 characters",
     "passwordRequirements": "Password must contain at least one uppercase letter, one lowercase letter, and one number"
   }
 }

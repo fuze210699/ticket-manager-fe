@@ -1,54 +1,34 @@
 <template>
   <div class="flex items-center gap-4">
     <template v-if="isEditMode">
-      <Button
-        variant="primary"
-        @click="saveLayout"
-      >
+      <Button variant="primary" @click="saveLayout">
         <Save class="w-5 h-5 mr-2" />
         {{ $t('common.save') }}
       </Button>
-      <Button
-        variant="secondary"
-        @click="resetLayout"
-      >
+      <Button variant="secondary" @click="resetLayout">
         <Undo class="w-5 h-5 mr-2" />
         {{ $t('common.reset') }}
       </Button>
-      <Button
-        variant="destructive"
-        @click="exitEditMode"
-      >
+      <Button variant="destructive" @click="exitEditMode">
         <X class="w-5 h-5 mr-2" />
         {{ $t('common.cancel') }}
       </Button>
-      <Button
-        variant="primary"
-        @click="toggleTheme"
-      >
+      <Button variant="primary" @click="toggleTheme">
         <Palette class="w-5 h-5 mr-2" />
         {{ $t('dashboard.changeTheme') }}
       </Button>
-      <Button
-        variant="primary"
-        @click="exportLayout"
-      >
+      <Button variant="primary" @click="exportLayout">
         <Download class="w-5 h-5 mr-2" />
         {{ $t('dashboard.exportLayout') }}
       </Button>
-      <Button
-        variant="primary"
-      >
+      <Button variant="primary">
         <Upload class="w-5 h-5 mr-2" />
         {{ $t('dashboard.importLayout') }}
         <input type="file" accept=".json" class="hidden" @change="handleImportLayout" />
       </Button>
     </template>
     <template v-else-if="hasAnyWidgets">
-      <Button
-        variant="primary"
-        @click="enterEditMode"
-      >
+      <Button variant="primary" @click="enterEditMode">
         <Edit class="w-5 h-5 mr-2" />
         {{ $t('dashboard.editLayout') }}
       </Button>
@@ -57,27 +37,18 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue';
-import {
-  Save,
-  Undo,
-  X,
-  Palette,
-  Download,
-  Upload,
-  Edit,
-} from 'lucide-vue-next';
+import { Save, Undo, X, Palette, Download, Upload, Edit } from 'lucide-vue-next';
 import Button from '@/core/ui/Button.vue';
 
 defineProps({
   isEditMode: {
     type: Boolean,
-    required: true
+    required: true,
   },
   hasAnyWidgets: {
     type: Boolean,
-    required: true
-  }
+    required: true,
+  },
 });
 
 const emit = defineEmits([
@@ -87,7 +58,7 @@ const emit = defineEmits([
   'enter-edit-mode',
   'toggle-theme',
   'export',
-  'import'
+  'import',
 ]);
 
 const saveLayout = () => {
@@ -114,7 +85,7 @@ const exportLayout = () => {
   emit('export');
 };
 
-const handleImportLayout = (event) => {
+const handleImportLayout = event => {
   emit('import', event);
 };
 </script>

@@ -12,7 +12,9 @@
       class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center gap-4 rounded-xl"
     >
       <!-- Drag Handle -->
-      <div class="cursor-move text-white hover:text-blue-500 transition-colors duration-200 cursor-move">
+      <div
+        class="cursor-move text-white hover:text-blue-500 transition-colors duration-200 cursor-move"
+      >
         <GripVertical class="w-6 h-6" />
       </div>
       <!-- Delete Button -->

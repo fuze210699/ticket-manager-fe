@@ -10,32 +10,12 @@
       ]"
     >
       <h3 class="text-lg font-semibold mb-4">{{ $t('dashboard.presetLayouts.title') }}</h3>
-      <div class="grid grid-cols-3 gap-2">
-        <button
-          v-for="preset in presetLayouts"
-          :key="preset.name"
-          :class="[
-            'p-2 rounded-lg transition-all duration-200 text-center group flex items-center justify-center flex-col',
-            widgetThemes[currentTheme].buttonBg,
-            widgetThemes[currentTheme].buttonHover,
-            'hover:shadow-md hover:scale-[1.02] active:scale-[0.98]',
-          ]"
-          @click="applyPreset(preset)"
-        >
-          <div
-            :class="[
-              'text-xl mb-1',
-              widgetThemes[currentTheme].iconColor,
-              widgetThemes[currentTheme].buttonHover,
-            ]"
-          >
-            <component :is="preset.icon" class="w-6 h-6" />
-          </div>
-          <div :class="['text-sm font-medium', widgetThemes[currentTheme].text]">
-            {{ $t(`dashboard.presetLayouts.${preset.name}`) }}
-          </div>
-        </button>
-      </div>
+      <PresetLayoutList
+        :layouts="presetLayouts"
+        :current-theme="currentTheme"
+        :widget-themes="widgetThemes"
+        @select="applyPreset"
+      />
     </div>
 
     <div
@@ -89,6 +69,7 @@
 
 <script setup>
 import { defineProps, defineEmits } from 'vue';
+import PresetLayoutList from './PresetLayoutList.vue';
 
 defineProps({
   availableWidgets: {

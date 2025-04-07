@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white border-b border-gray-200 w-full">
-    <div class="py-3 container mx-auto">
+    <div class="p-3">
       <!-- Desktop Header -->
       <div class="hidden md:flex items-center justify-between">
         <div class="flex items-center gap-4 cursor-pointer" @click="goToHome">
@@ -155,7 +155,6 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import LogoIcon from '@/shared/components/icons/LogoIcon.vue';
-import Button from '@core/ui/Button.vue';
 
 const route = useRoute();
 const router = useRouter();

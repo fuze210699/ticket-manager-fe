@@ -1,18 +1,27 @@
 import { markRaw } from 'vue';
-import Calendar from '@/shared/components/widgets/Calendar.vue';
-import Notes from '@/shared/components/widgets/Notes.vue';
-import Weather from '@/shared/components/widgets/Weather.vue';
-import Todo from '@/shared/components/widgets/Todo.vue';
+import Calendar from '@shared/widgets/calendar/Calendar.vue';
+import Notes from '@shared/widgets/note/Notes.vue';
+import Weather from '@shared/widgets/weather/Weather.vue';
+import Todo from '@shared/widgets/todo/Todo.vue';
+import WorkSpace from '@shared/widgets/ticket_manager/views/WorkSpace.vue';
+import YouTubePlayerVue from '@shared/widgets/music/YouTubePlayer.vue';
 import {
   Calendar as CalendarIcon,
   StickyNote,
   CloudSun,
   ListTodo,
   LayoutGrid,
-  LayoutTemplate,
-  LayoutList,
-  AlignJustify,
-  Share2,
+  Ticket,
+  GitCompare,
+  Bug,
+  Database,
+  Activity,
+  TestTube,
+  Rocket,
+  FileText,
+  BarChart,
+  Shield,
+  MusicIcon,
 } from 'lucide-vue-next';
 
 export const AVAILABLE_WIDGETS = [
@@ -36,6 +45,16 @@ export const AVAILABLE_WIDGETS = [
     component: markRaw(Todo),
     icon: ListTodo,
   },
+  {
+    name: 'workspace',
+    component: markRaw(WorkSpace),
+    icon: Ticket,
+  },
+  {
+    name: 'music',
+    component: markRaw(YouTubePlayerVue),
+    icon: MusicIcon,
+  },
 ];
 
 export const PRESET_LAYOUTS = [
@@ -50,62 +69,109 @@ export const PRESET_LAYOUTS = [
     ],
   },
   {
-    name: 'dashboard',
-    icon: LayoutTemplate,
-    description: 'Perfect for monitoring with one large widget and multiple smaller ones',
+    name: 'codeReview',
+    icon: GitCompare,
+    description: 'Perfect for code review workflow with diff view and comments',
     zones: [
-      { widget: null, minimized: false, size: 'col-8' },
-      { widget: null, minimized: false, size: 'col-4' },
-      { widget: null, minimized: false, size: 'col-4' },
-      { widget: null, minimized: false, size: 'col-4' },
-      { widget: null, minimized: false, size: 'col-4' },
+      { widget: null, minimized: false, size: 'col-8' },  // Main code diff view
+      { widget: null, minimized: false, size: 'col-4' },  // Comments & suggestions
+      { widget: null, minimized: false, size: 'col-6' },  // File tree
+      { widget: null, minimized: false, size: 'col-6' },  // Commit history
     ],
   },
   {
-    name: 'grid',
-    icon: LayoutList,
-    description: 'Equal-sized widgets in a grid pattern',
+    name: 'debugging',
+    icon: Bug,
+    description: 'Debugging layout with console, network, and state inspection',
     zones: [
-      { widget: null, minimized: false, size: 'col-3' },
-      { widget: null, minimized: false, size: 'col-3' },
-      { widget: null, minimized: false, size: 'col-3' },
-      { widget: null, minimized: false, size: 'col-3' },
+      { widget: null, minimized: false, size: 'col-8' },  // Main application view
+      { widget: null, minimized: false, size: 'col-4' },  // Console output
+      { widget: null, minimized: false, size: 'col-6' },  // Network requests
+      { widget: null, minimized: false, size: 'col-6' },  // State inspector
     ],
   },
   {
-    name: 'contentFocus',
-    icon: AlignJustify,
-    description: 'Large main content area with sidebar widgets',
+    name: 'database',
+    icon: Database,
+    description: 'Database management and query interface',
     zones: [
-      { widget: null, minimized: false, size: 'col-8' },
-      { widget: null, minimized: false, size: 'col-4' },
-      { widget: null, minimized: false, size: 'col-8' },
-      { widget: null, minimized: false, size: 'col-4' },
+      { widget: null, minimized: false, size: 'col-4' },  // Database schema
+      { widget: null, minimized: false, size: 'col-8' },  // Query editor
+      { widget: null, minimized: false, size: 'col-12' }, // Results table
+      { widget: null, minimized: false, size: 'col-6' },  // Query history
+      { widget: null, minimized: false, size: 'col-6' },  // Query statistics
     ],
   },
   {
-    name: 'social',
-    icon: Share2,
-    description: 'Optimized for social media feeds and updates',
+    name: 'monitoring',
+    icon: Activity,
+    description: 'System monitoring and performance metrics',
     zones: [
-      { widget: null, minimized: false, size: 'col-4' },
-      { widget: null, minimized: false, size: 'col-4' },
-      { widget: null, minimized: false, size: 'col-4' },
-      { widget: null, minimized: false, size: 'col-12' },
+      { widget: null, minimized: false, size: 'col-6' },  // CPU/Memory usage
+      { widget: null, minimized: false, size: 'col-6' },  // Network traffic
+      { widget: null, minimized: false, size: 'col-4' },  // Error rates
+      { widget: null, minimized: false, size: 'col-4' },  // Response times
+      { widget: null, minimized: false, size: 'col-4' },  // Active users
     ],
   },
   {
-    name: 'productivity',
-    icon: ListTodo,
-    description: 'Balanced layout for task management and productivity tools',
+    name: 'testing',
+    icon: TestTube,
+    description: 'Test execution and coverage analysis',
     zones: [
-      { widget: null, minimized: false, size: 'col-6' },
-      { widget: null, minimized: false, size: 'col-6' },
-      { widget: null, minimized: false, size: 'col-4' },
-      { widget: null, minimized: false, size: 'col-4' },
-      { widget: null, minimized: false, size: 'col-4' },
+      { widget: null, minimized: false, size: 'col-8' },  // Test results
+      { widget: null, minimized: false, size: 'col-4' },  // Test coverage
+      { widget: null, minimized: false, size: 'col-6' },  // Test logs
+      { widget: null, minimized: false, size: 'col-6' },  // Performance metrics
     ],
   },
+  {
+    name: 'deployment',
+    icon: Rocket,
+    description: 'Deployment pipeline and release management',
+    zones: [
+      { widget: null, minimized: false, size: 'col-12' }, // Pipeline status
+      { widget: null, minimized: false, size: 'col-6' },  // Build logs
+      { widget: null, minimized: false, size: 'col-6' },  // Deployment history
+      { widget: null, minimized: false, size: 'col-4' },  // Environment status
+      { widget: null, minimized: false, size: 'col-4' },  // Release notes
+      { widget: null, minimized: false, size: 'col-4' },  // Rollback options
+    ],
+  },
+  {
+    name: 'documentation',
+    icon: FileText,
+    description: 'API documentation and code reference',
+    zones: [
+      { widget: null, minimized: false, size: 'col-3' },  // Navigation
+      { widget: null, minimized: false, size: 'col-6' },  // Content
+      { widget: null, minimized: false, size: 'col-3' },  // Examples
+      { widget: null, minimized: false, size: 'col-12' }, // Interactive playground
+    ],
+  },
+  {
+    name: 'analytics',
+    icon: BarChart,
+    description: 'User behavior and application analytics',
+    zones: [
+      { widget: null, minimized: false, size: 'col-8' },  // Main chart
+      { widget: null, minimized: false, size: 'col-4' },  // Key metrics
+      { widget: null, minimized: false, size: 'col-6' },  // User segments
+      { widget: null, minimized: false, size: 'col-6' },  // Conversion funnel
+    ],
+  },
+  {
+    name: 'security',
+    icon: Shield,
+    description: 'Security monitoring and audit logs',
+    zones: [
+      { widget: null, minimized: false, size: 'col-6' },  // Security alerts
+      { widget: null, minimized: false, size: 'col-6' },  // Access logs
+      { widget: null, minimized: false, size: 'col-4' },  // Vulnerability scan
+      { widget: null, minimized: false, size: 'col-4' },  // Compliance status
+      { widget: null, minimized: false, size: 'col-4' },  // Security score
+    ],
+  }
 ];
 
 export const WIDGET_THEMES = {

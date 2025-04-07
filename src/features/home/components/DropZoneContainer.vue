@@ -44,8 +44,8 @@
           ]"
         >
           <!-- Width selector in edit mode -->
-          <div 
-            v-if="isEditMode" 
+          <div
+            v-if="isEditMode"
             class="absolute top-4 left-4 z-10 opacity-0 group-hover:opacity-100 transition-all duration-200"
           >
             <div class="relative">
@@ -58,7 +58,9 @@
                 @click="toggleWidthMenu(index)"
               >
                 <component :is="getSizeIcon(zone.size)" class="w-3.5 h-3.5" />
-                <span class="hidden sm:inline text-xs font-medium">{{ $t(`dashboard.sizes.${zone.size}`) }}</span>
+                <span class="hidden sm:inline text-xs font-medium">{{
+                  $t(`dashboard.sizes.${zone.size}`)
+                }}</span>
                 <ChevronDown class="w-3 h-3" />
               </button>
               <div
@@ -89,8 +91,8 @@
           </div>
 
           <!-- Delete button for empty dropzones -->
-          <div 
-            v-if="isEditMode && !zone.widget" 
+          <div
+            v-if="isEditMode && !zone.widget"
             class="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-all duration-200"
           >
             <button
