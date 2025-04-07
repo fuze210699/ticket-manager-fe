@@ -43,7 +43,7 @@
     "save": "保存",
     "addNew": "新規追加...",
     "expand": "展開",
-    "collapse": "折りたたみ",
+    "collapse": "折りたたむ",
     "language": "言語",
     "vietnamese": "ベトナム語",
     "english": "英語",
@@ -73,6 +73,9 @@
     "priority": "優先度",
     "filter": "フィルター",
     "advancedFilter": "詳細フィルター",
+    "all": "すべて",
+    "apply": "適用",
+    "optional": "任意",
     "priorities": {
       "low": "低",
       "medium": "中",
@@ -124,7 +127,19 @@
     "noTickets": "チケットがありません。「チケット追加」をクリックして作成してください。",
     "back": "戻る",
     "addMilestone": "マイルストーンを追加",
-    "ticketDetails": "チケット詳細"
+    "ticketDetails": "チケット詳細",
+    "deleteTitle": "ワークスペースを削除",
+    "deleteConfirm": "この操作は取り消せません。確認するにはDELETEと入力してください。",
+    "typeDelete": "DELETEと入力して確認",
+    "deleteWorkspace": "ワークスペースを削除",
+    "editTitle": "ワークスペースを編集",
+    "editWorkspace": "ワークスペースを編集",
+    "name": "名前",
+    "namePlaceholder": "ワークスペース名を入力",
+    "description": "説明",
+    "descriptionPlaceholder": "ワークスペースの説明を入力",
+    "members": "メンバー",
+    "membersPlaceholder": "メンバー数を入力"
   },
   "ticket": {
     "add": "チケット追加",
@@ -148,7 +163,15 @@
     "priority": "優先度",
     "dueDate": "期限",
     "save": "保存",
-    "details": "チケット詳細"
+    "details": "チケット詳細",
+    "openLink": "リンクを開く",
+    "dependencyTarget": "依存先",
+    "dependencySource": "依存元",
+    "priorities": {
+      "high": "高",
+      "medium": "中",
+      "low": "低"
+    }
   },
   "milestone": {
     "add": "マイルストーン追加",
@@ -215,16 +238,20 @@
   },
   "home": {
     "title": "ワークスペース",
-    "subtitle": "作業の管理と整理",
-    "createWorkspace": "新規ワークスペース作成",
-    "members": "メンバー",
+    "subtitle": "ワークスペースとチケットを管理",
+    "createWorkspace": "ワークスペースを作成",
     "openWorkspace": "ワークスペースを開く",
+    "members": "メンバー",
+    "noWorkspacesTitle": "ワークスペースがありません",
+    "noWorkspaces": "新しいワークスペースを作成して開始",
+    "importWorkspace": "ワークスペースをインポート",
+    "exportWorkspace": "ワークスペースをエクスポート",
+    "invalidImportData": "インポートデータの形式が無効です",
+    "importError": "データのインポート中にエラーが発生しました",
     "createWorkspaceTitle": "新規ワークスペース作成",
     "workspaceName": "ワークスペース名",
-    "workspaceDescription": "説明",
-    "create": "作成",
-    "noWorkspaces": "ワークスペースがありません。新規ワークスペースを作成して開始してください。",
-    "noWorkspacesTitle": "ワークスペースがありません"
+    "workspaceDescription": "ワークスペースの説明",
+    "create": "作成"
   },
   "nav": {
     "dashboard": "ダッシュボード",

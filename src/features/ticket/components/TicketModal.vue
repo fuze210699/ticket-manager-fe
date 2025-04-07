@@ -99,6 +99,21 @@
             <option value="Done">{{ t('ticket.statuses.done') }}</option>
           </select>
         </div>
+        <div class="space-y-2">
+          <label for="ticket-priority" class="text-sm font-medium">
+            {{ t('ticket.priority') }}
+          </label>
+          <select
+            id="ticket-priority"
+            v-model="ticket.priority"
+            :aria-label="t('ticket.priority')"
+            class="flex h-10 w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none"
+          >
+            <option value="high">{{ t('ticket.priorities.high') }}</option>
+            <option value="medium">{{ t('ticket.priorities.medium') }}</option>
+            <option value="low">{{ t('ticket.priorities.low') }}</option>
+          </select>
+        </div>
         <div class="grid grid-cols-2 gap-4">
           <div class="space-y-2">
             <label for="ticket-estimate" class="text-sm font-medium">
@@ -149,16 +164,14 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import Button from '@core/ui/Button.vue';
-import { useMilestoneStore } from '@core/stores/milestone';
-import { useTicketStore } from '@core/stores/ticket';
+import router from '@infrastructure/router';
+import { generateUUID } from '@core/utils/helper';
 
 const { t } = useI18n();
 const emit = defineEmits(['save', 'close']);
-const milestoneStore = useMilestoneStore();
-const ticketStore = useTicketStore();
 
 const ticket = ref({
   code: '',
@@ -166,11 +179,32 @@ const ticket = ref({
   link: '',
   milestone: '',
   status: 'To Do',
+  priority: 'medium',
   estimateTime: 0,
   actualTime: 0,
 });
 
-const milestones = computed(() => milestoneStore.getAllMilestones());
+const milestones = ref([]);
+
+// Load milestones from localStorage
+const loadMilestones = () => {
+  const savedWorkspaces = localStorage.getItem('workspaces');
+  if (savedWorkspaces) {
+    const workspaces = JSON.parse(savedWorkspaces);
+    const workspaceId = parseInt(router.currentRoute.value.params.id);
+    const workspace = workspaces.find(w => w.id === workspaceId);
+    if (workspace && workspace.elements) {
+      // Filter out milestone elements
+      milestones.value = workspace.elements
+        .filter(element => element.data?.type === 'milestone')
+        .map(element => element.data);
+    }
+  }
+};
+
+onMounted(() => {
+  loadMilestones();
+});
 
 const isFormValid = computed(() => {
   return ticket.value.code.trim() && ticket.value.title.trim() && ticket.value.milestone;
@@ -178,13 +212,48 @@ const isFormValid = computed(() => {
 
 const submit = () => {
   if (isFormValid.value) {
-    const newTicket = ticketStore.addTicket({
-      ...ticket.value,
-      code: ticket.value.code.trim(),
-      title: ticket.value.title.trim(),
-      link: ticket.value.link.trim(),
-    });
-    emit('save', newTicket);
+    const workspaceId = parseInt(router.currentRoute.value.params.id);
+    const savedWorkspaces = localStorage.getItem('workspaces');
+    if (savedWorkspaces) {
+      const workspaces = JSON.parse(savedWorkspaces);
+      const workspaceIndex = workspaces.findIndex(w => w.id === workspaceId);
+      
+      if (workspaceIndex !== -1) {
+        const newTicket = {
+          ...ticket.value,
+          id: generateUUID(),
+          code: ticket.value.code.trim(),
+          title: ticket.value.title.trim(),
+          link: ticket.value.link.trim(),
+          type: 'ticket',
+          workspaceId,
+        };
+
+        // Create a new ticket element for VueFlow
+        const ticketElement = {
+          id: newTicket.id,
+          type: 'custom',
+          position: { x: 250, y: (workspaces[workspaceIndex].elements?.length || 0) * 100 + 50 },
+          data: newTicket,
+          draggable: true,
+          connectable: true,
+          selectable: true,
+          class: 'ticket-node',
+        };
+
+        // Add the new ticket element to workspace elements
+        if (!workspaces[workspaceIndex].elements) {
+          workspaces[workspaceIndex].elements = [];
+        }
+        workspaces[workspaceIndex].elements.push(ticketElement);
+
+        // Save back to localStorage
+        localStorage.setItem('workspaces', JSON.stringify(workspaces));
+
+        // Emit the new ticket for parent component
+        emit('save', ticketElement);
+      }
+    }
   }
 };
 </script>

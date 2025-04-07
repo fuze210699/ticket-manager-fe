@@ -53,7 +53,7 @@
                 :class="[
                   'p-1.5 rounded-lg hover:bg-blue-100 hover:text-blue-600 transition-all duration-200 flex items-center gap-1',
                   widgetThemes[currentTheme].iconColor,
-                  'text-xs bg-white bg-opacity-80',
+                  'text-xs bg-white/80',
                 ]"
                 @click="toggleWidthMenu(index)"
               >
@@ -99,7 +99,7 @@
               :class="[
                 'p-1.5 rounded-lg hover:bg-red-100 hover:text-red-600 transition-all duration-200',
                 widgetThemes[currentTheme].iconColor,
-                'bg-white bg-opacity-80 shadow-sm',
+                'bg-white/80 shadow-sm',
               ]"
               @click="removeZone(index)"
             >

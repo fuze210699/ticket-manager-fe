@@ -7,7 +7,7 @@ const LandingPage = () => import('@features/landing/views/LandingPage.vue');
 const LoginPage = () => import('@features/auth/views/LoginPage.vue');
 const SignUpPage = () => import('@features/auth/views/SignUpPage.vue');
 const HomePage = () => import('@features/home/views/HomePage.vue');
-const WorkspaceDetail = () => import('@features/workspace/views/WorkspaceDetail.vue');
+const WorkspaceDetail = () => import('@shared/widgets/ticket_manager/views/WorkspaceDetail.vue');
 const NotFound = () => import('@shared/components/NotFound.vue');
 
 const routes = [

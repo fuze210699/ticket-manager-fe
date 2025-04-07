@@ -27,6 +27,9 @@
     "priority": "Độ ưu tiên",
     "filter": "Lọc",
     "advancedFilter": "Lọc nâng cao",
+    "all": "Tất cả",
+    "apply": "Áp dụng",
+    "optional": "Tùy chọn",
     "priorities": {
       "low": "Thấp",
       "medium": "Trung bình",
@@ -78,7 +81,8 @@
     "precipitation": "Lượng mưa",
     "dailyForecast": "Dự báo hàng ngày",
     "unit": "Đơn vị",
-    "updateInterval": "Chu kỳ cập nhật"
+    "updateInterval": "Chu kỳ cập nhật",
+    "collapse": "Thu gọn"
   },
   "nav": {
     "dashboard": "Bảng điều khiển",
@@ -340,7 +344,29 @@
     "addMilestone": "Thêm cột mốc",
     "ticketDetails": "Chi tiết ticket",
     "tickets": "Tickets",
-    "noTickets": "Chưa có ticket nào. Nhấp vào 'Thêm Ticket' để tạo."
+    "noTickets": "Chưa có ticket nào. Nhấp vào 'Thêm Ticket' để tạo.",
+    "addTicket": "Thêm vé",
+    "filter": "Lọc",
+    "settings": "Cài đặt",
+    "nodeColor": "Màu nút",
+    "nodeSize": "Kích thước nút",
+    "small": "Nhỏ",
+    "medium": "Trung bình",
+    "large": "Lớn",
+    "showMiniMap": "Hiện bản đồ thu nhỏ",
+    "showControls": "Hiện điều khiển",
+    "deleteTitle": "Xóa Không gian làm việc",
+    "deleteConfirm": "Hành động này không thể hoàn tác. Vui lòng nhập DELETE để xác nhận.",
+    "typeDelete": "Nhập DELETE để xác nhận",
+    "deleteWorkspace": "Xóa không gian làm việc",
+    "editTitle": "Chỉnh sửa Không gian làm việc",
+    "editWorkspace": "Chỉnh sửa không gian làm việc",
+    "name": "Tên",
+    "namePlaceholder": "Nhập tên không gian làm việc",
+    "description": "Mô tả",
+    "descriptionPlaceholder": "Nhập mô tả không gian làm việc",
+    "members": "Thành viên",
+    "membersPlaceholder": "Nhập số lượng thành viên"
   },
   "ticket": {
     "add": "Thêm Ticket",
@@ -349,6 +375,15 @@
     "link": "Liên kết",
     "milestone": "Cột mốc",
     "status": "Trạng thái",
+    "todo": "Cần làm",
+    "inProgress": "Đang thực hiện",
+    "done": "Hoàn thành",
+    "high": "Cao",
+    "medium": "Trung bình",
+    "low": "Thấp",
+    "titlePlaceholder": "Nhập tiêu đề ticket...",
+    "linkPlaceholder": "Nhập liên kết ticket...",
+    "selectMilestone": "Chọn cột mốc...",
     "statuses": {
       "todo": "Cần làm",
       "inProgress": "Đang thực hiện",
@@ -364,7 +399,15 @@
     "priority": "Ưu tiên",
     "dueDate": "Ngày hết hạn",
     "save": "Lưu",
-    "details": "Chi tiết Ticket"
+    "details": "Chi tiết Ticket",
+    "openLink": "Mở liên kết",
+    "dependencyTarget": "Đích phụ thuộc",
+    "dependencySource": "Nguồn phụ thuộc",
+    "priorities": {
+      "high": "Cao",
+      "medium": "Trung bình",
+      "low": "Thấp"
+    }
   },
   "milestone": {
     "add": "Thêm Cột mốc",
@@ -425,16 +468,20 @@
   },
   "home": {
     "title": "Không gian làm việc",
-    "subtitle": "Quản lý và tổ chức công việc",
-    "createWorkspace": "Tạo không gian làm việc mới",
-    "members": "thành viên",
+    "subtitle": "Quản lý không gian làm việc và công việc của bạn",
+    "createWorkspace": "Tạo không gian làm việc",
     "openWorkspace": "Mở không gian làm việc",
+    "members": "thành viên",
+    "noWorkspacesTitle": "Chưa có không gian làm việc",
+    "noWorkspaces": "Tạo không gian làm việc mới để bắt đầu",
+    "importWorkspace": "Nhập không gian làm việc",
+    "exportWorkspace": "Xuất không gian làm việc",
+    "invalidImportData": "Định dạng dữ liệu nhập không hợp lệ",
+    "importError": "Đã xảy ra lỗi khi nhập dữ liệu",
     "createWorkspaceTitle": "Tạo không gian làm việc mới",
     "workspaceName": "Tên không gian làm việc",
-    "workspaceDescription": "Mô tả",
-    "create": "Tạo",
-    "noWorkspaces": "Bạn chưa có không gian làm việc nào. Tạo không gian làm việc mới để bắt đầu.",
-    "noWorkspacesTitle": "Chưa có không gian làm việc"
+    "workspaceDescription": "Mô tả không gian làm việc",
+    "create": "Tạo"
   },
   "guide": {
     "title": "Hướng dẫn người dùng",

@@ -201,7 +201,7 @@ export const WIDGET_THEMES = {
     border: 'border-white border-opacity-20',
     hover: 'hover:opacity-90',
     buttonBg: 'bg-white/15',
-    buttonHover: 'hover:bg-white hover:bg-opacity-25',
+    buttonHover: 'hover:bg-white/25',
     iconColor: 'text-white',
     description: 'text-white text-opacity-80',
   },

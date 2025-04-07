@@ -52,7 +52,7 @@
       </button>
     </div>
     <div class="h-screen flex-1 flex flex-col">
-      <TaskBar @add-ticket="openTicketModal" />
+      <TaskBar @add-ticket="openTicketModal" @filter-change="applyFilters" />
 
       <VueFlow
         v-model="elements"
@@ -71,8 +71,8 @@
         @node-click="openTicketDetails"
       >
         <Background pattern-color="#aaa" :gap="16" />
-        <template #node-custom="props">
-          <CustomNode v-bind="props" />
+        <template #node-ticket-node="props">
+          <CustomNode v-bind="props.data" />
         </template>
         <template #edge-custom="props">
           <CustomEdge v-bind="props" />
@@ -99,12 +99,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import { VueFlow, useVueFlow } from '@vue-flow/core';
 import { MiniMap } from '@vue-flow/minimap';
 import { Controls } from '@vue-flow/controls';
 import { Background } from '@vue-flow/background';
-import TaskBar from '@shared/components/layout/TaskBar.vue';
+import TaskBar from '@shared/widgets/ticket_manager/components/TaskBar.vue';
 import TicketModal from '@features/ticket/components/TicketModal.vue';
 import MilestoneModal from '@features/milestone/components/MilestoneModal.vue';
 import DependencyModal from '@features/ticket/components/DependencyModal.vue';
@@ -116,15 +116,132 @@ import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 const elements = ref([]);
+const milestones = ref([]);
 const workspaceName = ref('');
+const currentFilters = ref({
+  status: '',
+  priority: '',
+  dueDate: '',
+  milestone: ''
+});
+
+// Load workspace data from localStorage
+const loadWorkspaceData = () => {
+  const savedWorkspaces = localStorage.getItem('workspaces');
+  if (savedWorkspaces) {
+    const workspaces = JSON.parse(savedWorkspaces);
+    const workspaceId = parseInt(router.currentRoute.value.params.id);
+    const workspace = workspaces.find(w => w.id === workspaceId);
+    if (workspace) {
+      workspaceName.value = workspace.name;
+      if (workspace.elements) {
+        const { tickets, milestones: savedMilestones } = workspace.elements.reduce(
+          (acc, element) => {
+            if (element.data?.type === 'milestone') {
+              acc.milestones.push(element.data);
+            } else if (element.data?.type === 'ticket') {
+              // Ensure all required VueFlow node properties are present
+              acc.tickets.push({
+                id: element.id,
+                type: 'ticket-node',
+                label: element.data.name || element.data.label,
+                position: element.position || { x: 0, y: 0 },
+                data: {
+                  ...element.data,
+                  id: element.id,
+                  type: 'ticket',
+                  workspaceId,
+                  name: element.data.name || element.data.label,
+                  description: element.data.description || '',
+                  status: element.data.status || 'TODO',
+                  priority: element.data.priority || 'MEDIUM',
+                  dueDate: element.data.dueDate || null,
+                  assignee: element.data.assignee || null,
+                  dependencies: element.data.dependencies || [],
+                  createdAt: element.data.createdAt || new Date().toISOString(),
+                  updatedAt: element.data.updatedAt || new Date().toISOString(),
+                },
+                draggable: true,
+                connectable: true,
+                selectable: true,
+                class: 'ticket-node',
+              });
+            }
+            return acc;
+          },
+          { tickets: [], milestones: [] }
+        );
+
+        elements.value = tickets;
+        milestones.value = savedMilestones;
+      }
+    }
+  }
+};
+
+// Watch for route changes
+watch(
+  () => router.currentRoute.value,
+  () => {
+    loadWorkspaceData();
+  },
+  { immediate: true }
+);
+
+// Save workspace data to localStorage
+const saveWorkspaceData = () => {
+  const savedWorkspaces = localStorage.getItem('workspaces');
+  if (savedWorkspaces) {
+    const workspaces = JSON.parse(savedWorkspaces);
+    const workspaceId = parseInt(router.currentRoute.value.params.id);
+    const index = workspaces.findIndex(w => w.id === workspaceId);
+    if (index !== -1) {
+      // Combine tickets and milestones
+      const allElements = [
+        ...elements.value,
+        ...milestones.value.map(milestone => ({
+          id: milestone.id,
+          type: 'milestone-node',
+          data: milestone,
+        })),
+      ];
+
+      // Update workspace data
+      workspaces[index] = {
+        ...workspaces[index],
+        name: workspaceName.value,
+        elements: allElements,
+      };
+
+      // Save to localStorage
+      localStorage.setItem('workspaces', JSON.stringify(workspaces));
+    }
+  }
+};
+
+// Load data when component mounts
+loadWorkspaceData();
+
+// Save data when workspace name changes
+watch(workspaceName, () => {
+  saveWorkspaceData();
+});
+
+// Save data when elements or milestones change
+watch(
+  [elements, milestones],
+  () => {
+    saveWorkspaceData();
+  },
+  { deep: true }
+);
 
 const showTicketModal = ref(false);
 const showMilestoneModal = ref(false);
 const showDependencyModal = ref(false);
 const selectedEdge = ref(null);
 
-const { onInit, onNodeDragStop, onConnect, addEdges, setViewport, toObject, onNodeDoubleClick } =
-  useVueFlow();
+const { onInit, onConnect, addEdges, onNodeDoubleClick } = useVueFlow();
 
 onNodeDoubleClick(event => {
   event.instance.zoomIn();
@@ -161,25 +278,67 @@ const closeDependencyModal = () => {
 
 const saveTicket = ticket => {
   const newId = generateUUID();
-  elements.value.push({
+  const workspaceId = parseInt(router.currentRoute.value.params.id);
+  const newNode = {
     id: newId,
-    type: 'custom',
+    type: 'ticket-node',
     label: ticket.name,
     position: { x: 250, y: elements.value.length * 100 + 50 },
-    data: { ...ticket, id: newId },
-  });
+    data: {
+      ...ticket,
+      id: newId,
+      type: 'ticket',
+      workspaceId,
+    },
+    // Add required VueFlow node properties
+    draggable: true,
+    connectable: true,
+    selectable: true,
+    class: 'ticket-node',
+  };
+
+  // Add the new node to elements
+  elements.value = [...elements.value, newNode];
   closeTicketModal();
 };
 
 const saveMilestone = milestone => {
   const newId = generateUUID();
-  elements.value.push({
+  const workspaceId = parseInt(router.currentRoute.value.params.id);
+  const newMilestone = {
     id: newId,
-    type: 'custom',
-    label: milestone.name,
-    position: { x: 250, y: elements.value.length * 100 + 50 },
-    data: { ...milestone, id: newId, isMilestone: true },
-  });
+    name: milestone.name,
+    description: milestone.description,
+    dueDate: milestone.dueDate,
+    type: 'milestone',
+    workspaceId,
+  };
+
+  // Add the new milestone to milestones array
+  milestones.value = [...milestones.value, newMilestone];
+
+  // Save to localStorage immediately
+  const savedWorkspaces = localStorage.getItem('workspaces');
+  if (savedWorkspaces) {
+    const workspaces = JSON.parse(savedWorkspaces);
+    const index = workspaces.findIndex(w => w.id === workspaceId);
+    if (index !== -1) {
+      // Create a milestone element for storage
+      const milestoneElement = {
+        id: newId,
+        type: 'milestone-node',
+        data: newMilestone,
+      };
+
+      // Add to existing elements
+      const existingElements = workspaces[index].elements || [];
+      workspaces[index].elements = [...existingElements, milestoneElement];
+
+      // Save back to localStorage
+      localStorage.setItem('workspaces', JSON.stringify(workspaces));
+    }
+  }
+
   closeMilestoneModal();
 };
 
@@ -206,7 +365,41 @@ const openTicketDetails = event => {
   console.log(t('workspace.ticketDetails') + ':', event.node);
 };
 
-const goBack = () => {
-  router.push('/home');
+const goBack = async () => {
+  await router.push('/home');
+  // Force reload the page to ensure data is refreshed
+  window.location.reload();
+};
+
+// Apply filters to elements
+const applyFilters = (filters) => {
+  currentFilters.value = filters;
+  
+  // If all filters are empty, show all nodes
+  if (Object.values(filters).every(filter => filter === '')) {
+    elements.value = elements.value.map(element => ({
+      ...element,
+      hidden: false
+    }));
+    return;
+  }
+
+  // Update hidden property for each element based on filters
+  elements.value = elements.value.map(element => {
+    if (element.data?.data?.type === 'ticket') {
+      // Skip empty filters
+      const matchesStatus = filters.status === '' || element.data.data.status.toLowerCase() === filters.status.toLowerCase();
+      const matchesPriority = filters.priority === '' || element.data.data.priority.toLowerCase() === filters.priority.toLowerCase();
+      const matchesDueDate = filters.dueDate === '' || element.data.data.dueDate === filters.dueDate;
+      // Show ticket if milestone filter is empty or ticket's milestone matches the filter
+      const matchesMilestone = filters.milestone === '' || (element.data.data.milestone && element.data.data.milestone === filters.milestone);
+
+      return {
+        ...element,
+        hidden: !(matchesStatus && matchesPriority && matchesDueDate && matchesMilestone)
+      };
+    }
+    return element;
+  });
 };
 </script>

@@ -27,6 +27,9 @@
     "priority": "Priority",
     "filter": "Filter",
     "advancedFilter": "Advanced Filter",
+    "all": "All",
+    "apply": "Apply",
+    "optional": "Optional",
     "priorities": {
       "low": "Low",
       "medium": "Medium",
@@ -78,7 +81,8 @@
     "precipitation": "Precipitation",
     "dailyForecast": "Daily Forecast",
     "unit": "Unit",
-    "updateInterval": "Update Interval"
+    "updateInterval": "Update Interval",
+    "collapse": "Collapse"
   },
   "nav": {
     "dashboard": "Dashboard",
@@ -340,7 +344,29 @@
     "addMilestone": "Add Milestone",
     "ticketDetails": "Ticket Details",
     "tickets": "Tickets",
-    "noTickets": "No tickets yet. Click 'Add Ticket' to create."
+    "noTickets": "No tickets yet. Click 'Add Ticket' to create.",
+    "addTicket": "Add Ticket",
+    "filter": "Filter",
+    "settings": "Settings",
+    "nodeColor": "Node Color",
+    "nodeSize": "Node Size",
+    "small": "Small",
+    "medium": "Medium",
+    "large": "Large",
+    "showMiniMap": "Show Mini Map",
+    "showControls": "Show Controls",
+    "deleteTitle": "Delete Workspace",
+    "deleteConfirm": "This action cannot be undone. Please type DELETE to confirm.",
+    "typeDelete": "Type DELETE to confirm",
+    "deleteWorkspace": "Delete workspace",
+    "editTitle": "Edit Workspace",
+    "editWorkspace": "Edit workspace",
+    "name": "Name",
+    "namePlaceholder": "Enter workspace name",
+    "description": "Description",
+    "descriptionPlaceholder": "Enter workspace description",
+    "members": "Members",
+    "membersPlaceholder": "Enter number of members"
   },
   "ticket": {
     "add": "Add Ticket",
@@ -349,10 +375,24 @@
     "link": "Link",
     "milestone": "Milestone",
     "status": "Status",
+    "todo": "To Do",
+    "inProgress": "In Progress",
+    "done": "Done",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low",
+    "titlePlaceholder": "Enter ticket title...",
+    "linkPlaceholder": "Enter ticket link...",
+    "selectMilestone": "Select a milestone...",
     "statuses": {
       "todo": "To Do",
       "inProgress": "In Progress",
       "done": "Done"
+    },
+    "priorities": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
     },
     "estimateTime": "Estimate Time",
     "actualTime": "Actual Time",
@@ -361,10 +401,12 @@
     "name": "Ticket Name",
     "description": "Description",
     "assignee": "Assignee",
-    "priority": "Priority",
     "dueDate": "Due Date",
     "save": "Save",
-    "details": "Ticket Details"
+    "details": "Ticket Details",
+    "openLink": "Open Link",
+    "dependencyTarget": "Dependency Target",
+    "dependencySource": "Dependency Source"
   },
   "milestone": {
     "add": "Add Milestone",
@@ -424,17 +466,21 @@
     "register": "Register"
   },
   "home": {
-    "title": "Workspace",
-    "subtitle": "Manage and organize your work",
-    "createWorkspace": "Create New Workspace",
-    "members": "members",
+    "title": "Workspaces",
+    "subtitle": "Manage your workspaces and tickets",
+    "createWorkspace": "Create Workspace",
     "openWorkspace": "Open Workspace",
+    "members": "members",
+    "noWorkspacesTitle": "No Workspaces",
+    "noWorkspaces": "Create a new workspace to get started",
+    "importWorkspace": "Import Workspace",
+    "exportWorkspace": "Export Workspace",
+    "invalidImportData": "Invalid import data format",
+    "importError": "Error occurred while importing data",
     "createWorkspaceTitle": "Create New Workspace",
     "workspaceName": "Workspace Name",
-    "workspaceDescription": "Description",
-    "create": "Create",
-    "noWorkspaces": "You don't have any workspaces yet. Create a new workspace to get started.",
-    "noWorkspacesTitle": "No Workspaces"
+    "workspaceDescription": "Workspace Description",
+    "create": "Create"
   },
   "guide": {
     "title": "User Guide",

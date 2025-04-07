@@ -4,20 +4,12 @@
     <div
       v-if="!isExpanded"
       class="flex items-center justify-between rounded-lg p-2"
-      :class="{
-        'bg-blue-100': data.status === 'To Do',
-        'bg-yellow-100': data.status === 'In Progress',
-        'bg-green-100': data.status === 'Done',
-      }"
+      :class="statusClass"
     >
       <div class="flex items-center gap-2">
         <span
           class="text-sm font-medium"
-          :class="{
-            'text-blue-800': data.status === 'To Do',
-            'text-yellow-800': data.status === 'In Progress',
-            'text-green-800': data.status === 'Done',
-          }"
+          :class="statusTextClass"
           >{{ data.code }}</span
         >
         <a
@@ -79,7 +71,17 @@
               'bg-green-100 text-green-800': data.status === 'Done',
             }"
           >
-            {{ t(`ticket.statuses.${data.status.toLowerCase().replace(' ', '')}`) }}
+            {{ t(statusTranslationKey) }}
+          </span>
+          <span
+            :class="{
+              'px-2 py-1 text-xs font-medium rounded-full': true,
+              'bg-red-100 text-red-800': data.priority === 'high',
+              'bg-yellow-100 text-yellow-800': data.priority === 'medium',
+              'bg-green-100 text-green-800': data.priority === 'low',
+            }"
+          >
+            {{ t(`ticket.priorities.${data.priority || 'medium'}`) }}
           </span>
         </div>
         <button
@@ -186,7 +188,7 @@
 
 <script setup>
 import { Handle } from '@vue-flow/core';
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
@@ -195,6 +197,17 @@ const props = defineProps({
   data: {
     type: Object,
     required: true,
+    default: () => ({
+      status: 'To Do',
+      priority: 'medium',
+      code: '',
+      name: '',
+      milestone: '',
+      estimateTime: 0,
+      actualTime: 0,
+      link: '',
+      type: 'ticket'
+    })
   },
 });
 
@@ -203,4 +216,35 @@ const isExpanded = ref(true);
 const toggleExpand = () => {
   isExpanded.value = !isExpanded.value;
 };
+
+// Computed property for status class
+const statusClass = computed(() => {
+  const status = props.data?.status || 'To Do';
+  return {
+    'bg-blue-100': status === 'To Do',
+    'bg-yellow-100': status === 'In Progress',
+    'bg-green-100': status === 'Done',
+  };
+});
+
+// Computed property for status text class
+const statusTextClass = computed(() => {
+  const status = props.data?.status || 'To Do';
+  return {
+    'text-blue-800': status === 'To Do',
+    'text-yellow-800': status === 'In Progress',
+    'text-green-800': status === 'Done',
+  };
+});
+
+// Computed property for status translation key
+const statusTranslationKey = computed(() => {
+  const status = props.data?.status || 'To Do';
+  const keyMap = {
+    'To Do': 'todo',
+    'In Progress': 'inProgress',
+    'Done': 'done'
+  };
+  return `ticket.statuses.${keyMap[status]}`;
+});
 </script>
