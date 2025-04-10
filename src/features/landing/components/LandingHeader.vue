@@ -139,7 +139,7 @@
 <script setup>
 import { ref } from 'vue';
 import Button from '@core/ui/Button.vue';
-import LogoIcon from '@/shared/components/icons/LogoIcon.vue';
+import LogoIcon from '@core/ui/LogoIcon.vue';
 
 const isMenuOpen = ref(false);
 const emit = defineEmits(['navigate', 'scroll']);

@@ -2,23 +2,35 @@
   "notFound": {
     "title": "Page Not Found",
     "description": "The page you are looking for does not exist.",
-    "goHome": "Go back home"
+    "goHome": "Go to Home"
   },
   "common": {
+    "close": "Close",
+    "save": "Save",
+    "addNew": "Add New...",
+    "expand": "Expand",
+    "collapse": "Collapse",
     "language": "Language",
     "vietnamese": "Vietnamese",
     "english": "English",
     "japanese": "Japanese",
-    "add": "Add",
-    "edit": "Edit",
-    "delete": "Delete",
-    "save": "Save",
-    "cancel": "Cancel",
-    "close": "Close",
     "back": "Back",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "confirm": "Confirm",
+    "allRightsReserved": "All Rights Reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "add": "Add",
     "next": "Next",
     "previous": "Previous",
-    "search": "Search...",
+    "search": "Search",
     "settings": "Settings",
     "profile": "Profile",
     "logout": "Logout",
@@ -51,15 +63,6 @@
     "title": "Title",
     "description": "Description",
     "event": "Event",
-    "loading": "Loading...",
-    "error": "An error occurred",
-    "success": "Success",
-    "confirm": "Confirm",
-    "allRightsReserved": "All rights reserved",
-    "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
-    "learnMore": "Learn More",
-    "getStarted": "Get Started",
     "theme": "Theme",
     "view": "View",
     "timezone": "Timezone",
@@ -81,8 +84,7 @@
     "precipitation": "Precipitation",
     "dailyForecast": "Daily Forecast",
     "unit": "Unit",
-    "updateInterval": "Update Interval",
-    "collapse": "Collapse"
+    "updateInterval": "Update Interval"
   },
   "nav": {
     "dashboard": "Dashboard",
@@ -99,43 +101,42 @@
   },
   "footer": {
     "appName": "MySpace - Your Customizable Workspace",
-    "allRightsReserved": "All rights reserved",
+    "allRightsReserved": "All Rights Reserved",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
   },
   "auth": {
-    "createAccount": "Create your account",
+    "createAccount": "Create Account",
     "alreadyHaveAccount": "Already have an account?",
-    "signIn": "Sign in",
+    "signIn": "Sign In",
     "fullName": "Full Name",
     "fullNamePlaceholder": "Enter your full name",
-    "email": "Email address",
+    "email": "Email Address",
     "emailPlaceholder": "Enter your email",
     "password": "Password",
     "passwordPlaceholder": "Create a password",
     "confirmPassword": "Confirm Password",
     "confirmPasswordPlaceholder": "Confirm your password",
-    "acceptTerms": "I accept the",
+    "acceptTerms": "I agree to the",
     "termsOfService": "Terms of Service",
     "and": "and",
     "privacyPolicy": "Privacy Policy",
     "creatingAccount": "Creating account...",
-    "createAccount": "Create account",
     "error": {
       "title": "Error",
       "passwordMismatch": "Passwords do not match",
-      "signupFailed": "Sign up failed",
+      "signupFailed": "Failed to create account",
       "enterCredentials": "Please enter both email and password"
     },
     "success": {
       "title": "Success",
       "accountCreated": "Account created successfully"
     },
-    "title": "Sign in",
+    "title": "Login",
     "noAccount": "Don't have an account?",
     "register": "Register",
     "rememberMe": "Remember me",
-    "forgotPassword": "Forgot your password?"
+    "forgotPassword": "Forgot password?"
   },
   "dashboard": {
     "title": "My Dashboard",
@@ -150,25 +151,9 @@
       "title": "Preset Layouts",
       "search": "Search layouts...",
       "default": "Default Layout",
-      "codeReview": "Code Review",
-      "debugging": "Debugging",
-      "database": "Database",
-      "monitoring": "Monitoring",
-      "testing": "Testing",
-      "deployment": "Deployment",
-      "documentation": "Documentation",
-      "analytics": "Analytics",
-      "security": "Security",
-      "default_description": "Basic layout with one main content area and two side panels",
-      "codeReview_description": "Perfect for code review workflow with diff view and comments",
-      "debugging_description": "Debugging layout with console, network, and state inspection",
-      "database_description": "Database management and query interface",
-      "monitoring_description": "System monitoring and performance metrics",
-      "testing_description": "Test execution and coverage analysis",
-      "deployment_description": "Deployment pipeline and release management",
-      "documentation_description": "API documentation and code reference",
-      "analytics_description": "User behavior and application analytics",
-      "security_description": "Security monitoring and audit logs"
+      "entertainment": "Entertainment",
+      "default_description": "Basic layout with a main content area and two side panels",
+      "entertainment_description": "Perfect for entertainment with main content and side panel"
     },
     "availableWidgets": "Available Widgets",
     "dropZone": "Drop widget here",
@@ -176,22 +161,23 @@
     "changeTheme": "Change Theme",
     "exportLayout": "Export Layout",
     "importLayout": "Import Layout",
-    "noWidgets": "No Widgets Added",
+    "noWidgets": "No Widgets",
     "addWidgetsDesc": "Your dashboard is empty. Click the button below to enter edit mode and add widgets to your dashboard.",
     "sizes": {
       "col-12": "Full Width",
+      "col-9": "Three Quarters",
       "col-8": "Two Thirds",
-      "col-6": "Half Width",
+      "col-6": "Half",
       "col-4": "One Third",
-      "col-3": "Quarter Width"
+      "col-3": "One Quarter"
     },
     "widgets": {
-      "addWidget": "Add Widget",
+      "addWidget": "Add widget",
       "customize": "Customize",
       "resize": "Resize",
       "move": "Move",
       "remove": "Remove",
-      "settings": "Widget Settings"
+      "settings": "Widget settings"
     }
   },
   "widgets": {
@@ -203,168 +189,88 @@
       "custom": "Custom"
     },
     "types": {
+      "workspace": {
+        "title": "Workspace",
+        "description": "Manage your projects and tasks"
+      },
       "music": {
         "title": "Music Player",
         "description": "Listen to your favorite music"
       },
-      "video": {
-        "title": "Video Player",
-        "description": "Watch videos from YouTube, TikTok, etc."
-      },
-      "calendar": {
-        "title": "Calendar",
-        "description": "Manage schedules and events",
-        "createEvent": "Create Event",
-        "editEvent": "Edit Event",
-        "deleteEvent": "Delete Event",
-        "eventDetails": "Event Details",
-        "noEvents": "No Events",
-        "settings": {
-          "title": "Calendar Settings",
-          "viewMode": "View Mode",
-          "timezone": "Timezone",
-          "theme": "Theme",
-          "showWeekends": "Show Weekends",
-          "showHolidays": "Show Holidays"
-        }
-      },
       "notes": {
         "title": "Notes",
-        "description": "Organize and save your thoughts and ideas",
-        "addNote": "Add Note",
-        "history": "History",
-        "empty": "No notes yet. Click to add your first note!",
-        "note": "Note",
+        "description": "Organize and store your thoughts and ideas",
         "titlePlaceholder": "Enter note title",
-        "content": "Content",
         "contentPlaceholder": "Enter your note content here...",
-        "preview": "Preview",
-        "attachments": "Attachments",
-        "autoSave": "Auto Save",
-        "syntaxHighlighting": "Syntax Highlighting",
-        "versionHistory": "Version History",
-        "noSelection": "No note selected",
-        "selectOrCreate": "Select a note from the list or create a new one",
-        "untitled": "Untitled Note",
-        "noContent": "No content",
         "lastSaved": "Last saved",
         "editing": "Editing...",
-        "searchPlaceholder": "Search notes...",
-        "showFilters": "Show filters",
-        "hideFilters": "Hide filters",
-        "filterByTags": "Filter by tags",
-        "filterByDate": "Filter by date",
-        "hasAttachments": "Has attachments",
-        "pin": "Pin note",
-        "unpin": "Unpin note",
-        "share": "Share",
-        "shareNote": "Share note",
-        "import": "Import",
-        "export": "Export",
-        "importJson": "Import from JSON",
-        "sync": "Sync",
-        "addItem": "Add item",
-        "addDiagram": "Add diagram",
-        "addAttachment": "Add attachment",
-        "restore": "Restore",
-        "keyboardShortcuts": "Keyboard shortcuts",
-        "newNote": "New note",
-        "saveNote": "Save note",
-        "focusSearch": "Focus search",
-        "toggleEditorMode": "Toggle editor mode",
-        "togglePin": "Toggle pin",
-        "addCodeBlock": "Add code block"
+        "shortcuts": "Keyboard shortcuts",
+        "characterLimit": "Character limit",
+        "saving": "Saving...",
+        "saved": "Saved",
+        "maxCharacters": "Maximum 5000 characters"
       },
-      "todo": {
-        "title": "Todo List",
-        "description": "Manage tasks and track progress",
-        "task": "Task",
-        "tasks": "Tasks",
-        "empty": "No tasks yet",
+      "reportGenerator": {
+        "title": "Report Generator",
+        "description": "Generate work reports easily",
+        "projectName": "Project Name",
+        "projectNamePlaceholder": "Enter project name",
+        "taskList": "Task List",
+        "taskPlaceholder": "Enter task content",
         "addTask": "Add Task",
-        "titlePlaceholder": "Enter task title",
-        "descriptionPlaceholder": "Enter task description",
-        "subtaskPlaceholder": "Enter subtask title",
-        "addSubtask": "Add Subtask",
-        "subtaskProgress": "{completed}/{total} subtasks completed",
-        "subtasks": "Subtasks",
-        "overdue": "Overdue",
-        "highPriority": "High Priority",
-        "filters": {
-          "all": "All",
-          "active": "Active",
-          "completed": "Completed",
-          "overdue": "Overdue",
-          "highPriority": "High Priority"
+        "deleteTask": "Delete",
+        "generateReport": "Copy Report to Clipboard",
+        "copied": "Copied!",
+        "preview": "Preview",
+        "status": {
+          "notStarted": "Not Started",
+          "inProgress": "In Progress",
+          "completed": "Completed"
         },
-        "sortBy": "Sort By",
-        "sortOptions": {
-          "dueDate": "Due Date",
-          "priority": "Priority",
-          "category": "Category"
-        },
-        "filterBy": "Filter By",
-        "filterOptions": {
-          "allPriorities": "All Priorities",
-          "allCategories": "All Categories"
-        },
-        "categories": {
-          "work": "Work",
-          "personal": "Personal",
-          "shopping": "Shopping",
-          "health": "Health"
-        },
-        "tags": {
-          "urgent": "Urgent",
-          "important": "Important",
-          "later": "Later",
-          "routine": "Routine"
-        },
-        "stats": {
-          "completed": "Completed",
-          "remaining": "Remaining",
-          "highPriority": "High Priority",
-          "overdue": "Overdue"
-        }
+        "emptyState": "Please enter project name and tasks",
+        "title": "Report Generator",
+        "subtitle": "Create work reports"
       },
-      "weather": {
-        "title": "Weather",
-        "description": "View current weather and forecast"
-      },
-      "workspace": {
-        "title": "Workspace",
-        "description": "Manage projects and tasks"
+      "codeViewer": {
+        "title": "Code Viewer",
+        "subtitle": "View, highlight and refactor code",
+        "fileNamePlaceholder": "Enter file name",
+        "codePlaceholder": "Paste your code here...",
+        "refactorSuggestions": "Refactoring Suggestions",
+        "analyzeCode": "Analyze Code",
+        "analyzing": "Analyzing code...",
+        "noSuggestions": "No refactoring suggestions found for this code.",
+        "line": "Line",
+        "apply": "Apply",
+        "longFunctionSuggestion": "This function is too long. Consider breaking it into smaller functions for better readability and maintainability.",
+        "consoleLogSuggestion": "Console.log statements should be removed or replaced with proper logging in production code.",
+        "styleSuggestion": "Consider adding documentation comments to improve code readability.",
+        "applied": "Suggestion Applied",
+        "originalCode": "Original Code",
+        "codeToReplace": "Code to Replace",
+        "suggestedCode": "Suggested Code",
+        "tempAppliedMessage": "Suggestion applied successfully!",
+        "suggestion": "Suggestion",
+        "notAppliedYet": "(Not Applied Yet)"
       }
     }
   },
   "workspace": {
     "namePlaceholder": "Enter workspace name...",
     "descriptionPlaceholder": "Enter workspace description...",
+    "tickets": "Tickets",
+    "noTickets": "No tickets yet. Click 'Add Ticket' to create one.",
     "back": "Back",
     "addMilestone": "Add Milestone",
     "ticketDetails": "Ticket Details",
-    "tickets": "Tickets",
-    "noTickets": "No tickets yet. Click 'Add Ticket' to create.",
-    "addTicket": "Add Ticket",
-    "filter": "Filter",
-    "settings": "Settings",
-    "nodeColor": "Node Color",
-    "nodeSize": "Node Size",
-    "small": "Small",
-    "medium": "Medium",
-    "large": "Large",
-    "showMiniMap": "Show Mini Map",
-    "showControls": "Show Controls",
     "deleteTitle": "Delete Workspace",
     "deleteConfirm": "This action cannot be undone. Please type DELETE to confirm.",
     "typeDelete": "Type DELETE to confirm",
-    "deleteWorkspace": "Delete workspace",
+    "deleteWorkspace": "Delete Workspace",
     "editTitle": "Edit Workspace",
-    "editWorkspace": "Edit workspace",
+    "editWorkspace": "Edit Workspace",
     "name": "Name",
-    "namePlaceholder": "Enter workspace name",
     "description": "Description",
-    "descriptionPlaceholder": "Enter workspace description",
     "members": "Members",
     "membersPlaceholder": "Enter number of members"
   },
@@ -375,38 +281,30 @@
     "link": "Link",
     "milestone": "Milestone",
     "status": "Status",
-    "todo": "To Do",
-    "inProgress": "In Progress",
-    "done": "Done",
-    "high": "High",
-    "medium": "Medium",
-    "low": "Low",
-    "titlePlaceholder": "Enter ticket title...",
-    "linkPlaceholder": "Enter ticket link...",
-    "selectMilestone": "Select a milestone...",
     "statuses": {
       "todo": "To Do",
       "inProgress": "In Progress",
       "done": "Done"
     },
-    "priorities": {
-      "high": "High",
-      "medium": "Medium",
-      "low": "Low"
-    },
-    "estimateTime": "Estimate Time",
+    "estimateTime": "Estimated Time",
     "actualTime": "Actual Time",
     "startTime": "Start Time",
     "endTime": "End Time",
     "name": "Ticket Name",
     "description": "Description",
     "assignee": "Assignee",
+    "priority": "Priority",
     "dueDate": "Due Date",
     "save": "Save",
     "details": "Ticket Details",
     "openLink": "Open Link",
     "dependencyTarget": "Dependency Target",
-    "dependencySource": "Dependency Source"
+    "dependencySource": "Dependency Source",
+    "priorities": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    }
   },
   "milestone": {
     "add": "Add Milestone",
@@ -438,7 +336,7 @@
   },
   "landing": {
     "title": "Smart Ticket Management",
-    "description": "Efficient ticket management solution with intuitive and user-friendly interface. Optimize your workflow with powerful features.",
+    "description": "Efficient ticket management solution with an intuitive and user-friendly interface. Optimize your workflow with powerful features.",
     "getStarted": "Get Started",
     "benefits": {
       "time": {
@@ -453,14 +351,23 @@
         "title": "Easy Collaboration",
         "description": "Work effectively as a team with sharing and notification features"
       }
+    },
+    "widgets": {
+      "title": "Available Widgets",
+      "subtitle": "Choose Your Tools",
+      "description": "Browse our collection of widgets designed to help you work smarter, not harder.",
+      "analytics": {
+        "title": "Analytics",
+        "description": "Visualize your data and track your progress with customizable charts."
+      }
     }
   },
   "login": {
-    "title": "Sign In",
+    "title": "Login",
     "email": "Email",
     "password": "Password",
     "rememberMe": "Remember me",
-    "forgotPassword": "Forgot your password?",
+    "forgotPassword": "Forgot password?",
     "signIn": "Sign In",
     "noAccount": "Don't have an account?",
     "register": "Register"
@@ -476,25 +383,16 @@
     "importWorkspace": "Import Workspace",
     "exportWorkspace": "Export Workspace",
     "invalidImportData": "Invalid import data format",
-    "importError": "Error occurred while importing data",
+    "importError": "An error occurred while importing data",
     "createWorkspaceTitle": "Create New Workspace",
     "workspaceName": "Workspace Name",
     "workspaceDescription": "Workspace Description",
     "create": "Create"
   },
-  "guide": {
-    "title": "User Guide",
-    "subtitle": "Learn how to use Ticket Manager effectively",
-    "gettingStarted": "Getting Started",
-    "features": "Features",
-    "tutorials": "Tutorials",
-    "faq": "FAQ",
-    "contact": "Contact Support"
-  },
   "profile": {
     "title": "Personal Profile",
     "changeAvatar": "Change Avatar",
-    "avatarDescription": "Upload new profile picture",
+    "avatarDescription": "Upload a new profile image",
     "personalInfo": "Personal Information",
     "fullName": "Full Name",
     "email": "Email",
@@ -508,11 +406,11 @@
     "saving": "Saving...",
     "saved": "Profile saved",
     "saveSuccess": "Profile updated successfully",
-    "saveError": "Save failed",
+    "saveError": "Failed to save",
     "saveErrorDescription": "An error occurred while saving your profile. Please try again.",
     "invalidFileType": "Invalid file type",
     "pleaseSelectImage": "Please select an image file",
-    "fileTooLarge": "File too large",
+    "fileTooLarge": "File is too large",
     "maxFileSize": "Maximum file size is 5MB",
     "avatarUploaded": "Avatar uploaded",
     "avatarUploadSuccess": "Avatar updated successfully",
@@ -532,7 +430,7 @@
     "pushNotificationsDescription": "Receive notifications directly in your browser",
     "saveChanges": "Save Changes",
     "saveSuccess": "Settings saved",
-    "saveError": "Save settings failed",
+    "saveError": "Failed to save settings",
     "saveErrorDescription": "An error occurred while saving your settings. Please try again.",
     "passwordMismatch": "New passwords do not match",
     "invalidCurrentPassword": "Current password is incorrect",

@@ -168,12 +168,6 @@
                   </button>
                 </div>
               </div>
-              <div
-                class="h-8 w-8 cursor-move text-gray-400 hover:text-gray-600 transition-all duration-200"
-                @mousedown="startDrag(index)"
-              >
-                <GripVertical class="w-5 h-5" />
-              </div>
             </div>
 
             <!-- Widget Content -->
@@ -212,7 +206,7 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits, ref, computed } from 'vue';
+import { ref, computed } from 'vue';
 import {
   X,
   ChevronDown,
@@ -278,6 +272,8 @@ const getWidthClass = size => {
   switch (size) {
     case 'col-12':
       return 'w-full';
+    case 'col-9':
+      return 'w-3/4';
     case 'col-6':
       return 'w-1/2';
     case 'col-4':
@@ -394,9 +390,20 @@ const removeZone = index => {
 </script>
 
 <style scoped>
-/* Custom width classes that account for gap in flex layout */
+.drop-zone-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
 .drop-zone-grid > .w-full {
   width: 100%;
+}
+
+.drop-zone-grid > .w-3\/4 {
+  width: calc(66.666666% - 0.333rem);
+  max-width: calc(66.666666% - 0.333rem);
 }
 
 .drop-zone-grid > .w-1\/2 {
@@ -418,5 +425,11 @@ const removeZone = index => {
 .drop-zone-grid > [class*='w-'] {
   flex-grow: 0;
   flex-shrink: 0;
+}
+
+/* Ensure proper row alignment for col-3 and col-9 */
+.drop-zone-grid > .w-3\/4 + .w-1\/4,
+.drop-zone-grid > .w-1\/4 + .w-3\/4 {
+  margin-left: 0;
 }
 </style>

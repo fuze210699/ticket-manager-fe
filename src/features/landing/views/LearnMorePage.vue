@@ -212,10 +212,7 @@
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n';
-import LearnMoreButton from '@shared/components/ui/ui/button/LearnMoreButton.vue';
-
-const { t } = useI18n();
+import LearnMoreButton from '@core/ui/button/LearnMoreButton.vue';
 
 const scrollToFeatures = () => {
   const featuresElement = document.getElementById('features');

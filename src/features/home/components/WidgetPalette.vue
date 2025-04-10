@@ -2,24 +2,6 @@
   <div class="w-1/4 space-y-6">
     <div
       :class="[
-        'rounded-xl shadow-lg p-4',
-        widgetThemes[currentTheme].bg,
-        widgetThemes[currentTheme].text,
-        widgetThemes[currentTheme].border,
-        'transition-all duration-300',
-      ]"
-    >
-      <h3 class="text-lg font-semibold mb-4">{{ $t('dashboard.presetLayouts.title') }}</h3>
-      <PresetLayoutList
-        :layouts="presetLayouts"
-        :current-theme="currentTheme"
-        :widget-themes="widgetThemes"
-        @select="applyPreset"
-      />
-    </div>
-
-    <div
-      :class="[
         'rounded-xl shadow-lg p-6',
         widgetThemes[currentTheme].bg,
         widgetThemes[currentTheme].text,
@@ -64,11 +46,28 @@
         </div>
       </div>
     </div>
+
+    <div
+      :class="[
+        'rounded-xl shadow-lg p-4',
+        widgetThemes[currentTheme].bg,
+        widgetThemes[currentTheme].text,
+        widgetThemes[currentTheme].border,
+        'transition-all duration-300',
+      ]"
+    >
+      <h3 class="text-lg font-semibold mb-4">{{ $t('dashboard.presetLayouts.title') }}</h3>
+      <PresetLayoutList
+        :layouts="presetLayouts"
+        :current-theme="currentTheme"
+        :widget-themes="widgetThemes"
+        @select="applyPreset"
+      />
+    </div>
   </div>
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue';
 import PresetLayoutList from './PresetLayoutList.vue';
 
 defineProps({

@@ -224,6 +224,15 @@
         "title": "簡単なコラボレーション",
         "description": "共有と通知機能でチームとして効果的に作業"
       }
+    },
+    "widgets": {
+      "title": "利用可能なウィジェット",
+      "subtitle": "ツールを選択",
+      "description": "スマートな作業をサポートするウィジェットコレクションをご覧ください。",
+      "analytics": {
+        "title": "分析",
+        "description": "カスタマイズ可能なチャートでデータを視覚化し、進捗状況を追跡します。"
+      }
     }
   },
   "login": {
@@ -268,7 +277,7 @@
   },
   "guide": {
     "title": "ユーザーガイド",
-    "subtitle": "Ticket Managerの効果的な使用方法を学ぶ",
+    "subtitle": "チケットマネージャーの効果的な使用方法を学ぶ",
     "gettingStarted": "はじめに",
     "features": "機能",
     "tutorials": "チュートリアル",
@@ -290,17 +299,17 @@
     "bioPlaceholder": "自己紹介を入力...",
     "bioDescription": "プロフィールの簡単な説明",
     "saving": "保存中...",
-    "saved": "プロフィールを保存",
-    "saveSuccess": "プロフィールを更新しました",
-    "saveError": "保存に失敗",
+    "saved": "プロフィールを保存しました",
+    "saveSuccess": "プロフィールが正常に更新されました",
+    "saveError": "保存に失敗しました",
     "saveErrorDescription": "プロフィールの保存中にエラーが発生しました。もう一度お試しください。",
-    "invalidFileType": "無効なファイル形式",
+    "invalidFileType": "無効なファイル形式です",
     "pleaseSelectImage": "画像ファイルを選択してください",
     "fileTooLarge": "ファイルが大きすぎます",
     "maxFileSize": "最大ファイルサイズは5MBです",
-    "avatarUploaded": "アバターをアップロード",
-    "avatarUploadSuccess": "アバターを更新しました",
-    "uploadError": "アップロードに失敗",
+    "avatarUploaded": "アバターをアップロードしました",
+    "avatarUploadSuccess": "アバターが正常に更新されました",
+    "uploadError": "アップロードに失敗しました",
     "uploadErrorDescription": "アバターのアップロード中にエラーが発生しました。もう一度お試しください。"
   },
   "settings": {
@@ -311,17 +320,17 @@
     "confirmPassword": "新しいパスワードを確認",
     "notificationSettings": "通知設定",
     "emailNotifications": "メール通知",
-    "emailNotificationsDescription": "更新と変更に関する通知をメールで受け取る",
+    "emailNotificationsDescription": "更新や変更に関する通知をメールで受け取る",
     "pushNotifications": "プッシュ通知",
     "pushNotificationsDescription": "ブラウザで直接通知を受け取る",
     "saveChanges": "変更を保存",
-    "saveSuccess": "設定を保存",
-    "saveError": "設定の保存に失敗",
+    "saveSuccess": "設定を保存しました",
+    "saveError": "設定の保存に失敗しました",
     "saveErrorDescription": "設定の保存中にエラーが発生しました。もう一度お試しください。",
     "passwordMismatch": "新しいパスワードが一致しません",
     "invalidCurrentPassword": "現在のパスワードが正しくありません",
-    "passwordTooShort": "パスワードは8文字以上である必要があります",
-    "passwordRequirements": "パスワードは大文字、小文字、数字を少なくとも1文字ずつ含める必要があります"
+    "passwordTooShort": "パスワードは8文字以上必要です",
+    "passwordRequirements": "パスワードは大文字、小文字、数字を少なくとも1つずつ含める必要があります"
   },
   "dashboard": {
     "title": "マイダッシュボード",
@@ -329,47 +338,32 @@
     "createSpace": "新規スペース作成",
     "members": "メンバー",
     "openSpace": "スペースを開く",
-    "noSpacesTitle": "スペースなし",
-    "noSpaces": "スペースがありません。新規スペースを作成して開始してください。",
+    "noSpacesTitle": "スペースがありません",
+    "noSpaces": "まだスペースがありません。新規スペースを作成して開始してください。",
     "editLayout": "レイアウトを編集",
     "presetLayouts": {
       "title": "プリセットレイアウト",
       "search": "レイアウトを検索...",
       "default": "デフォルトレイアウト",
-      "codeReview": "コードレビュー",
-      "debugging": "デバッグ",
-      "database": "データベース",
-      "monitoring": "モニタリング",
-      "testing": "テスト",
-      "deployment": "デプロイメント",
-      "documentation": "ドキュメント",
-      "analytics": "分析",
-      "security": "セキュリティ",
-      "default_description": "メインコンテンツエリアと2つのサイドパネルを持つ基本的なレイアウト",
-      "codeReview_description": "差分表示とコメント機能を備えたコードレビューワークフローに最適",
-      "debugging_description": "コンソール、ネットワーク、状態検査を備えたデバッグレイアウト",
-      "database_description": "データベース管理とクエリインターフェース",
-      "monitoring_description": "システムモニタリングとパフォーマンスメトリクス",
-      "testing_description": "テスト実行とカバレッジ分析",
-      "deployment_description": "デプロイメントパイプラインとリリース管理",
-      "documentation_description": "APIドキュメントとコードリファレンス",
-      "analytics_description": "ユーザー行動とアプリケーション分析",
-      "security_description": "セキュリティモニタリングと監査ログ"
+      "entertainment": "エンターテイメント",
+      "default_description": "メインコンテンツエリアと2つのサイドパネルを持つ基本レイアウト",
+      "entertainment_description": "メインコンテンツとサイドパネルを持つエンターテイメント向けレイアウト"
     },
     "availableWidgets": "利用可能なウィジェット",
-    "dropZone": "ウィジェットをここにドロップ",
+    "dropZone": "ここにウィジェットをドロップ",
     "addZone": "新規ゾーン追加",
     "changeTheme": "テーマを変更",
     "exportLayout": "レイアウトをエクスポート",
     "importLayout": "レイアウトをインポート",
-    "noWidgets": "ウィジェットなし",
+    "noWidgets": "ウィジェットがありません",
     "addWidgetsDesc": "ダッシュボードが空です。下のボタンをクリックして編集モードに入り、ウィジェットを追加してください。",
     "sizes": {
       "col-12": "全幅",
-      "col-8": "2/3幅",
-      "col-6": "半幅",
-      "col-4": "1/3幅",
-      "col-3": "1/4幅"
+      "col-9": "4分の3",
+      "col-8": "3分の2",
+      "col-6": "半分",
+      "col-4": "3分の1",
+      "col-3": "4分の1"
     },
     "widgets": {
       "addWidget": "ウィジェットを追加",
@@ -389,9 +383,33 @@
       "custom": "カスタム"
     },
     "types": {
+      "workspace": {
+        "title": "ワークスペース",
+        "description": "プロジェクトとタスクを管理"
+      },
       "music": {
-        "title": "音楽プレーヤー",
+        "title": "ミュージックプレーヤー",
         "description": "お気に入りの音楽を聴く"
+      },
+      "notes": {
+        "title": "メモ",
+        "description": "メモを作成、整理、共有する",
+        "newNote": "新規メモ",
+        "editNote": "メモを編集",
+        "deleteNote": "メモを削除",
+        "placeholder": "ここに内容を入力します...",
+        "actions": {
+          "save": "保存",
+          "delete": "削除",
+          "cancel": "キャンセル"
+        },
+        "confirmDelete": "このメモを削除してもよろしいですか？この操作は元に戻せません。",
+        "noNotes": "メモがありません",
+        "createFirst": "最初のメモを作成",
+        "searchPlaceholder": "メモを検索...",
+        "lastEdited": "最終編集",
+        "saved": "保存されました",
+        "maxCharacters": "最大5000文字"
       },
       "video": {
         "title": "動画プレーヤー",
@@ -403,8 +421,8 @@
         "createEvent": "イベントを作成",
         "editEvent": "イベントを編集",
         "deleteEvent": "イベントを削除",
-        "eventDetails": "イベント詳細",
-        "noEvents": "イベントなし",
+        "eventDetails": "イベントの詳細",
+        "noEvents": "イベントがありません",
         "settings": {
           "title": "カレンダー設定",
           "viewMode": "表示モード",
@@ -413,28 +431,6 @@
           "showWeekends": "週末を表示",
           "showHolidays": "祝日を表示"
         }
-      },
-      "notes": {
-        "title": "ノート",
-        "description": "メモやアイデアを整理して保存",
-        "addNote": "ノートを追加",
-        "history": "履歴",
-        "empty": "ノートがありません。クリックして最初のノートを追加！",
-        "note": "ノート",
-        "titlePlaceholder": "ノートのタイトルを入力",
-        "content": "内容",
-        "contentPlaceholder": "ノートの内容をここに入力...",
-        "preview": "プレビュー",
-        "attachments": "添付ファイル",
-        "autoSave": "自動保存",
-        "syntaxHighlighting": "シンタックスハイライト",
-        "versionHistory": "バージョン履歴",
-        "noSelection": "ノートが選択されていません",
-        "selectOrCreate": "リストからノートを選択するか、新規作成",
-        "untitled": "無題のノート",
-        "noContent": "内容なし",
-        "lastSaved": "最終保存",
-        "editing": "編集中..."
       },
       "todo": {
         "title": "タスクリスト",
@@ -492,9 +488,47 @@
         "title": "天気",
         "description": "現在の天気と予報を表示"
       },
-      "workspace": {
-        "title": "ワークスペース",
-        "description": "プロジェクトとタスクを管理"
+      "reportGenerator": {
+        "title": "作業報告生成",
+        "description": "作業報告書を簡単に生成",
+        "projectName": "プロジェクト名",
+        "projectNamePlaceholder": "プロジェクト名を入力",
+        "taskList": "タスク一覧",
+        "taskPlaceholder": "タスク内容を入力",
+        "addTask": "タスクを追加",
+        "deleteTask": "削除",
+        "generateReport": "レポートをクリップボードにコピー",
+        "copied": "コピーしました！",
+        "preview": "プレビュー",
+        "status": {
+          "notStarted": "未着手",
+          "inProgress": "作業中",
+          "completed": "完了"
+        },
+        "emptyState": "プロジェクト名とタスクを入力してください",
+        "title": "作業報告生成",
+        "subtitle": "日報作成ツール"
+      },
+      "codeViewer": {
+        "title": "コードビューワー",
+        "subtitle": "コードの表示、ハイライト、リファクタリング",
+        "fileNamePlaceholder": "ファイル名を入力",
+        "codePlaceholder": "ここにコードを貼り付け...",
+        "refactorSuggestions": "リファクタリング提案",
+        "analyzeCode": "コードを分析",
+        "analyzing": "分析中...",
+        "noSuggestions": "このコードにはリファクタリングの提案はありません。",
+        "line": "行",
+        "apply": "適用",
+        "longFunctionSuggestion": "この関数は長すぎます。可読性と保守性を向上させるために、小さな関数に分割することを検討してください。",
+        "consoleLogSuggestion": "console.log文は本番コードでは削除するか、適切なロギングシステムに置き換えるべきです。",
+        "styleSuggestion": "コードの可読性を向上させるために、ドキュメントコメントの追加を検討してください。",
+        "applied": "提案を適用しました",
+        "originalCode": "元のコード",
+        "codeToReplace": "置き換えるコード",
+        "suggestedCode": "提案されたコード",
+        "tempAppliedMessage": "提案が正常に適用されました！",
+        "suggestion": "提案"
       }
     }
   }

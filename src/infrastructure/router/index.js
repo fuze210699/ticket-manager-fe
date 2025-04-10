@@ -2,13 +2,13 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { i18n } from '@infrastructure/i18n';
 
 // Define lazy-loaded components
-const RootLayout = () => import('@app/RootLayout.vue');
+const RootLayout = () => import('@core/layout/RootLayout.vue');
 const LandingPage = () => import('@features/landing/views/LandingPage.vue');
 const LoginPage = () => import('@features/auth/views/LoginPage.vue');
 const SignUpPage = () => import('@features/auth/views/SignUpPage.vue');
 const HomePage = () => import('@features/home/views/HomePage.vue');
-const WorkspaceDetail = () => import('@shared/widgets/ticket_manager/views/WorkspaceDetail.vue');
-const NotFound = () => import('@shared/components/NotFound.vue');
+const WorkspaceDetail = () => import('@infrastructure/widgets/ticket_manager/views/WorkspaceDetail.vue');
+const NotFound = () => import('@core/ui/NotFound.vue');
 
 const routes = [
   {
