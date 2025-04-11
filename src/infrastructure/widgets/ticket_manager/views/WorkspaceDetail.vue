@@ -105,9 +105,9 @@ import { MiniMap } from '@vue-flow/minimap';
 import { Controls } from '@vue-flow/controls';
 import { Background } from '@vue-flow/background';
 import TaskBar from '@infrastructure/widgets/ticket_manager/components/TaskBar.vue';
-import TicketModal from '@features/ticket/components/TicketModal.vue';
-import MilestoneModal from '@features/milestone/components/MilestoneModal.vue';
-import DependencyModal from '@features/ticket/components/DependencyModal.vue';
+import TicketModal from '@infrastructure/widgets/ticket_manager/components/TicketModal.vue';
+import MilestoneModal from '@infrastructure/widgets/ticket_manager/components/MilestoneModal.vue';
+import DependencyModal from '@infrastructure/widgets/ticket_manager/components/DependencyModal.vue';
 import CustomNode from '@core/ui/CustomNode.vue';
 import CustomEdge from '@core/ui/CustomEdge.vue';
 import { generateUUID } from '@core/utils/helper';
@@ -374,7 +374,7 @@ const goBack = async () => {
 // Apply filters to elements
 const applyFilters = (filters) => {
   currentFilters.value = filters;
-  
+
   // If all filters are empty, show all nodes
   if (Object.values(filters).every(filter => filter === '')) {
     elements.value = elements.value.map(element => ({
