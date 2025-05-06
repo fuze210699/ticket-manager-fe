@@ -508,27 +508,6 @@
         "emptyState": "プロジェクト名とタスクを入力してください",
         "title": "作業報告生成",
         "subtitle": "日報作成ツール"
-      },
-      "codeViewer": {
-        "title": "コードビューワー",
-        "subtitle": "コードの表示、ハイライト、リファクタリング",
-        "fileNamePlaceholder": "ファイル名を入力",
-        "codePlaceholder": "ここにコードを貼り付け...",
-        "refactorSuggestions": "リファクタリング提案",
-        "analyzeCode": "コードを分析",
-        "analyzing": "分析中...",
-        "noSuggestions": "このコードにはリファクタリングの提案はありません。",
-        "line": "行",
-        "apply": "適用",
-        "longFunctionSuggestion": "この関数は長すぎます。可読性と保守性を向上させるために、小さな関数に分割することを検討してください。",
-        "consoleLogSuggestion": "console.log文は本番コードでは削除するか、適切なロギングシステムに置き換えるべきです。",
-        "styleSuggestion": "コードの可読性を向上させるために、ドキュメントコメントの追加を検討してください。",
-        "applied": "提案を適用しました",
-        "originalCode": "元のコード",
-        "codeToReplace": "置き換えるコード",
-        "suggestedCode": "提案されたコード",
-        "tempAppliedMessage": "提案が正常に適用されました！",
-        "suggestion": "提案"
       }
     }
   }

@@ -10,8 +10,7 @@
     "lint": "eslint . --ext .js,.vue",
     "lint:fix": "eslint . --ext .js,.vue --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "server": "node server.js"
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^44.3.0",
@@ -35,10 +34,7 @@
     "swiper": "^11.2.6",
     "vue": "^3.5.13",
     "vue-i18n": "^11.1.2",
-    "vue-router": "^4.5.0",
-    "express": "^4.18.2",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1"
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.3",

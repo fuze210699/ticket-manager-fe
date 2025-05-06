@@ -230,28 +230,6 @@
         "emptyState": "Please enter project name and tasks",
         "title": "Report Generator",
         "subtitle": "Create work reports"
-      },
-      "codeViewer": {
-        "title": "Code Viewer",
-        "subtitle": "View, highlight and refactor code",
-        "fileNamePlaceholder": "Enter file name",
-        "codePlaceholder": "Paste your code here...",
-        "refactorSuggestions": "Refactoring Suggestions",
-        "analyzeCode": "Analyze Code",
-        "analyzing": "Analyzing code...",
-        "noSuggestions": "No refactoring suggestions found for this code.",
-        "line": "Line",
-        "apply": "Apply",
-        "longFunctionSuggestion": "This function is too long. Consider breaking it into smaller functions for better readability and maintainability.",
-        "consoleLogSuggestion": "Console.log statements should be removed or replaced with proper logging in production code.",
-        "styleSuggestion": "Consider adding documentation comments to improve code readability.",
-        "applied": "Suggestion Applied",
-        "originalCode": "Original Code",
-        "codeToReplace": "Code to Replace",
-        "suggestedCode": "Suggested Code",
-        "tempAppliedMessage": "Suggestion applied successfully!",
-        "suggestion": "Suggestion",
-        "notAppliedYet": "(Not Applied Yet)"
       }
     }
   },

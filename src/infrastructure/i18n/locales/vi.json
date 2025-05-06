@@ -230,28 +230,6 @@
         "emptyState": "Vui lòng nhập tên dự án và các công việc",
         "title": "Tạo báo cáo",
         "subtitle": "Công cụ tạo báo cáo công việc"
-      },
-      "codeViewer": {
-        "title": "Trình xem mã",
-        "subtitle": "Xem, tô sáng và cải tiến mã nguồn",
-        "fileNamePlaceholder": "Nhập tên tệp",
-        "codePlaceholder": "Dán mã nguồn của bạn vào đây...",
-        "refactorSuggestions": "Đề xuất cải tiến",
-        "analyzeCode": "Phân tích mã",
-        "analyzing": "Đang phân tích mã...",
-        "noSuggestions": "Không tìm thấy đề xuất cải tiến cho mã này.",
-        "line": "Dòng",
-        "apply": "Áp dụng",
-        "longFunctionSuggestion": "Hàm này quá dài. Hãy xem xét chia nhỏ thành các hàm ngắn hơn để dễ đọc và bảo trì hơn.",
-        "consoleLogSuggestion": "Các câu lệnh console.log nên được xóa hoặc thay thế bằng hệ thống ghi nhật ký phù hợp trong mã sản phẩm.",
-        "styleSuggestion": "Hãy xem xét thêm chú thích tài liệu để cải thiện khả năng đọc mã.",
-        "applied": "Đã áp dụng đề xuất",
-        "originalCode": "Mã nguồn gốc",
-        "codeToReplace": "Mã cần thay thế",
-        "suggestedCode": "Mã đề xuất",
-        "tempAppliedMessage": "Đã áp dụng đề xuất thành công!",
-        "suggestion": "Đề xuất",
-        "notAppliedYet": "(Chưa áp dụng)"
       }
     }
   },

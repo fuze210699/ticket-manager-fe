@@ -3,7 +3,6 @@ import NotesVue from '@infrastructure/widgets/note/Notes.vue';
 import WorkSpaceVue from '@infrastructure/widgets/ticket_manager/views/WorkSpace.vue';
 import YouTubePlayerVue from '@infrastructure/widgets/music/YouTubePlayer.vue';
 import ReportGeneratorVue from '@infrastructure/widgets/report_generator/ReportGenerator.vue';
-import CodeViewerWidgetVue from '@infrastructure/widgets/code_viewer/CodeViewerWidget.vue';
 import {
   StickyNote,
   LayoutGrid,
@@ -11,7 +10,6 @@ import {
   MusicIcon,
   Gamepad2,
   FileText,
-  Code,
 } from 'lucide-vue-next';
 
 export const AVAILABLE_WIDGETS = [
@@ -34,11 +32,6 @@ export const AVAILABLE_WIDGETS = [
     name: 'reportGenerator',
     component: markRaw(ReportGeneratorVue),
     icon: FileText,
-  },
-  {
-    name: 'codeViewer',
-    component: markRaw(CodeViewerWidgetVue),
-    icon: Code,
   },
 ];
 
