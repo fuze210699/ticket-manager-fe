@@ -68,6 +68,12 @@ const router = createRouter({
 
 // Navigation guard to check authentication
 router.beforeEach((to, from, next) => {
+  // Redirect root path to home
+  if (to.path === '/') {
+    next('/home');
+    return;
+  }
+
   if (
     to.name !== 'landing' &&
     to.name !== 'login' &&
